@@ -66,12 +66,12 @@ const Services = () => {
 
   // Auto-scroll logic for mobile
   useEffect(() => {
-    timeoutRef.current && clearTimeout(timeoutRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % services.length);
     }, AUTO_SCROLL_INTERVAL);
     return () => {
-      timeoutRef.current && clearTimeout(timeoutRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [current]);
 

@@ -41,8 +41,8 @@ const Hero = () => {
     if (!container) return;
 
     let isHovered = false;
-    let scrollAmount = 0.5; // px per frame
-    let direction = 1;
+    const scrollAmount = 0.5; // px per frame
+    const direction = 1;
 
     const handleMouseEnter = () => { isHovered = true; };
     const handleMouseLeave = () => { isHovered = false; };

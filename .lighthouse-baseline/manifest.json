@@ -1,0 +1,56 @@
+[
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_28_42.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_28_42.report.json",
+    "summary": {
+      "performance": null
+    }
+  },
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_30_54.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_30_54.report.json",
+    "summary": {
+      "performance": null
+    }
+  },
+  {
+    "url": "http://localhost:4173/students",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_00.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_00.report.json",
+    "summary": {
+      "performance": 0.79
+    }
+  },
+  {
+    "url": "http://localhost:4173/students",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_49.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_49.report.json",
+    "summary": {
+      "performance": 0.8
+    }
+  },
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_29_48.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_-2025_09_13_09_29_48.report.json",
+    "summary": {
+      "performance": null
+    }
+  },
+  {
+    "url": "http://localhost:4173/students",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_24.report.html",
+    "jsonPath": "/home/snehith-chalasani/Downloads/simpleschoolwebsite-19-main/.lighthouse-baseline/localhost-_students-2025_09_13_09_32_24.report.json",
+    "summary": {
+      "performance": 0.8
+    }
+  }
+]
