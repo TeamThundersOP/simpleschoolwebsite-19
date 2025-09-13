@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, fix/static-react-hardening ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund --omit=optional
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx -y tsc --noEmit
+
+      - name: Build
+        run: npm run build
+
+      - name: Serve build
+        run: npx -y serve -s dist -l 4173 &
+
+      - name: Wait for server
+        run: npx -y wait-on http://localhost:4173
+
+      - name: Lighthouse CI
+        run: npx -y @lhci/cli@0.14.x autorun --collect.url=http://localhost:4173/ --collect.url=http://localhost:4173/students --upload.target=filesystem --upload.outputDir=.lhr-ci
+
+      - name: Upload Lighthouse reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lhr-ci

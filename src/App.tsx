@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,53 +6,67 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useLenis } from "@/hooks/use-lenis";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Students from "./pages/Students";
-import Teachers from "./pages/Teachers";
-import SchoolManagement from "./pages/SchoolManagement";
-import CodeSchool from "./pages/CodeSchool";
-import FinnishExperience from "./pages/FinnishExperience";
-import GraphoGame from "./pages/GraphoGame";
-import KindieDays from "./pages/KindieDays";
-import MoominLanguageSchool from "./pages/MoominLanguageSchool";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import StudentsService from "./pages/services/Students";
-import TeachersService from "./pages/services/Teachers";
-import SchoolManagementService from "./pages/services/SchoolManagement";
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Students = lazy(() => import("./pages/Students"));
+const Teachers = lazy(() => import("./pages/Teachers"));
+const SchoolManagement = lazy(() => import("./pages/SchoolManagement"));
+const CodeSchool = lazy(() => import("./pages/CodeSchool"));
+const FinnishExperience = lazy(() => import("./pages/FinnishExperience"));
+const GraphoGame = lazy(() => import("./pages/GraphoGame"));
+const KindieDays = lazy(() => import("./pages/KindieDays"));
+const MoominLanguageSchool = lazy(() => import("./pages/MoominLanguageSchool"));
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const StudentsService = lazy(() => import("./pages/services/Students"));
+const TeachersService = lazy(() => import("./pages/services/Teachers"));
+const SchoolManagementService = lazy(() => import("./pages/services/SchoolManagement"));
 
 const queryClient = new QueryClient();
 
 const App = () => {
   useLenis();
-  
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path="/school-management" element={<SchoolManagement />} />
-          <Route path="/code-school" element={<CodeSchool />} />
-          <Route path="/finnish-experience" element={<FinnishExperience />} />
-          <Route path="/grapho-game" element={<GraphoGame />} />
-          <Route path="/kindie-days" element={<KindieDays />} />
-          <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/students" element={<StudentsService />} />
-          <Route path="/services/teachers" element={<TeachersService />} />
-          <Route path="/services/school-management" element={<SchoolManagementService />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[2000] focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded"
+          >
+            Skip to main content
+          </a>
+          <Suspense
+            fallback={
+              <div className="p-4" role="status" aria-live="polite">
+                Loading…
+              </div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/students" element={<Students />} />
+              <Route path="/teachers" element={<Teachers />} />
+              <Route path="/school-management" element={<SchoolManagement />} />
+              <Route path="/code-school" element={<CodeSchool />} />
+              <Route path="/finnish-experience" element={<FinnishExperience />} />
+              <Route path="/grapho-game" element={<GraphoGame />} />
+              <Route path="/kindie-days" element={<KindieDays />} />
+              <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/students" element={<StudentsService />} />
+              <Route path="/services/teachers" element={<TeachersService />} />
+              <Route path="/services/school-management" element={<SchoolManagementService />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 };
 

@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.lighthouse-baseline
+.lighthouse-after
+.lighthouseci
 
 # Editor directories and files
 .vscode/*
