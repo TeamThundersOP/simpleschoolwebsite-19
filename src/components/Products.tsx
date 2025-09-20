@@ -88,18 +88,18 @@ const Products = () => {
             {products.map((product, index) => (
               <motion.article 
                 key={index} 
-                className="box-border flex flex-col justify-between items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl lg:rounded-[32px] hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4 h-full"
+                className="box-border flex flex-col justify-between items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4 h-full"
                 variants={{
                   hidden: { opacity: 0, y: 50 },
                   visible: { opacity: 1, y: 0 }
                 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="box-border w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-[32px]">
+                <div className="box-border w-full overflow-hidden rounded-xl sm:rounded-2xl">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="box-border h-40 sm:h-48 md:h-52 lg:h-56 w-full aspect-[74/45] object-cover m-0 p-0 rounded-xl sm:rounded-2xl lg:rounded-[32px] transition-transform duration-300 group-hover:scale-105"
+                    className="box-border h-40 sm:h-48 md:h-52 lg:h-56 w-full aspect-[74/45] object-cover m-0 p-0 rounded-xl sm:rounded-2xl transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="box-border flex flex-col items-start gap-3 sm:gap-4 lg:gap-6 w-full m-0 p-0">

@@ -29,7 +29,7 @@ const Newsletter = () => {
   return (
     <section className="box-border flex w-full flex-col items-center gap-20 bg-[#03182F] m-0 px-16 py-28 max-md:px-8 max-md:py-20 max-sm:px-4 max-sm:py-[60px]">
       <div className="box-border flex max-w-screen-xl flex-col items-start gap-20 w-full m-0 p-0">
-        <div className="box-border flex items-center gap-8 w-full border bg-[#03182F] m-0 p-12 rounded-[40px] border-solid border-[rgba(255,255,255,0.20)] max-md:flex-col max-md:p-8">
+        <div className="box-border flex items-center gap-8 w-full border bg-[#03182F] m-0 p-12 rounded-2xl border-solid border-[rgba(255,255,255,0.20)] max-md:flex-col max-md:p-8">
           <div className="box-border flex flex-col items-start gap-6 flex-1 m-0 p-0">
             <h2 className="box-border w-full text-white text-[44px] font-medium leading-[52.8px] tracking-[-0.44px] m-0 p-0 max-md:text-4xl max-sm:text-[28px]">
               Stay Updated with Our Newsletter
@@ -52,7 +52,7 @@ const Newsletter = () => {
               </div>
               <button
                 type="submit"
-                className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-3 py-1.5 rounded-[100px] border-solid border-white max-sm:w-full hover:bg-gray-100 transition-colors disabled:opacity-50"
+                className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-3 py-1.5 rounded-full border-solid border-white max-sm:w-full hover:bg-gray-100 transition-colors disabled:opacity-50"
                 disabled={isSubmitted}
               >
                 <span className="box-border text-[#0C0504] text-base font-normal leading-6 m-0 p-0">

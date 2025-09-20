@@ -92,7 +92,7 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
-                    className="box-border h-64 sm:h-72 lg:h-[296px] w-full aspect-[1/1] object-cover m-0 p-0 rounded-2xl lg:rounded-[32px]"
+                    className="box-border h-64 sm:h-72 lg:h-[296px] w-full aspect-[1/1] object-cover m-0 p-0 rounded-2xl"
                   />
                   <div className="box-border flex flex-col items-start gap-3 lg:gap-4 w-full m-0 p-0">
                     <div className="box-border flex flex-col items-start w-full m-0 p-0">

@@ -153,7 +153,7 @@ const MoominLanguageSchool = () => {
             </div>
             <div className="box-border w-full overflow-x-auto lg:overflow-visible m-0 p-0">
               <div className="box-border flex items-start gap-6 lg:gap-12 min-w-max lg:grid lg:grid-cols-3 lg:min-w-0 m-0 p-0">
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
+                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
                   <div className="box-border flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl m-0 p-0">
                     <Users className="w-8 h-8 text-primary" />
                   </div>
@@ -167,7 +167,7 @@ const MoominLanguageSchool = () => {
                   </div>
                 </div>
                 
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
+                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
                   <div className="box-border flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl m-0 p-0">
                     <Heart className="w-8 h-8 text-primary" />
                   </div>
@@ -181,7 +181,7 @@ const MoominLanguageSchool = () => {
                   </div>
                 </div>
                 
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
+                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
                   <div className="box-border flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl m-0 p-0">
                     <Star className="w-8 h-8 text-primary" />
                   </div>

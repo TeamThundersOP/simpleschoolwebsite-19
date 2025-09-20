@@ -77,7 +77,7 @@ const Navbar = () => {
           </nav>
 
           <div className="box-border flex justify-center items-center gap-2 sm:gap-3 md:gap-4 m-0 p-0">
-            <button className="box-border flex justify-center items-center gap-1 sm:gap-2 border cursor-pointer bg-gray-900 m-0 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-[100px] border-solid border-gray-900 hover:bg-gray-800 transition-colors">
+            <button className="box-border flex justify-center items-center gap-1 sm:gap-2 border cursor-pointer bg-gray-900 m-0 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border-solid border-gray-900 hover:bg-gray-800 transition-colors">
               <span className="box-border text-white text-xs sm:text-sm md:text-base font-bold leading-4 sm:leading-5 md:leading-6 m-0 p-0">
                 Book Appointment
               </span>

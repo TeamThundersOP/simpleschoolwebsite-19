@@ -70,7 +70,7 @@ const SchoolManagement = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl lg:rounded-[32px] overflow-hidden group cursor-pointer"
+                <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden group cursor-pointer"
                      onClick={() => openVideoModal('https://example.com/videos/management-hero.mp4', 'School Management Overview')}>
                   <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
                     <motion.div

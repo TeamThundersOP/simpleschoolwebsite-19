@@ -8,8 +8,8 @@ export const TOKENS = {
   SECTION_PADDING: "py-16 sm:py-20 lg:py-28",
   
   // Border radius and shadows
-  RADIUS_CLASS: "rounded-2xl lg:rounded-[32px]",
-  RADIUS_LARGE: "rounded-2xl lg:rounded-[40px]",
+  RADIUS_CLASS: "rounded-2xl",
+  RADIUS_LARGE: "rounded-2xl",
   SHADOW_CLASS: "shadow-sm",
   CARD_HOVER_SHADOW: "hover:shadow-xl",
   
@@ -40,6 +40,6 @@ export const TOKENS = {
   ICON_SIZE_SMALL: "w-4 h-4 sm:w-5 sm:h-5",
   
   // Card styles from Home
-  CARD_BASE: "flex flex-col items-start gap-6 lg:gap-8 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]",
-  CARD_PRODUCT: "flex flex-col items-start gap-6 lg:gap-8 flex-1 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-2xl lg:rounded-[32px] hover:bg-gray-50/50 p-4 -m-4",
+  CARD_BASE: "flex flex-col items-start gap-6 lg:gap-8 p-6 bg-gray-50 rounded-2xl",
+  CARD_PRODUCT: "flex flex-col items-start gap-6 lg:gap-8 flex-1 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-2xl hover:bg-gray-50/50 p-4 -m-4",
 };
