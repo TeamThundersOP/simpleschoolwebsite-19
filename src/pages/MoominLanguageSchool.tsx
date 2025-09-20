@@ -1,326 +1,371 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import VideoModal, { VideoThumbnail } from '@/components/VideoModal';
-import { CheckCircle, Globe2, BookOpen, Users, Sparkles, Award, Star, Heart } from 'lucide-react';
-import { Feature197 } from '@/components/blocks/accordion-feature-section';
-import Section from '@/components/ui/section';
+import { motion } from 'framer-motion';
+import { Check, ArrowRight, Star, Users, School, Baby, Heart, Globe2, BookOpen, Phone, Mail, Play } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-const demoData = {
-  features: [
-    {
-      id: 1,
-      title: "Story-Driven Language Learning",
-      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
-      description: "Learn languages naturally through engaging Moomin stories and adventures that make learning memorable and fun.",
-    },
-    {
-      id: 2,
-      title: "Interactive Character Lessons",
-      image: "https://shadcnblocks.com/images/block/placeholder-2.svg",
-      description: "Immersive language activities featuring beloved Moomin characters that guide learners through their language journey.",
-    },
-    {
-      id: 3,
-      title: "Multi-Language Support",
-      image: "https://shadcnblocks.com/images/block/placeholder-3.svg",
-      description: "Support for various languages with native speaker pronunciation and culturally authentic content and expressions.",
-    },
-    {
-      id: 4,
-      title: "Family Learning Environment",
-      image: "https://shadcnblocks.com/images/block/placeholder-4.svg",
-      description: "Safe and nurturing environment perfect for children and families to learn together in the magical world of Moomins.",
-    },
-    {
-      id: 5,
-      title: "Progressive Skill Building",
-      image: "https://shadcnblocks.com/images/block/placeholder-5.svg",
-      description: "Structured learning path that builds language skills progressively through age-appropriate content and activities.",
-    },
-  ],
-};
+import Seo from '@/components/Seo';
 
 const MoominLanguageSchool = () => {
-  const [videoModal, setVideoModal] = useState({
-    isOpen: false,
-    videoUrl: '',
-    title: '',
-    posterUrl: ''
+  const [selectedChip, setSelectedChip] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    role: '',
+    organization: '',
+    email: '',
+    phone: '',
+    intent: ''
   });
 
-  const openVideoModal = (videoUrl: string, title: string, posterUrl?: string) => {
-    setVideoModal({
-      isOpen: true,
-      videoUrl,
-      title,
-      posterUrl: posterUrl || ''
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
   };
 
-  const closeVideoModal = () => {
-    setVideoModal({
-      isOpen: false,
-      videoUrl: '',
-      title: '',
-      posterUrl: ''
-    });
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0">
+    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0 overflow-x-clip">
       <Navbar />
-      <main className="w-full">
-        {/* Hero Section */}
-        <Section index={0} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl w-full items-center gap-12 lg:gap-20 m-0 p-0 max-lg:flex-col">
-            <div className="box-border flex flex-col items-start gap-6 lg:gap-8 flex-1 text-center lg:text-left m-0 p-0">
-              <h1 className="box-border w-full text-foreground text-4xl md:text-6xl font-bold leading-tight tracking-tight m-0 p-0 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Moomin Language School
-              </h1>
-              <p className="box-border w-full text-foreground text-2xl font-semibold leading-tight m-0 p-0">
-                Learn Languages Through Beloved Characters
-              </p>
-              <p className="box-border w-full text-muted-foreground text-xl font-normal leading-relaxed m-0 p-0">
-                Natural language learning through immersive storytelling and the magical world of Moomins.
-              </p>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">Story-driven learning through engaging Moomin adventures</span>
-              </div>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">Interactive lessons with beloved Moomin characters</span>
-              </div>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">Safe and nurturing environment perfect for families</span>
-              </div>
-              <div className="box-border flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full m-0 p-0">
-                <Button size="lg">Start Learning</Button>
-                <Button variant="outline" size="lg">Meet the Moomins</Button>
-              </div>
-            </div>
-            <div className="box-border flex-1 m-0 p-0">
-              <VideoThumbnail
-                videoUrl="https://example.com/moomin-hero.mp4"
-                title="Moomin Language School Demo"
-                posterUrl="https://api.builder.io/api/v1/image/assets/TEMP/moomin-hero.jpg"
-                onPlay={() => openVideoModal(
-                  "https://example.com/moomin-hero.mp4",
-                  "Moomin Language School - Learn Through Stories",
-                  "https://api.builder.io/api/v1/image/assets/TEMP/moomin-hero.jpg"
-                )}
-                className="w-full"
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* Trust Section */}
-        <Section index={1} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Loved Worldwide
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full m-0 p-0">
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">75+</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Years of Moomin Magic</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">50+</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Languages & Countries</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">10M+</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Moomin Fans Globally</p>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Benefits Section */}
-        <Section index={2} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Learning Made Magical
-              </h2>
-            </div>
-            <div className="box-border w-full overflow-x-auto lg:overflow-visible m-0 p-0">
-              <div className="box-border flex items-start gap-6 lg:gap-12 min-w-max lg:grid lg:grid-cols-3 lg:min-w-0 m-0 p-0">
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl m-0 p-0">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Children
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Engaging language learning through beloved Moomin characters and stories that make learning fun and memorable.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl m-0 p-0">
-                    <Heart className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Families
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Shared learning experiences that bring families together through the timeless values and adventures of Moominvalley.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl m-0 p-0">
-                    <Star className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Educators
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Structured curriculum with proven story-based methodology that makes language teaching engaging and effective.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Feature197 Section */}
-        <Section index={3}>
-          <Feature197 {...demoData} />
-        </Section>
-
-        {/* Learning Journey */}
-        <Section index={4} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Your Learning Adventure
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full m-0 p-0">
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">1</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Meet the Moomins</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Begin your journey in Moominvalley with beloved characters as your guides.</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">2</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Story Adventures</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Learn through engaging stories and interactive activities with Moomin friends.</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">3</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Language Mastery</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Build confidence and fluency through progressive lessons and practice.</p>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Video Gallery */}
-        <Section index={5} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Explore Moomin Language Learning
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full m-0 p-0">
-              <VideoThumbnail
-                videoUrl="https://example.com/moomin-overview.mp4"
-                title="Moomin School Overview"
-                duration="2:25"
-                onPlay={() => openVideoModal(
-                  "https://example.com/moomin-overview.mp4",
-                  "Moomin Language School Overview"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/story-lessons.mp4"
-                title="Story-Based Lessons"
-                duration="3:00"
-                onPlay={() => openVideoModal(
-                  "https://example.com/story-lessons.mp4",
-                  "Learning Through Moomin Stories"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/character-interactions.mp4"
-                title="Character Interactions"
-                duration="2:35"
-                onPlay={() => openVideoModal(
-                  "https://example.com/character-interactions.mp4",
-                  "Interactive Moomin Characters"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/language-progress.mp4"
-                title="Language Progress Tracking"
-                duration="2:15"
-                onPlay={() => openVideoModal(
-                  "https://example.com/language-progress.mp4",
-                  "Track Your Learning Progress"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/family-learning.mp4"
-                title="Family Learning Together"
-                duration="2:50"
-                onPlay={() => openVideoModal(
-                  "https://example.com/family-learning.mp4",
-                  "Families Learning Together"
-                )}
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* CTA Section */}
-        <Section index={6} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 lg:gap-12 w-full text-center m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Begin Your Language Adventure
-              </h2>
-              <p className="box-border w-full text-muted-foreground text-base sm:text-lg font-normal leading-relaxed m-0 p-0">
-                Story-driven learning with beloved characters in a family-friendly experience.
-              </p>
-            </div>
-            <div className="box-border flex flex-col sm:flex-row gap-4 justify-center w-full m-0 p-0">
-              <Button size="lg">
-                Start Learning
-              </Button>
-              <Button size="lg" variant="outline">
-                Free Trial
-              </Button>
-            </div>
-          </div>
-        </Section>
-      </main>
-      <Footer />
-      
-      <VideoModal
-        isOpen={videoModal.isOpen}
-        onClose={closeVideoModal}
-        videoUrl={videoModal.videoUrl}
-        title={videoModal.title}
-        posterUrl={videoModal.posterUrl}
+      <Seo
+        title="Moomin Language School – Early English in the Finnish Way"
+        description="Joyful English learning for children aged 3–8 with daily app practice and weekly playful sessions. Finnish pedagogy, teacher-friendly rollout, and proven outcomes."
+        canonical="https://simpleschoolwebsite-19.onrender.com/moomin-language-school"
       />
+      
+      <main id="main" className="w-full" role="main">
+        
+        {/* Hero (Compact) - Matching Home Page Style */}
+        <section className="box-border flex w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[#021223] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-x-hidden">
+          <div className="box-border flex max-w-screen-xl flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 md:gap-12 lg:gap-16 flex-1 w-full m-0 p-0">
+            {/* Content Section - Left */}
+            <div className="box-border flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 gap-4 sm:gap-6 lg:gap-8 m-0 p-0 lg:pt-6">
+              <motion.div
+                className="box-border flex flex-col justify-center items-center lg:items-start gap-4 lg:gap-6 w-full m-0 p-0"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <motion.h1
+                  className="box-border w-full text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight m-0 p-0 break-words"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  Moomin Language School
+                </motion.h1>
+                <motion.p
+                  className="box-border w-full text-white text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed m-0 p-0 max-w-2xl break-words"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  Early English in the Finnish way – daily app practice and weekly playful sessions for children aged 3–8.
+                </motion.p>
+              </motion.div>
+              <motion.div
+                className="box-border flex flex-col sm:flex-row items-center gap-3 sm:gap-4 m-0 p-0 w-full sm:w-auto justify-center lg:justify-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                <motion.button
+                  className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-white hover:bg-gray-100 transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <span className="box-border text-[#0C0504] font-semibold leading-5 sm:leading-6 m-0 p-0">
+                    Get Started
+                  </span>
+                </motion.button>
+                <motion.button
+                  className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-[rgba(255,255,255,0.30)] hover:bg-[rgba(255,255,255,0.08)] transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] text-white shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <span className="box-border font-semibold leading-5 sm:leading-6 m-0 p-0">
+                    Learn More
+                  </span>
+                </motion.button>
+              </motion.div>
+            </div>
+
+            {/* Images/Illustration Section - Right */}
+            <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
+              <div className="relative w-full max-w-lg">
+                <div className="aspect-video bg-white/10 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
+                  <div className="w-full h-full flex items-center justify-center text-white">
+                    <div className="text-center">
+                      <BookOpen className="h-16 w-16 mx-auto mb-4 opacity-80" />
+                      <p className="text-lg font-medium">Joyful English Learning</p>
+                      <p className="text-sm opacity-70">Ages 3–8 • Daily + Weekly format</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Strip (Logos & Certifications) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 overflow-x-hidden">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-6 w-full m-0 p-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full">
+              {['Education Finland', 'Moomin Characters', 'University Partners', 'Global Schools', 'Teacher Ready'].map((partner, index) => (
+                <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm opacity-60 hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium text-gray-600">{partner}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1" />
+                Finnish Pedagogy
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                <Star className="w-3 h-3 mr-1" />
+                Loved by Children
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1" />
+                Teacher Friendly
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* Who It's For (3 Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+              {[
+                {
+                  icon: <Baby className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Children (3–8)",
+                  points: ["Joyful daily practice", "Safe, limited screen time"]
+                },
+                {
+                  icon: <Users className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Teachers",
+                  points: ["Ready-made materials", "No advanced English needed"]
+                },
+                {
+                  icon: <School className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Schools",
+                  points: ["Easy rollout", "Strong parent appeal"]
+                }
+              ].map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
+                >
+                  {card.icon}
+                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <ul className="space-y-2 text-center">
+                    {card.points.map((point, pointIndex) => (
+                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Key Highlights (Bulleted) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+              {[
+                "Daily app + weekly playful sessions",
+                "Native-modelled pronunciation",
+                "No reading/writing required",
+                "Teacher-ready materials included"
+              ].map((highlight, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
+                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outcomes / Stats (3 Metric Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Proven Outcomes</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
+              {[
+                { number: "3–8", caption: "Ages supported" },
+                { number: "500+", caption: "Teacher-ready lesson plans" },
+                { number: "1000+", caption: "Interactive exercises" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center text-center p-6 bg-white rounded-2xl"
+                >
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof (Testimonial / Logo Row) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl text-center">
+              <div className="flex justify-center mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-lg text-[#0C0504] mb-4">
+                "Children look forward to Moomin time every day. Teachers love how easy it is to run, and parents see the progress at home."
+              </blockquote>
+              <cite className="text-[#0C0504] opacity-80 font-medium">
+                — Principal, Early Years School
+              </cite>
+            </div>
+            <div className="flex flex-wrap justify-center gap-8 opacity-60">
+              {['Education Finland', 'Moomin Characters', 'Global Schools', 'Teacher Ready'].map((item, index) => (
+                <div key={index} className="text-sm font-medium text-gray-600">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Lead Capture (Short Form) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <div className="max-w-2xl text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Bring Moomin Language School to Your Classrooms</h2>
+              <p className="text-[#0C0504] opacity-80 mb-8">
+                Simple to start, joyful to teach, and loved by children. Request details or schedule a demo.
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="w-full max-w-2xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="role"
+                  placeholder="Role/Position"
+                  value={formData.role}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="organization"
+                  placeholder="School/Organization"
+                  value={formData.organization}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                />
+                <select
+                  name="intent"
+                  value={formData.intent}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                >
+                  <option value="">Select Intent</option>
+                  <option value="consultation">Book Consultation</option>
+                  <option value="demo">Schedule a Demo</option>
+                  <option value="program-details">Request Program Details</option>
+                  <option value="pilot">Start Pilot</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                  <input type="checkbox" className="mt-1" required />
+                  I agree to receive communications about Moomin Language School and understand that I can unsubscribe at any time.
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+              >
+                Submit Request
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      {/* CTA Bar (Sticky on Mobile) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
+        <div className="flex gap-2">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
+            <Phone className="w-4 h-4" />
+            Call
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Mail className="w-4 h-4" />
+            Info
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Play className="w-4 h-4" />
+            Demo
+          </button>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
