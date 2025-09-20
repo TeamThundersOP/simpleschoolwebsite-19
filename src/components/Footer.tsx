@@ -1,21 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const footerLinks = {
   products: [
-    { name: "Code School", href: "/code-school" },
+    { name: "Code School Finland", href: "/code-school" },
     { name: "Finnish Experience", href: "/finnish-experience" },
     { name: "GraphoGame", href: "/grapho-game" },
     { name: "Kindie Days", href: "/kindie-days" },
     { name: "Moomin Language School", href: "/moomin-language-school" }
   ],
   services: [
-    { name: "Students", href: "/students" },
-    { name: "Teachers", href: "/teachers" },
-    { name: "School Management", href: "/school-management" }
+    { name: "For Students", href: "/students" },
+    { name: "For Teachers", href: "/teachers" },
+    { name: "School Management", href: "/school-management" },
+    { name: "All Services", href: "/services" }
   ],
-  quickLinks: [
+  company: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" }
+    { name: "About Us", href: "/about" },
+    { name: "Product Page", href: "/product" },
+    { name: "Contact", href: "#contact" }
+  ],
+  legal: [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" }
   ]
 };
 
@@ -77,101 +86,154 @@ const SocialIcon: React.FC<SocialIconProps> = ({ type, href }) => {
 };
 
 const Footer: React.FC = () => {
+  const renderFooterLink = (link: { name: string; href: string }) => {
+    if (link.href.startsWith('#')) {
+      return (
+        <a
+          key={link.href}
+          href={link.href}
+          className="box-border text-white/90 text-sm sm:text-base font-normal leading-6 cursor-pointer m-0 p-0 hover:text-[#b2e61b] transition-colors duration-200"
+        >
+          {link.name}
+        </a>
+      );
+    }
+    
+    return (
+      <Link
+        key={link.href}
+        to={link.href}
+        className="box-border text-white/90 text-sm sm:text-base font-normal leading-6 cursor-pointer m-0 p-0 hover:text-[#b2e61b] transition-colors duration-200"
+      >
+        {link.name}
+      </Link>
+    );
+  };
+
   return (
     <footer className="box-border flex w-full flex-col items-center gap-6 sm:gap-8 md:gap-10 bg-[#021223] m-0 px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-10 md:py-14 lg:py-16 overflow-x-hidden">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 sm:gap-10 w-full m-0 p-0">
         <div className="box-border flex flex-wrap justify-between items-start w-full m-0 p-0 gap-8 sm:gap-10 md:gap-12">
-          <div className="box-border flex w-auto h-14 sm:h-16 md:h-20 justify-center items-center shrink-0 m-0 p-0">
-            <img 
-              src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png" 
-              alt="School Grads Logo" 
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert drop-shadow-lg"
-              loading="lazy"
-              width={140}
-              height={64}
-            />
+          {/* Logo and Company Info */}
+          <div className="box-border flex flex-col items-start gap-4 m-0 p-0 max-w-sm">
+            <Link to="/" className="box-border flex w-auto h-14 sm:h-16 md:h-20 justify-start items-center shrink-0 m-0 p-0">
+              <img 
+                src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png" 
+                alt="School Grads Logo" 
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert drop-shadow-lg"
+                loading="lazy"
+                width={140}
+                height={64}
+              />
+            </Link>
+            <p className="text-white/80 text-sm leading-relaxed">
+              Transforming Indian education with global excellence through Finnish pedagogy and innovative learning solutions.
+            </p>
           </div>
-          <nav className="box-border flex flex-1 flex-wrap items-start gap-8 sm:gap-10 md:gap-14 lg:gap-20 m-0 p-0 max-md:flex-col max-md:gap-6 max-md:w-full" aria-label="Footer Navigation">
+          
+          {/* Navigation Links */}
+          <nav className="box-border flex flex-1 flex-wrap items-start gap-8 sm:gap-10 md:gap-12 lg:gap-16 m-0 p-0 max-md:flex-col max-md:gap-6 max-md:w-full" aria-label="Footer Navigation">
             <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 min-w-[140px]">
               <h3 className="box-border text-white text-lg sm:text-xl font-bold leading-7 sm:leading-8 m-0 p-0 mb-1">
                 Products
               </h3>
-              {footerLinks.products.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="box-border text-white/90 text-sm sm:text-base font-normal leading-6 cursor-pointer m-0 p-0 hover:text-primary-300 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {footerLinks.products.map(renderFooterLink)}
             </div>
+            
             <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 min-w-[140px]">
               <h3 className="box-border text-white text-lg sm:text-xl font-bold leading-7 sm:leading-8 m-0 p-0 mb-1">
                 Services
               </h3>
-              {footerLinks.services.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="box-border text-white/90 text-sm sm:text-base font-normal leading-6 cursor-pointer m-0 p-0 hover:text-primary-300 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {footerLinks.services.map(renderFooterLink)}
             </div>
+            
             <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 min-w-[140px]">
               <h3 className="box-border text-white text-lg sm:text-xl font-bold leading-7 sm:leading-8 m-0 p-0 mb-1">
-                Quick Links
+                Company
               </h3>
-              {footerLinks.quickLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="box-border text-white/90 text-sm sm:text-base font-normal leading-6 cursor-pointer m-0 p-0 hover:text-primary-300 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {footerLinks.company.map(renderFooterLink)}
             </div>
+            
+            <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 min-w-[140px]">
+              <h3 className="box-border text-white text-lg sm:text-xl font-bold leading-7 sm:leading-8 m-0 p-0 mb-1">
+                Legal
+              </h3>
+              {footerLinks.legal.map(renderFooterLink)}
+            </div>
+          </nav>
+          
+          {/* Contact and Social Section */}
+          <div className="box-border flex flex-col items-start gap-6 m-0 p-0 min-w-[250px] max-md:w-full">
             {/* Contact Us Section */}
-            <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 min-w-[200px]">
+            <div className="box-border flex flex-col items-start gap-4 sm:gap-5 m-0 p-0 w-full">
               <h3 className="box-border text-white text-lg sm:text-xl font-bold leading-7 sm:leading-8 m-0 p-0 mb-1">
                 Contact Us
               </h3>
-              <address className="not-italic box-border text-white/90 text-sm sm:text-base font-normal leading-6 m-0 p-0 flex flex-col gap-2">
-                <div>
-                  <span className="font-semibold">Phone: </span>
-                  <a href="tel:7499929999" className="hover:text-primary-300 transition-colors underline underline-offset-2" aria-label="Call School Grads">7499929999</a>
+              <address className="not-italic box-border text-white/90 text-sm font-normal leading-6 m-0 p-0 flex flex-col gap-3">
+                <div className="flex flex-col gap-1">
+                  <span className="font-semibold text-white">Phone:</span>
+                  <a 
+                    href="tel:+917499929999" 
+                    className="hover:text-[#b2e61b] transition-colors duration-200 underline underline-offset-2" 
+                    aria-label="Call School Grads"
+                  >
+                    +91 74999 29999
+                  </a>
                 </div>
-                <div>
-                  <span className="font-semibold">Email: </span>
-                  <a href="mailto:info@schoolgrads.ai" className="hover:text-primary-300 transition-colors underline underline-offset-2" aria-label="Email School Grads">info@schoolgrads.ai</a>
+                <div className="flex flex-col gap-1">
+                  <span className="font-semibold text-white">Email:</span>
+                  <a 
+                    href="mailto:info@schoolgrads.ai" 
+                    className="hover:text-[#b2e61b] transition-colors duration-200 underline underline-offset-2" 
+                    aria-label="Email School Grads"
+                  >
+                    info@schoolgrads.ai
+                  </a>
                 </div>
-                <div>
-                  <span className="font-semibold">Address: </span>
-                  <span>
-                    School Grads, 7, 1-636/40, near ESI Hospital, Model Colony, Sundar Nagar, Erragadda, Hyderabad, Telangana 500038
+                <div className="flex flex-col gap-1">
+                  <span className="font-semibold text-white">Address:</span>
+                  <span className="text-white/80 text-sm leading-relaxed">
+                    School Grads, 7, 1-636/40,<br />
+                    Near ESI Hospital, Model Colony,<br />
+                    Sundar Nagar, Erragadda,<br />
+                    Hyderabad, Telangana 500038
                   </span>
                 </div>
               </address>
             </div>
-          </nav>
-          <div className="box-border flex flex-col items-center gap-3 sm:gap-4 md:gap-5 m-0 p-0 max-md:justify-center max-md:w-full">
-            <span className="text-white/80 text-sm font-medium mb-1">Follow us</span>
-            <div className="flex flex-row gap-3 sm:gap-4">
-              <SocialIcon type="facebook" href={socialLinks.facebook} />
-              <SocialIcon type="twitter" href={socialLinks.twitter} />
-              <SocialIcon type="linkedin" href={socialLinks.linkedin} />
-              <SocialIcon type="instagram" href={socialLinks.instagram} />
+            
+            {/* Social Media Section */}
+            <div className="box-border flex flex-col items-start gap-3 sm:gap-4 m-0 p-0 w-full">
+              <span className="text-white text-lg font-bold mb-1">Follow Us</span>
+              <div className="flex flex-row gap-3 sm:gap-4">
+                <SocialIcon type="facebook" href={socialLinks.facebook} />
+                <SocialIcon type="twitter" href={socialLinks.twitter} />
+                <SocialIcon type="linkedin" href={socialLinks.linkedin} />
+                <SocialIcon type="instagram" href={socialLinks.instagram} />
+              </div>
             </div>
           </div>
         </div>
+        
+        {/* Divider */}
         <div className="box-border w-full h-px bg-[rgba(255,255,255,0.12)] m-0 p-0" />
-        <div className="box-border flex justify-center items-center w-full m-0 p-0">
-          <p className="box-border text-white/70 text-xs sm:text-sm font-normal leading-5 m-0 p-0 text-center">
-            © {new Date().getFullYear()} <span className="font-semibold text-white">SchoolGrads</span>. All rights reserved.
+        
+        {/* Bottom Section */}
+        <div className="box-border flex flex-col sm:flex-row justify-between items-center w-full gap-4 m-0 p-0">
+          <p className="box-border text-white/70 text-xs sm:text-sm font-normal leading-5 m-0 p-0 text-center sm:text-left">
+            © {new Date().getFullYear()} <span className="font-semibold text-white">School Grads</span>. All rights reserved.
           </p>
+          <div className="flex flex-wrap gap-4 text-xs sm:text-sm">
+            <Link to="/privacy" className="text-white/70 hover:text-[#b2e61b] transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-white/70 hover:text-[#b2e61b] transition-colors duration-200">
+              Terms of Service
+            </Link>
+            <Link to="/cookies" className="text-white/70 hover:text-[#b2e61b] transition-colors duration-200">
+              Cookies
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
