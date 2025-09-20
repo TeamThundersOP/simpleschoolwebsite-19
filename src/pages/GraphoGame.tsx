@@ -39,32 +39,32 @@ const GraphoGame = () => {
       
       <main id="main" className="w-full" role="main">
         
-        {/* Hero (Compact) */}
-        <section className="box-border flex w-full flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+        {/* Hero (Compact) - Matching Home Page Style */}
+        <section className="box-border flex w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[#021223] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-x-hidden">
           <div className="box-border flex max-w-screen-xl w-full items-center gap-8 lg:gap-16 m-0 p-0">
             <div className="flex-1">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
-              >
+            >
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C0504] leading-tight">
                   GraphoGame
-                </h1>
+              </h1>
                 <p className="text-lg sm:text-xl text-[#0C0504] opacity-80">
                   Revolutionary reading game making literacy fun and effective for children worldwide.
-                </p>
+              </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold">
-                    Play Now
+                  Play Now
                     <Play className="w-4 h-4" />
-                  </button>
+                </button>
                   <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold">
-                    For Parents
-                  </button>
-                </div>
-              </motion.div>
+                  For Parents
+                </button>
+              </div>
+            </motion.div>
             </div>
             <div className="hidden lg:block w-80">
               <div className="w-full h-64 bg-gradient-to-br from-[#0C0504]/10 to-[#b2e61b]/10 rounded-2xl flex items-center justify-center">
@@ -100,8 +100,8 @@ const GraphoGame = () => {
                 50+ Countries
               </span>
             </div>
-          </div>
-        </section>
+            </div>
+          </section>
 
         {/* Who It's For (3 Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
@@ -139,11 +139,11 @@ const GraphoGame = () => {
                     {card.points.map((point, pointIndex) => (
                       <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
                     ))}
-                  </ul>
+                </ul>
                 </motion.div>
               ))}
-            </div>
-          </div>
+                    </div>
+                  </div>
         </section>
 
         {/* Key Highlights (Bulleted) */}
@@ -170,8 +170,8 @@ const GraphoGame = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+            </div>
+          </section>
 
         {/* Snapshot / Specs (Scrollable Chips) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
@@ -202,12 +202,12 @@ const GraphoGame = () => {
                         <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
                       </div>
                     )}
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* How It Works (3-4 Steps) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
@@ -294,8 +294,8 @@ const GraphoGame = () => {
                   <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
                 </motion.div>
               ))}
-            </div>
-          </div>
+                  </div>
+                </div>
         </section>
 
         {/* Social Proof (Testimonial / Case Logo Row) */}
@@ -318,9 +318,9 @@ const GraphoGame = () => {
               {['University of Jyväskylä', 'Education Finland', 'Reading Research', 'Global Schools'].map((partner, index) => (
                 <div key={index} className="text-sm font-medium text-gray-600">{partner}</div>
               ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Lead Capture (Short Form) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
@@ -328,8 +328,8 @@ const GraphoGame = () => {
             <div className="max-w-2xl text-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Start Your Child's Reading Journey</h2>
               <p className="text-[#0C0504] opacity-80 mb-8">
-                Join millions of families worldwide who trust GraphoGame for reading success.
-              </p>
+                  Join millions of families worldwide who trust GraphoGame for reading success.
+                </p>
             </div>
             <form onSubmit={handleSubmit} className="w-full max-w-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -389,7 +389,7 @@ const GraphoGame = () => {
                   <option value="school-trial">School Trial</option>
                   <option value="research">Research Partnership</option>
                 </select>
-              </div>
+                </div>
               <div className="mb-4">
                 <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
                   <input type="checkbox" className="mt-1" required />
@@ -404,8 +404,8 @@ const GraphoGame = () => {
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
-          </div>
-        </section>
+            </div>
+          </section>
       </main>
 
       {/* CTA Bar (Sticky on Mobile) */}
