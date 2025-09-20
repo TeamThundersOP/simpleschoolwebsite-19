@@ -347,4 +347,3 @@ const KindieDays = () => {
 };
 
 export default KindieDays;
-export default KindieDays;

@@ -345,4 +345,4 @@ const FinnishExperience = () => {
     </div>
   );
 };
-};
+export default FinnishExperience;
