@@ -19,6 +19,7 @@ const KindieDays = lazy(() => import("./pages/KindieDays"));
 const MoominLanguageSchool = lazy(() => import("./pages/MoominLanguageSchool"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
+const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => {
               <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/product" element={<ProductPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

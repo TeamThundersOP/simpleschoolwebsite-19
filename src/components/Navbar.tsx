@@ -61,7 +61,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       to={item.href}
-                      className="block px-4 py-2 text-card-foreground font-bold hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="block px-4 py-2 text-card-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                       onClick={() => setActiveDropdown(null)}
                     >
                       {item.name}
@@ -122,7 +122,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       to={item.href}
-                      className="text-gray-600 text-sm font-bold hover:text-gray-900 transition-colors"
+                      className="text-gray-600 text-sm hover:text-gray-900 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
