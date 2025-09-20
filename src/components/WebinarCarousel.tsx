@@ -184,8 +184,32 @@ const WebinarCarousel = () => {
                         </div>
                       </div>
                     </div>
-                    <button className="box-border bg-[#0C0504] hover:bg-[#0C0504]/90 text-white font-semibold rounded-lg px-4 py-2 text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#0C0504] focus:ring-offset-2 m-0">
-                      Join Webinar
+                    <button 
+                      className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-3 sm:px-4 py-2 sm:py-2.5 mt-2 sm:mt-4 rounded-full border-solid transition-all duration-300 hover:shadow-lg hover:scale-105 w-full text-center"
+                      style={{
+                        backgroundColor: "#0C0504",
+                        color: "#fff",
+                        borderColor: "#0C0504",
+                        transition: "background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s",
+                      }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.backgroundColor = "#b2e61b";
+                        (e.currentTarget as HTMLElement).style.borderColor = "#b2e61b";
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.backgroundColor = "#0C0504";
+                        (e.currentTarget as HTMLElement).style.borderColor = "#0C0504";
+                      }}
+                    >
+                      <span
+                        className="box-border text-xs sm:text-sm md:text-base font-medium leading-5 sm:leading-6 m-0 p-0"
+                        style={{ color: "#fff" }}
+                      >
+                        Join Webinar
+                      </span>
+                      <svg width="16" height="16" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 12.5L19.5 12.5M19.5 12.5L12.5 5.5M19.5 12.5L12.5 19.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </button>
                   </div>
                 </motion.article>
