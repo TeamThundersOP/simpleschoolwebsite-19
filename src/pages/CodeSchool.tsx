@@ -86,7 +86,7 @@ const CodeSchool = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="box-border text-[#0C0504] font-semibold leading-5 sm:leading-6 m-0 p-0">
+                  <span className="box-border text-highlight font-semibold leading-5 sm:leading-6 m-0 p-0">
                     Book Consultation
                   </span>
                 </motion.button>
@@ -149,9 +149,9 @@ const CodeSchool = () => {
         {/* School Grads Vision for India */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">School Grads Vision for India</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">School Grads Vision for India</h2>
             <div className="text-center max-w-4xl">
-              <p className="text-lg text-[#0C0504] leading-relaxed mb-6">
+              <p className="text-lg text-highlight leading-relaxed mb-6">
                 At SchoolGrads, our mission is to bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable. With our partner, Code School Finland, we help schools give students—from early years to high school—practical skills in coding, AI, robotics, and future skills while also building their creativity, innovation, and problem-solving abilities.
               </p>
             </div>
@@ -161,11 +161,11 @@ const CodeSchool = () => {
         {/* What Students, Teachers & Schools Gain - 3 Cards */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">What They Gain</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What They Gain</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 {
-                  icon: <Users className="w-8 h-8 text-[#0C0504]" />,
+                  icon: <Users className="w-8 h-8 text-highlight" />,
                   title: "What Students Gain",
                   points: [
                     "Coding, AI, robotics, and future skills are taught from basics to advanced levels",
@@ -174,7 +174,7 @@ const CodeSchool = () => {
                   ]
                 },
                 {
-                  icon: <GraduationCap className="w-8 h-8 text-[#0C0504]" />,
+                  icon: <GraduationCap className="w-8 h-8 text-highlight" />,
                   title: "What Teachers Gain",
                   points: [
                     "Designed for teachers with no prior coding experience",
@@ -183,7 +183,7 @@ const CodeSchool = () => {
                   ]
                 },
                 {
-                  icon: <School className="w-8 h-8 text-[#0C0504]" />,
+                  icon: <School className="w-8 h-8 text-highlight" />,
                   title: "What Schools Gain",
                   points: [
                     "Globally benchmarked curriculum, locally adaptable to boards and timetables",
@@ -203,12 +203,12 @@ const CodeSchool = () => {
                   <div className="box-border flex h-full w-full p-6 flex-col justify-start items-start gap-6 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
                     <div className="flex items-center gap-3">
                       {card.icon}
-                      <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                      <h3 className="text-xl font-semibold text-highlight">{card.title}</h3>
                     </div>
                     <ul className="space-y-3">
                       {card.points.map((point, pointIndex) => (
-                        <li key={pointIndex} className="flex items-start gap-2 text-[#0C0504] opacity-80">
-                          <span className="text-[#0C0504] font-bold text-lg">•</span>
+                        <li key={pointIndex} className="flex items-start gap-2 text-highlight opacity-80">
+                          <span className="text-highlight font-bold text-lg">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -223,26 +223,26 @@ const CodeSchool = () => {
         {/* Why Code School Finland */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Why Code School Finland</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Why Code School Finland</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
               {[
                 {
-                  icon: <Users className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Users className="w-6 h-6 text-highlight" />,
                   title: "Built by educators",
                   desc: "Co-created and tested with Finnish teachers"
                 },
                 {
-                  icon: <Globe className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Globe className="w-6 h-6 text-highlight" />,
                   title: "Trusted worldwide", 
                   desc: "Implemented in 20+ countries, available in 7 languages"
                 },
                 {
-                  icon: <Award className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Award className="w-6 h-6 text-highlight" />,
                   title: "Proven at scale",
                   desc: "3,00,000+ learners, thousands of trained teachers"
                 },
                 {
-                  icon: <Clock className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Clock className="w-6 h-6 text-highlight" />,
                   title: "Faster adoption",
                   desc: "Up to 80% less teacher training time, 90% less lesson prep"
                 }
@@ -258,8 +258,8 @@ const CodeSchool = () => {
                   <div className="box-border flex h-full w-full p-4 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
                     {item.icon}
                     <div>
-                      <h3 className="font-semibold text-[#0C0504] mb-1">{item.title}</h3>
-                      <p className="text-[#0C0504] opacity-80 text-sm">{item.desc}</p>
+                      <h3 className="font-semibold text-highlight mb-1">{item.title}</h3>
+                      <p className="text-highlight opacity-80 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -268,11 +268,11 @@ const CodeSchool = () => {
             
             {/* Quote */}
             <div className="relative group">
-              <div className="box-border flex h-full w-full p-6 flex-col justify-center items-center gap-4 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm max-w-3xl text-center border-l-4 border-l-[#0C0504]">
-                <p className="text-lg text-[#0C0504] italic mb-4">
+              <div className="box-border flex h-full w-full p-6 flex-col justify-center items-center gap-4 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm max-w-3xl text-center border-l-4 border-l-highlight">
+                <p className="text-lg text-highlight italic mb-4">
                   "Great teachers don't need to be coders—they need the right tools."
                 </p>
-                <p className="text-sm text-[#0C0504] opacity-70 font-medium">
+                <p className="text-sm text-highlight opacity-70 font-medium">
                   — Kaisu Pallaskallio, CEO & Co-Founder, Code School Finland
                 </p>
               </div>
@@ -283,26 +283,26 @@ const CodeSchool = () => {
         {/* What's Included */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">What's Included</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What's Included</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
               {[
                 {
-                  icon: <Target className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Target className="w-6 h-6 text-highlight" />,
                   title: "Custom Implementation Plan",
                   desc: "Designed around your school's grades, subjects, and vision"
                 },
                 {
-                  icon: <GraduationCap className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <GraduationCap className="w-6 h-6 text-highlight" />,
                   title: "Flexible Teacher Training",
                   desc: "Along with the certification, teachers get short, blended modules that fit into busy schedules"
                 },
                 {
-                  icon: <BookOpen className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <BookOpen className="w-6 h-6 text-highlight" />,
                   title: "Complete Classroom Kit",
                   desc: "Lesson plans, worksheets, guides, projects, and assessment guides included"
                 },
                 {
-                  icon: <Users className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Users className="w-6 h-6 text-highlight" />,
                   title: "Continuous Support",
                   desc: "Live and offline expert guidance, regular resource updates, and a dedicated helpdesk"
                 }
@@ -318,8 +318,8 @@ const CodeSchool = () => {
                   <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
                     {item.icon}
                     <div>
-                      <h3 className="font-semibold text-[#0C0504] mb-2">{item.title}</h3>
-                      <p className="text-[#0C0504] opacity-80">{item.desc}</p>
+                      <h3 className="font-semibold text-highlight mb-2">{item.title}</h3>
+                      <p className="text-highlight opacity-80">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -334,25 +334,25 @@ const CodeSchool = () => {
             {/* Pedagogy & Fit for India */}
             <div className="flex-1 relative group">
               <div className="box-border flex h-full w-full p-6 flex-col justify-start items-start gap-6 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C0504] mb-6">Pedagogy & Fit for India</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">Pedagogy & Fit for India</h2>
                 <div className="space-y-4">
                   {[
                     {
-                      icon: <Lightbulb className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Lightbulb className="w-5 h-5 text-highlight" />,
                       text: "Project-based & hands-on – Students learn by building, testing, and creating together"
                     },
                     {
-                      icon: <Brain className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Brain className="w-5 h-5 text-highlight" />,
                       text: "Research-led – Focus on creativity, collaboration, and critical thinking"
                     },
                     {
-                      icon: <Check className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Check className="w-5 h-5 text-highlight" />,
                       text: "Aligned with NEP 2020 – Supports digital literacy and computational thinking goals"
                     }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       {item.icon}
-                      <span className="text-[#0C0504]">{item.text}</span>
+                      <span className="text-highlight">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -362,25 +362,25 @@ const CodeSchool = () => {
             {/* Implementation with School Grads */}
             <div className="flex-1 relative group">
               <div className="box-border flex h-full w-full p-6 flex-col justify-start items-start gap-6 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C0504] mb-6">Implementation with School Grads</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">Implementation with School Grads</h2>
                 <div className="space-y-4">
                   {[
                     {
-                      icon: <Clock className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Clock className="w-5 h-5 text-highlight" />,
                       text: "Rapid onboarding for leadership and staff"
                     },
                     {
-                      icon: <Cog className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Cog className="w-5 h-5 text-highlight" />,
                       text: "Timetable integration across subjects and grades"
                     },
                     {
-                      icon: <Star className="w-5 h-5 text-[#0C0504]" />,
+                      icon: <Star className="w-5 h-5 text-highlight" />,
                       text: "Monitoring, assessments, and showcase events (hackathons, exhibitions)"
                     }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       {item.icon}
-                      <span className="text-[#0C0504]">{item.text}</span>
+                      <span className="text-highlight">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -392,7 +392,7 @@ const CodeSchool = () => {
         {/* Outcomes You Can Expect */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Outcomes You Can Expect</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Outcomes You Can Expect</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 "Teachers confidently leading coding & AI lessons without extra burden",
@@ -408,8 +408,8 @@ const CodeSchool = () => {
                   className="relative group"
                 >
                   <div className="box-border flex h-full w-full p-6 items-start gap-3 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                    <Check className="w-6 h-6 text-[#0C0504] flex-shrink-0 mt-1" />
-                    <span className="text-[#0C0504] font-medium">{outcome}</span>
+                    <Check className="w-6 h-6 text-highlight flex-shrink-0 mt-1" />
+                    <span className="text-highlight font-medium">{outcome}</span>
                   </div>
                 </motion.div>
               ))}
@@ -421,8 +421,8 @@ const CodeSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-2">Code School Finland × School Grads</h2>
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#0C0504]">Curriculum Roadmap: Future Skills from K–12</h3>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-2">Code School Finland × School Grads</h2>
+              <h3 className="text-xl sm:text-2xl font-semibold text-highlight">Curriculum Roadmap: Future Skills from K–12</h3>
             </div>
 
             <div className="w-full space-y-6">
@@ -431,13 +431,13 @@ const CodeSchool = () => {
                   stage: "Early Years (K–2 | Ages 5–7)",
                   course: "Future Thinker",
                   description: "Help young children develop computational thinking through playful activities that spark curiosity and prepare them for digital learning.",
-                  icon: <Brain className="w-6 h-6 text-[#0C0504]" />
+                  icon: <Brain className="w-6 h-6 text-highlight" />
                 },
                 {
                   stage: "Lower Primary (Grades 1–3 | Ages 6–9)",
                   course: "Little AI Learner",
                   description: "Discover AI through engaging, unplugged activities and creative exploration for young learners.",
-                  icon: <Lightbulb className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Lightbulb className="w-6 h-6 text-highlight" />,
                   course2: "Junior Coder",
                   description2: "Develop computational thinking and problem-solving through hands-on ScratchJr activities."
                 },
@@ -445,13 +445,13 @@ const CodeSchool = () => {
                   stage: "Upper Primary (Grades 3–6 | Ages 8–11)",
                   course: "Code & Create + AI",
                   description: "Practise computational thinking by creating stories, games, and AI apps using Scratch.",
-                  icon: <Code className="w-6 h-6 text-[#0C0504]" />
+                  icon: <Code className="w-6 h-6 text-highlight" />
                 },
                 {
                   stage: "Middle School (Grades 3–8 | Ages 8–13)",
                   course: "Automate",
                   description: "Get practical experience in automation and embedded systems while building with sensors, processors, and actuators.",
-                  icon: <Cog className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Cog className="w-6 h-6 text-highlight" />,
                   course2: "Develop & Test",
                   description2: "Design and build educational games by applying product development principles."
                 },
@@ -459,7 +459,7 @@ const CodeSchool = () => {
                   stage: "Lower Secondary (Grades 6–9 | Ages 11–15)",
                   course: "Solutions & Syntax",
                   description: "Build work-life skills through innovative, project-based learning in a textual programming course.",
-                  icon: <Code className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Code className="w-6 h-6 text-highlight" />,
                   course2: "AI Vision",
                   description2: "Create machine vision and augmented reality projects to explore AI creatively."
                 },
@@ -467,7 +467,7 @@ const CodeSchool = () => {
                   stage: "Upper Secondary (Grades 8–12 | Ages 13–17)",
                   course: "ICT Explorer",
                   description: "Learn to navigate the internet and computer systems safely and independently.",
-                  icon: <Shield className="w-6 h-6 text-[#0C0504]" />,
+                  icon: <Shield className="w-6 h-6 text-highlight" />,
                   course2: "Web Innovator",
                   description2: "Design stunning, functional webpages by progressing from basic web design to AI-enhanced applications.",
                   course3: "Teachable Machine",
@@ -477,7 +477,7 @@ const CodeSchool = () => {
                   stage: "Senior Secondary (Grades 9–12 | Ages 14–18)",
                   course: "Sensor Challenger",
                   description: "Conduct experiments with electromechanics and embedded systems to build sensor-activated games in a project-based course.",
-                  icon: <Gamepad2 className="w-6 h-6 text-[#0C0504]" />
+                  icon: <Gamepad2 className="w-6 h-6 text-highlight" />
                 }
               ].map((level, index) => (
                 <motion.div
@@ -488,28 +488,28 @@ const CodeSchool = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative group"
                 >
-                  <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm border-l-4 border-l-[#0C0504]">
+                  <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm border-l-4 border-l-highlight">
                     {level.icon}
                     <div className="flex-1">
-                      <h4 className="text-lg font-bold text-[#0C0504] mb-2">{level.stage}</h4>
+                      <h4 className="text-lg font-bold text-highlight mb-2">{level.stage}</h4>
                       
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-[#0C0504] mb-1">{level.course}</h5>
-                          <p className="text-[#0C0504] opacity-80 text-sm">{level.description}</p>
+                            <h5 className="font-semibold text-highlight mb-1">{level.course}</h5>
+                            <p className="text-highlight opacity-80 text-sm">{level.description}</p>
                         </div>
                         
                         {level.course2 && (
                           <div>
-                            <h5 className="font-semibold text-[#0C0504] mb-1">{level.course2}</h5>
-                            <p className="text-[#0C0504] opacity-80 text-sm">{level.description2}</p>
+                            <h5 className="font-semibold text-highlight mb-1">{level.course2}</h5>
+                            <p className="text-highlight opacity-80 text-sm">{level.description2}</p>
                           </div>
                         )}
                         
                         {level.course3 && (
                           <div>
-                            <h5 className="font-semibold text-[#0C0504] mb-1">{level.course3}</h5>
-                            <p className="text-[#0C0504] opacity-80 text-sm">{level.description3}</p>
+                            <h5 className="font-semibold text-highlight mb-1">{level.course3}</h5>
+                            <p className="text-highlight opacity-80 text-sm">{level.description3}</p>
                           </div>
                         )}
                       </div>

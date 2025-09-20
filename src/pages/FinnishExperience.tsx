@@ -78,7 +78,7 @@ const FinnishExperience = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="box-border text-[#0C0504] font-semibold leading-5 sm:leading-6 m-0 p-0">
+                  <span className="box-border text-highlight font-semibold leading-5 sm:leading-6 m-0 p-0">
                     Explore Finland
                   </span>
                 </motion.button>
@@ -141,7 +141,7 @@ const FinnishExperience = () => {
         {/* Who It's For (3 Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Who It's For</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 {
@@ -169,10 +169,10 @@ const FinnishExperience = () => {
                   className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
                 >
                   {card.icon}
-                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <h3 className="text-xl font-semibold text-highlight">{card.title}</h3>
                   <ul className="space-y-2 text-center">
                     {card.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                      <li key={pointIndex} className="text-highlight opacity-80">• {point}</li>
                     ))}
                   </ul>
                 </motion.div>
@@ -184,7 +184,7 @@ const FinnishExperience = () => {
         {/* Key Highlights (Bulleted) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Key Highlights</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
               {[
                 "World's #1 education system",
@@ -201,7 +201,7 @@ const FinnishExperience = () => {
                   className="flex items-center gap-3"
                 >
                   <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
-                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                  <span className="text-highlight font-medium">{highlight}</span>
                 </motion.div>
               ))}
             </div>
@@ -211,7 +211,7 @@ const FinnishExperience = () => {
         {/* Outcomes / Stats (3 Metric Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Finnish Excellence</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Finnish Excellence</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
               {[
                 { number: "#1", caption: "Global education ranking" },
@@ -229,7 +229,7 @@ const FinnishExperience = () => {
                   <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                  <div className="text-highlight opacity-80">{stat.caption}</div>
                 </motion.div>
               ))}
             </div>
@@ -240,8 +240,8 @@ const FinnishExperience = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="max-w-2xl text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Experience Finnish Excellence</h2>
-              <p className="text-[#0C0504] opacity-80 mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">Experience Finnish Excellence</h2>
+              <p className="text-highlight opacity-80 mb-8">
                 Join educators worldwide who have transformed their practice through Finnish educational philosophy.
               </p>
             </div>
@@ -306,14 +306,14 @@ const FinnishExperience = () => {
                 </select>
               </div>
               <div className="mb-4">
-                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                <label className="flex items-start gap-2 text-sm text-highlight opacity-80">
                   <input type="checkbox" className="mt-1" required />
                   I agree to receive communications about Finnish Experience and understand that I can unsubscribe at any time.
                 </label>
               </div>
               <button
                 type="submit"
-                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
               >
                 Submit Request
                 <ArrowRight className="w-4 h-4" />
@@ -326,15 +326,15 @@ const FinnishExperience = () => {
       {/* CTA Bar (Sticky on Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
         <div className="flex gap-2">
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
             <Phone className="w-4 h-4" />
             Call
           </button>
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-highlight text-highlight hover:bg-highlight hover:text-white transition-all duration-300 font-semibold text-sm">
             <Mail className="w-4 h-4" />
             Info
           </button>
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-highlight hover:bg-highlight hover:text-white transition-all duration-300 font-semibold text-sm">
             <Globe className="w-4 h-4" />
             Explore
           </button>

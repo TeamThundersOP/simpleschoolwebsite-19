@@ -56,7 +56,7 @@ const MoominLanguageSchool = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Moomin Language School
+                Moomin Language School
                 </motion.h1>
                 <motion.p
                   className="box-border w-full text-white text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed m-0 p-0 max-w-2xl break-words"
@@ -78,7 +78,7 @@ const MoominLanguageSchool = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="box-border text-[#0C0504] font-semibold leading-5 sm:leading-6 m-0 p-0">
+              <span className="box-border text-highlight font-semibold leading-5 sm:leading-6 m-0 p-0">
                     Get Started
                   </span>
                 </motion.button>
@@ -103,9 +103,9 @@ const MoominLanguageSchool = () => {
                       <BookOpen className="h-16 w-16 mx-auto mb-4 opacity-80" />
                       <p className="text-lg font-medium">Joyful English Learning</p>
                       <p className="text-sm opacity-70">Ages 3–8 • Daily + Weekly format</p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              </div>
+              </div>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@ const MoominLanguageSchool = () => {
         {/* Who It's For (3 Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Who It's For</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 {
@@ -169,22 +169,22 @@ const MoominLanguageSchool = () => {
                   className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
                 >
                   {card.icon}
-                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <h3 className="text-xl font-semibold text-highlight">{card.title}</h3>
                   <ul className="space-y-2 text-center">
                     {card.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                      <li key={pointIndex} className="text-highlight opacity-80">• {point}</li>
                     ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
-          </div>
+                  </div>
         </section>
 
         {/* Key Highlights (Bulleted) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Key Highlights</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
               {[
                 "Daily app + weekly playful sessions",
@@ -201,17 +201,17 @@ const MoominLanguageSchool = () => {
                   className="flex items-center gap-3"
                 >
                   <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
-                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                  <span className="text-highlight font-medium">{highlight}</span>
                 </motion.div>
               ))}
-            </div>
-          </div>
+                  </div>
+                </div>
         </section>
 
         {/* Outcomes / Stats (3 Metric Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Proven Outcomes</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Proven Outcomes</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
               {[
                 { number: "3–8", caption: "Ages supported" },
@@ -229,7 +229,7 @@ const MoominLanguageSchool = () => {
                   <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                  <div className="text-highlight opacity-80">{stat.caption}</div>
                 </motion.div>
               ))}
             </div>
@@ -245,10 +245,10 @@ const MoominLanguageSchool = () => {
                   <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-lg text-[#0C0504] mb-4">
+              <blockquote className="text-lg text-highlight mb-4">
                 "Children look forward to Moomin time every day. Teachers love how easy it is to run, and parents see the progress at home."
               </blockquote>
-              <cite className="text-[#0C0504] opacity-80 font-medium">
+              <cite className="text-highlight opacity-80 font-medium">
                 — Principal, Early Years School
               </cite>
             </div>
@@ -264,8 +264,8 @@ const MoominLanguageSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="max-w-2xl text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Bring Moomin Language School to Your Classrooms</h2>
-              <p className="text-[#0C0504] opacity-80 mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">Bring Moomin Language School to Your Classrooms</h2>
+              <p className="text-highlight opacity-80 mb-8">
                 Simple to start, joyful to teach, and loved by children. Request details or schedule a demo.
               </p>
             </div>
@@ -330,14 +330,14 @@ const MoominLanguageSchool = () => {
                 </select>
               </div>
               <div className="mb-4">
-                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                <label className="flex items-start gap-2 text-sm text-highlight opacity-80">
                   <input type="checkbox" className="mt-1" required />
                   I agree to receive communications about Moomin Language School and understand that I can unsubscribe at any time.
                 </label>
-              </div>
+            </div>
               <button
                 type="submit"
-                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
               >
                 Submit Request
                 <ArrowRight className="w-4 h-4" />
@@ -350,15 +350,15 @@ const MoominLanguageSchool = () => {
       {/* CTA Bar (Sticky on Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
         <div className="flex gap-2">
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
             <Phone className="w-4 h-4" />
             Call
           </button>
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-highlight text-highlight hover:bg-highlight hover:text-white transition-all duration-300 font-semibold text-sm">
             <Mail className="w-4 h-4" />
             Info
           </button>
-          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-highlight hover:bg-highlight hover:text-white transition-all duration-300 font-semibold text-sm">
             <Play className="w-4 h-4" />
             Demo
           </button>

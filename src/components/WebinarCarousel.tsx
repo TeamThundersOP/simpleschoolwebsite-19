@@ -92,16 +92,16 @@ const WebinarCarousel = () => {
       <div className="box-border flex max-w-screen-xl flex-col items-start gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full m-0 p-0">
         {/* Header */}
         <div className="box-border flex max-w-screen-md flex-col items-start gap-3 sm:gap-4 w-full m-0 p-0">
-          <div className="box-border flex items-center m-0 p-0">
-            <div className="box-border text-[#0C0504] text-sm sm:text-base font-semibold leading-6 m-0 p-0 uppercase tracking-widest">
+            <div className="box-border flex items-center m-0 p-0">
+            <div className="box-border text-highlight text-sm sm:text-base font-semibold leading-6 m-0 p-0 uppercase tracking-widest">
               Events
             </div>
           </div>
           <div className="box-border flex flex-col items-start gap-3 sm:gap-4 lg:gap-6 w-full m-0 p-0">
-            <h2 className="box-border w-full text-[#0C0504] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-medium leading-tight tracking-tight m-0 p-0 break-words">
+            <h2 className="box-border w-full text-highlight text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-medium leading-tight tracking-tight m-0 p-0 break-words">
               Upcoming Webinars
             </h2>
-            <p className="box-border w-full text-[#0C0504] text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
+            <p className="box-border w-full text-highlight text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
               Join our expert-led webinars to learn about the latest trends in education and innovative teaching methods from global experts.
             </p>
           </div>
@@ -129,7 +129,7 @@ const WebinarCarousel = () => {
               className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 bg-white border border-gray-200 rounded-full shadow-lg hover:bg-gray-50 p-2 sm:p-3 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
               aria-label="Previous webinar"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#0C0504]" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-highlight" />
             </button>
             
             <button
@@ -137,7 +137,7 @@ const WebinarCarousel = () => {
               className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 bg-white border border-gray-200 rounded-full shadow-lg hover:bg-gray-50 p-2 sm:p-3 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
               aria-label="Next webinar"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#0C0504]" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-highlight" />
             </button>
             {/* Show 3 cards starting from currentIndex */}
             {Array.from({ length: 3 }).map((_, i) => {
@@ -163,23 +163,23 @@ const WebinarCarousel = () => {
                   </div>
                   <div className="box-border flex flex-col items-start gap-3 sm:gap-4 lg:gap-6 w-full m-0 p-0">
                     <div className="box-border flex flex-col items-start gap-2 lg:gap-3 w-full m-0 p-0">
-                      <h3 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-[#0C0504]">
+                      <h3 className="box-border w-full text-highlight text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-highlight">
                         {webinar.title}
                       </h3>
-                      <h4 className="box-border w-full text-[#0C0504] text-base md:text-lg font-semibold leading-tight m-0 p-0 break-words transition-colors duration-300">
+                      <h4 className="box-border w-full text-highlight text-base md:text-lg font-semibold leading-tight m-0 p-0 break-words transition-colors duration-300">
                         {webinar.name}
                       </h4>
-                      <div className="box-border flex flex-col gap-1 w-full text-[#0C0504] text-sm md:text-base font-normal leading-5 sm:leading-6 m-0 p-0 break-words transition-colors duration-300">
+                      <div className="box-border flex flex-col gap-1 w-full text-highlight text-sm md:text-base font-normal leading-5 sm:leading-6 m-0 p-0 break-words transition-colors duration-300">
                         <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 text-[#0C0504] opacity-70" />
+                          <MapPin className="w-4 h-4 text-highlight opacity-70" />
                           <span>{webinar.location}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-[#0C0504] opacity-70" />
+                          <Calendar className="w-4 h-4 text-highlight opacity-70" />
                           <span>{webinar.date}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-[#0C0504] opacity-70" />
+                          <Clock className="w-4 h-4 text-highlight opacity-70" />
                           <span>{webinar.time}</span>
                         </div>
                       </div>
@@ -187,9 +187,9 @@ const WebinarCarousel = () => {
                     <button 
                       className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-3 sm:px-4 py-2 sm:py-2.5 mt-2 sm:mt-4 rounded-full border-solid transition-all duration-300 hover:shadow-lg hover:scale-105 w-full text-center"
                       style={{
-                        backgroundColor: "#0C0504",
+                        backgroundColor: "hsl(var(--highlight))",
                         color: "#fff",
-                        borderColor: "#0C0504",
+                        borderColor: "hsl(var(--highlight))",
                         transition: "background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s",
                       }}
                       onMouseEnter={e => {
@@ -197,8 +197,8 @@ const WebinarCarousel = () => {
                         (e.currentTarget as HTMLElement).style.borderColor = "#b2e61b";
                       }}
                       onMouseLeave={e => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor = "#0C0504";
-                        (e.currentTarget as HTMLElement).style.borderColor = "#0C0504";
+                        (e.currentTarget as HTMLElement).style.backgroundColor = "hsl(var(--highlight))";
+                        (e.currentTarget as HTMLElement).style.borderColor = "hsl(var(--highlight))";
                       }}
                     >
                       <span
@@ -225,8 +225,8 @@ const WebinarCarousel = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full border-2 transition-all duration-200 ${
                   index === currentIndex
-                    ? "bg-[#0C0504] border-[#0C0504] scale-110 shadow"
-                    : "bg-gray-200 border-gray-300 hover:bg-[#0C0504] hover:border-[#0C0504]"
+                    ? "bg-highlight border-highlight scale-110 shadow"
+                    : "bg-gray-200 border-gray-300 hover:bg-highlight hover:border-highlight"
                 }`}
                 aria-label={`Go to webinar ${index + 1}`}
               />

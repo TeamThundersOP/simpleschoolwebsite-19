@@ -49,26 +49,26 @@ const GraphoGame = () => {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
             >
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C0504] leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-highlight leading-tight">
                   GraphoGame
               </h1>
-                <p className="text-lg sm:text-xl text-[#0C0504] opacity-80">
+                <p className="text-lg sm:text-xl text-highlight opacity-80">
                   Revolutionary reading game making literacy fun and effective for children worldwide.
               </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold">
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold">
                   Play Now
                     <Play className="w-4 h-4" />
                 </button>
-                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold">
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-highlight text-highlight hover:bg-highlight hover:text-white transition-all duration-300 font-semibold">
                   For Parents
                 </button>
               </div>
             </motion.div>
             </div>
             <div className="hidden lg:block w-80">
-              <div className="w-full h-64 bg-gradient-to-br from-[#0C0504]/10 to-[#b2e61b]/10 rounded-2xl flex items-center justify-center">
-                <div className="w-20 h-20 bg-[#0C0504] rounded-full flex items-center justify-center">
+              <div className="w-full h-64 bg-gradient-to-br from-[hsl(var(--highlight))]/10 to-[#b2e61b]/10 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 bg-highlight rounded-full flex items-center justify-center">
                   <Gamepad2 className="w-10 h-10 text-[#b2e61b]" />
                 </div>
               </div>
@@ -99,14 +99,14 @@ const GraphoGame = () => {
                 <Check className="w-3 h-3 mr-1" />
                 50+ Countries
               </span>
-            </div>
+              </div>
             </div>
           </section>
 
         {/* Who It's For (3 Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Who It's For</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 {
@@ -134,10 +134,10 @@ const GraphoGame = () => {
                   className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
                 >
                   {card.icon}
-                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <h3 className="text-xl font-semibold text-highlight">{card.title}</h3>
                   <ul className="space-y-2 text-center">
                     {card.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                      <li key={pointIndex} className="text-highlight opacity-80">• {point}</li>
                     ))}
                 </ul>
                 </motion.div>
@@ -149,7 +149,7 @@ const GraphoGame = () => {
         {/* Key Highlights (Bulleted) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Key Highlights</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
               {[
                 "Scientifically designed reading games",
@@ -166,17 +166,17 @@ const GraphoGame = () => {
                   className="flex items-center gap-3"
                 >
                   <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
-                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                  <span className="text-highlight font-medium">{highlight}</span>
                 </motion.div>
               ))}
-            </div>
+              </div>
             </div>
           </section>
 
         {/* Snapshot / Specs (Scrollable Chips) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Game Features</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Game Features</h2>
             <div className="overflow-x-auto w-full">
               <div className="flex gap-3 pb-2 min-w-max">
                 {[
@@ -193,7 +193,7 @@ const GraphoGame = () => {
                     onMouseEnter={() => setSelectedChip(index)}
                     onMouseLeave={() => setSelectedChip(null)}
                   >
-                    <span className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-[#b2e61b] hover:text-white text-[#0C0504] text-sm font-medium rounded-full border border-gray-200 cursor-pointer transition-all duration-200 whitespace-nowrap">
+                    <span className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-[#b2e61b] hover:text-white text-highlight text-sm font-medium rounded-full border border-gray-200 cursor-pointer transition-all duration-200 whitespace-nowrap">
                       {spec.label}
                     </span>
                     {selectedChip === index && (
@@ -212,7 +212,7 @@ const GraphoGame = () => {
         {/* How It Works (3-4 Steps) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">How It Works</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
               {[
                 { step: "1", title: "Start Playing", desc: "Download and begin with age-appropriate games" },
@@ -227,11 +227,11 @@ const GraphoGame = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex flex-col items-center text-center gap-4"
                 >
-                  <div className="w-12 h-12 bg-[#0C0504] text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="w-12 h-12 bg-highlight text-white rounded-full flex items-center justify-center font-bold text-lg">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-semibold text-[#0C0504]">{item.title}</h3>
-                  <p className="text-[#0C0504] opacity-80">{item.desc}</p>
+                  <h3 className="text-lg font-semibold text-highlight">{item.title}</h3>
+                  <p className="text-highlight opacity-80">{item.desc}</p>
                   {index < 2 && (
                     <ChevronRight className="w-6 h-6 text-[#b2e61b] hidden md:block absolute top-6 -right-4" />
                   )}
@@ -244,7 +244,7 @@ const GraphoGame = () => {
         {/* Use Cases (Tiles) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Use Cases</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Use Cases</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
               {[
                 { title: "Home Learning", desc: "Support reading development at home" },
@@ -262,8 +262,8 @@ const GraphoGame = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-[#0C0504] mb-2">{useCase.title}</h3>
-                  <p className="text-[#0C0504] opacity-80">{useCase.desc}</p>
+                  <h3 className="text-lg font-semibold text-highlight mb-2">{useCase.title}</h3>
+                  <p className="text-highlight opacity-80">{useCase.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -273,7 +273,7 @@ const GraphoGame = () => {
         {/* Outcomes / Stats (3 Metric Cards) */}
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Proven Results</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Proven Results</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
               {[
                 { number: "1M+", caption: "Children learning worldwide" },
@@ -291,7 +291,7 @@ const GraphoGame = () => {
                   <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                  <div className="text-highlight opacity-80">{stat.caption}</div>
                 </motion.div>
               ))}
                   </div>
@@ -307,10 +307,10 @@ const GraphoGame = () => {
                   <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-lg text-[#0C0504] mb-4">
+              <blockquote className="text-lg text-highlight mb-4">
                 "GraphoGame has transformed how our children approach reading. The games are engaging and the progress tracking helps us support their learning journey."
               </blockquote>
-              <cite className="text-[#0C0504] opacity-80 font-medium">
+              <cite className="text-highlight opacity-80 font-medium">
                 — Parent, Helsinki Elementary School
               </cite>
             </div>
@@ -326,8 +326,8 @@ const GraphoGame = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="max-w-2xl text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Start Your Child's Reading Journey</h2>
-              <p className="text-[#0C0504] opacity-80 mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">Start Your Child's Reading Journey</h2>
+              <p className="text-highlight opacity-80 mb-8">
                   Join millions of families worldwide who trust GraphoGame for reading success.
                 </p>
             </div>
@@ -391,14 +391,14 @@ const GraphoGame = () => {
                 </select>
                 </div>
               <div className="mb-4">
-                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                <label className="flex items-start gap-2 text-sm text-highlight opacity-80">
                   <input type="checkbox" className="mt-1" required />
                   I agree to receive communications about GraphoGame and understand that I can unsubscribe at any time.
                 </label>
               </div>
               <button
                 type="submit"
-                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4" />

@@ -55,7 +55,7 @@ const Newsletter = () => {
                 className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-3 py-1.5 rounded-full border-solid border-white max-sm:w-full hover:bg-gray-100 transition-colors disabled:opacity-50"
                 disabled={isSubmitted}
               >
-                <span className="box-border text-[#0C0504] text-base font-normal leading-6 m-0 p-0">
+                <span className="box-border text-highlight text-base font-normal leading-6 m-0 p-0">
                   {isSubmitted ? 'Subscribed!' : 'Sign Up'}
                 </span>
               </button>

@@ -38,6 +38,9 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Highlight brand color (rgb(17 24 39)) in HSL */
+    --highlight: 221 39% 11%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
