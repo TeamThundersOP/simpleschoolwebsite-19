@@ -88,7 +88,7 @@ const Products = () => {
             {products.map((product, index) => (
               <motion.article 
                 key={index} 
-                className="box-border flex flex-col items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl lg:rounded-[32px] hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4"
+                className="box-border flex flex-col justify-between items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl lg:rounded-[32px] hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4 h-full"
                 variants={{
                   hidden: { opacity: 0, y: 50 },
                   visible: { opacity: 1, y: 0 }

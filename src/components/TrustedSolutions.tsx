@@ -71,9 +71,42 @@ const TrustedSolutions = () => {
           </div>
         </div>
 
-        {/* Unified List for All Devices */}
+        {/* Trust Strip - Company Logos */}
         <motion.div
-          className="box-border grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full m-0 p-0"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+        >
+          {/* Placeholder trust indicators */}
+          {Array.from({ length: 5 }).map((_, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center justify-center p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20"
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 }
+              }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="text-white/60 text-xs font-medium">
+                Partner {index + 1}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Stats Section */}
+        <motion.div
+          className="box-border grid grid-cols-1 sm:grid-cols-3 gap-4 w-full m-0 p-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -99,7 +132,7 @@ const TrustedSolutions = () => {
               {/* Icon and Number in a single line */}
               <div className="mb-2 flex items-center justify-center gap-4">
                 {ICONS[index]}
-                <span className="box-border text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight m-0 p-0">
+                <span className="box-border text-white text-4xl font-semibold leading-tight m-0 p-0">
                   {stat.number}
                 </span>
               </div>
