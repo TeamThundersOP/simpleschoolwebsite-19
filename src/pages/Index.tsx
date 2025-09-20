@@ -10,6 +10,7 @@ import Seo from '@/components/Seo';
 import Team from '@/components/Team';
 import Testimonials from '@/components/Testimonials';
 import WebinarCarousel from '@/components/WebinarCarousel';
+import ImageGallery from '@/components/ImageGallery';
 import Newsletter from '@/components/Newsletter';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -75,6 +76,7 @@ const Index = () => {
         <Team />
         <Testimonials />
         <WebinarCarousel />
+        <ImageGallery />
         <Newsletter />
         <Contact />
       </main>
