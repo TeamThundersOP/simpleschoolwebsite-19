@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useLenis } from "@/hooks/use-lenis";
+import { FullPageLoader } from "@/components/ui/loader";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Students = lazy(() => import("./pages/Students"));
@@ -17,15 +19,12 @@ const KindieDays = lazy(() => import("./pages/KindieDays"));
 const MoominLanguageSchool = lazy(() => import("./pages/MoominLanguageSchool"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
-const StudentsService = lazy(() => import("./pages/services/Students"));
-const TeachersService = lazy(() => import("./pages/services/Teachers"));
-const SchoolManagementService = lazy(() => import("./pages/services/SchoolManagement"));
 
 const queryClient = new QueryClient();
 
 const App = () => {
   useLenis();
-
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -38,13 +37,8 @@ const App = () => {
           >
             Skip to main content
           </a>
-          <Suspense
-            fallback={
-              <div className="p-4" role="status" aria-live="polite">
-                Loading…
-              </div>
-            }
-          >
+          <ScrollToTop />
+          <Suspense fallback={<FullPageLoader text="Loading page..." />}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/students" element={<Students />} />
@@ -57,9 +51,6 @@ const App = () => {
               <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services/students" element={<StudentsService />} />
-              <Route path="/services/teachers" element={<TeachersService />} />
-              <Route path="/services/school-management" element={<SchoolManagementService />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

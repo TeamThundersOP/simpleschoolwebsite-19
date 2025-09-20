@@ -150,7 +150,6 @@ const Hero = () => {
               sm:gap-4 md:gap-6
               scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
               max-sm:flex-row
-              max-sm:space-x-4
               max-sm:overflow-x-auto
               max-sm:overflow-y-hidden
               max-sm:items-stretch
@@ -160,8 +159,6 @@ const Hero = () => {
               max-sm:w-[calc(100vw+32px)]
               max-sm:max-w-none
               max-sm:scroll-smooth
-              max-sm:gap-0
-              max-sm:space-x-0
               max-sm:justify-start
               max-sm:relative
               max-sm:z-10
@@ -176,17 +173,17 @@ const Hero = () => {
           >
             {/* Mobile: show all images in a single horizontal row */}
             <div
-              className="flex flex-row gap-3 sm:hidden w-full"
+              className="flex flex-row gap-3 w-full sm:hidden"
               ref={scrollRef}
               style={{ scrollBehavior: 'smooth', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}
             >
               {/* Duplicate images for seamless infinite scroll */}
-              {[...leftImages, ...rightImages, ...leftImages, ...rightImages].map((img, idx) => (
+              {[...leftImages, ...rightImages, ...leftImages, ...rightImages].map((img, idx, arr) => (
                 <img
                   key={img.src + idx}
                   src={img.src}
                   alt={img.alt}
-                  className="box-border h-32 w-40 shrink-0 aspect-[77/82] object-cover m-0 p-0 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                  className={`box-border h-32 w-40 shrink-0 aspect-[77/82] object-cover m-0 p-0 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105${idx !== arr.length - 1 ? ' mr-3' : ''}`}
                   loading="lazy"
                   style={{ minWidth: 160, maxWidth: 180 }}
                 />
@@ -194,24 +191,24 @@ const Hero = () => {
             </div>
             {/* Desktop: original two columns */}
             <React.Fragment>
-              <div className="box-border flex-col items-start gap-2 sm:gap-4 md:gap-6 m-0 p-0 w-1/2 lg:w-[260px] max-sm:hidden animate-[scroll-up_20s_ease-in-out_infinite_alternate]">
-                {leftImages.map((img) => (
+              <div className="box-border flex flex-col items-start gap-2 sm:gap-4 md:gap-6 m-0 p-0 w-1/2 lg:w-[260px] max-sm:hidden animate-[scroll-up_20s_ease-in-out_infinite_alternate]">
+                {leftImages.map((img, idx) => (
                   <img
                     key={img.src}
                     src={img.src}
                     alt={img.alt}
-                    className="box-border h-24 sm:h-32 md:h-40 lg:h-[200px] shrink-0 w-full aspect-[77/82] object-cover m-0 p-0 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105"
+                    className={`box-border h-24 sm:h-32 md:h-40 lg:h-[200px] shrink-0 w-full aspect-[77/82] object-cover m-0 p-0 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105${idx !== leftImages.length - 1 ? ' mb-2 sm:mb-4 md:mb-6' : ''}`}
                     loading="lazy"
                   />
                 ))}
               </div>
-              <div className="box-border flex-col items-start gap-2 sm:gap-4 md:gap-6 translate-y-0 sm:translate-y-[-30px] md:translate-y-[-40px] lg:translate-y-[-60px] m-0 p-0 w-1/2 lg:w-[260px] max-sm:hidden animate-[scroll-down_25s_ease-in-out_infinite_alternate]">
-                {rightImages.map((img) => (
+              <div className="box-border flex flex-col items-start gap-2 sm:gap-4 md:gap-6 translate-y-0 sm:translate-y-[-30px] md:translate-y-[-40px] lg:translate-y-[-60px] m-0 p-0 w-1/2 lg:w-[260px] max-sm:hidden animate-[scroll-down_25s_ease-in-out_infinite_alternate]">
+                {rightImages.map((img, idx) => (
                   <img
                     key={img.src}
                     src={img.src}
                     alt={img.alt}
-                    className="box-border h-24 sm:h-32 md:h-40 lg:h-[200px] shrink-0 w-full aspect-[77/82] object-cover m-0 p-0 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105"
+                    className={`box-border h-24 sm:h-32 md:h-40 lg:h-[200px] shrink-0 w-full aspect-[77/82] object-cover m-0 p-0 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105${idx !== rightImages.length - 1 ? ' mb-2 sm:mb-4 md:mb-6' : ''}`}
                     loading="lazy"
                   />
                 ))}

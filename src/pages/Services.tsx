@@ -1,217 +1,137 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Users, GraduationCap, Building2, ArrowRight, CheckCircle } from "lucide-react";
+import React, { memo } from "react";
+import { WorldMap } from "@/components/ui/world-map";
+import { GraduationCap, Users, Building2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { TOKENS } from "@/design/tokens-from-home";
-import { AltSection } from "@/components/blocks/alt-section";
-import { Button } from "@/components/ui/button";
 
-const Services = () => {
-  const services = [
-    {
-      icon: Users,
-      title: "For Students",
-      description: "Future-ready learning programs that develop computational thinking and creativity",
-      bullets: [
-        "Project-based coding & AI curriculum",
-        "Creative problem-solving skills",
-        "Real-world application projects"
-      ],
-      href: "/services/students",
-      gradient: "from-blue-500/20 to-purple-500/20"
-    },
-    {
-      icon: GraduationCap,
-      title: "For Teachers",
-      description: "Professional development and comprehensive training for educators",
-      bullets: [
-        "No prior coding experience required",
-        "Complete lesson plans & resources",
-        "Ongoing certification & support"
-      ],
-      href: "/services/teachers",
-      gradient: "from-green-500/20 to-emerald-500/20"
-    },
-    {
-      icon: Building2,
-      title: "For School Management",
-      description: "Strategic transformation and seamless adoption solutions",
-      bullets: [
-        "Global benchmarked curriculum",
-        "Stronger innovation profile",
-        "NEP 2020 alignment & compliance"
-      ],
-      href: "/services/school-management",
-      gradient: "from-orange-500/20 to-red-500/20"
-    }
-  ];
+// Memoize static data to avoid recreation on each render
+const worldMapDots = [
+  {
+    start: { lat: 20.5937, lng: 78.9629 }, // India
+    end: { lat: 61.9241, lng: 25.7482 }, // Finland
+  },
+  {
+    start: { lat: 20.5937, lng: 78.9629 }, // India
+    end: { lat: 37.0902, lng: -95.7129 }, // USA
+  },
+  {
+    start: { lat: 20.5937, lng: 78.9629 }, // India
+    end: { lat: -1.2921, lng: 36.8219 }, // Kenya (Africa)
+  },
+];
 
-  let sectionIndex = 0;
+const services = [
+  {
+    icon: <GraduationCap className="w-10 h-10 text-blue-500" />,
+    title: "For Students",
+    subtitle: "Future-Ready Learning (Pre-School to K–12)",
+    description:
+      "Programs in Coding, AI, English, Maths, Science, Robotics, and Future Skills designed for preschool to high school learners. We build strong foundations and advance skills step by step, preparing students with confidence, creativity, and problem-solving abilities to excel in academics, adapt to challenges, and succeed in future personal and professional journeys.",
+  },
+  {
+    icon: <Users className="w-10 h-10 text-green-500" />,
+    title: "For Teachers",
+    subtitle: "Professional Development, Training & Certification",
+    description:
+      "Training, certification, and continuous upskilling programs empower teachers to adopt innovative pedagogy. Teachers access lesson plans, digital resources, and classroom strategies to confidently teach future-ready subjects. With expert mentorship, they strengthen instructional practices, improve student outcomes, and achieve professional growth, equipping them to excel as impactful teachers in today’s evolving educational environment.",
+  },
+  {
+    icon: <Building2 className="w-10 h-10 text-purple-500" />,
+    title: "For School Leaders",
+    subtitle: "School Transformation & Consultation",
+    description:
+      "We provide expert support to transform schools into global-standard institutions through audits, consultations, and new school setups. Leaders benefit from participation in Finnish Experience Flagship or Partner School programs. Our approach fosters innovation, builds sustainable growth, and strengthens reputation, ensuring academic excellence and long-term success with future-ready frameworks and progressive leadership practices.",
+  },
+];
 
+// Extracted ServiceCard for reusability and memoization
+const ServiceCard = memo(function ServiceCard({ icon, title, subtitle, description }: typeof services[0]) {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <AltSection index={sectionIndex++}>
-        <section className={`${TOKENS.SECTION_PADDING} pt-32`}>
-          <div className={TOKENS.CONTAINER_CLASS}>
-            <div className="text-center max-w-4xl mx-auto">
-              <motion.h1 
-                className={`${TOKENS.H1_CLASS} ${TOKENS.TEXT_DARK} mb-6`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                Services
-              </motion.h1>
-              <motion.p 
-                className={`${TOKENS.BODY_CLASS} ${TOKENS.TEXT_DARK} mb-8`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                Future-skills for Students, practical training for Teachers, and seamless adoption for School Management.
-              </motion.p>
-              <motion.ul 
-                className={`${TOKENS.BODY_CLASS} ${TOKENS.TEXT_DARK} text-left max-w-2xl mx-auto mb-10 space-y-2`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  Designed for classrooms, powered by Finnish pedagogy
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  Complete implementation with teacher training & ongoing support
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  NEP 2020 aligned curriculum for Indian schools
-                </li>
-              </motion.ul>
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <Button size="lg" className={TOKENS.BTN_CUSTOM_PRIMARY}>
-                  Talk to us
-                </Button>
-                <Button variant="outline" size="lg">
-                  See how it works
-                </Button>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-      </AltSection>
+    <article
+      className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl lg:rounded-[32px] shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group"
+    >
+      <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
+        <div className="transition-colors duration-300 group-hover:[&>*]:text-white">
+          {icon}
+        </div>
+      </div>
+      <h2 className="box-border w-full text-[#0C0504] text-lg sm:text-xl md:text-2xl font-semibold leading-tight tracking-tight m-0 p-0 transition-colors duration-300 group-hover:text-white">
+        {title}
+      </h2>
+      <h3 className="box-border w-full text-[#0C0504] text-base sm:text-lg md:text-xl font-medium leading-tight tracking-tight m-0 p-0 transition-colors duration-300 group-hover:text-gray-200">
+        {subtitle}
+      </h3>
+      <p className="box-border w-full text-[#0C0504] text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words transition-colors duration-300 group-hover:text-gray-300">
+        {description}
+      </p>
+    </article>
+  );
+});
 
-      {/* Service Cards Grid */}
-      <AltSection index={sectionIndex++}>
-        <section className={TOKENS.SECTION_PADDING}>
-          <div className={TOKENS.CONTAINER_CLASS}>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <motion.article
-                    key={service.title}
-                    className={`${TOKENS.CARD_BASE} relative overflow-hidden border border-gray-200/50 hover:border-gray-300/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    {/* Subtle gradient background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 hover:opacity-100 transition-opacity duration-300`} />
-                    
-                    <div className="relative z-10">
-                      <div className={`${TOKENS.ICON_SIZE} mb-4 p-2 rounded-lg bg-primary/10`}>
-                        <Icon className={`w-full h-full text-primary`} />
-                      </div>
-                      
-                      <h3 className={`${TOKENS.H3_CLASS} ${TOKENS.TEXT_DARK} mb-3`}>
-                        {service.title}
-                      </h3>
-                      
-                      <p className={`${TOKENS.BODY_CLASS} ${TOKENS.TEXT_DARK} mb-4`}>
-                        {service.description}
-                      </p>
-                      
-                      <ul className="space-y-2 mb-6">
-                        {service.bullets.map((bullet, bulletIndex) => (
-                          <li key={bulletIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                            <span className={`${TOKENS.BODY_SMALL} ${TOKENS.TEXT_DARK}`}>
-                              {bullet}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <Link 
-                        to={service.href}
-                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-                      >
-                        View service
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </motion.article>
-                );
-              })}
-            </div>
+const Services = () => (
+  <div className="flex flex-col min-h-screen bg-white">
+    <Navbar />
+    <main className="flex-1 flex flex-col">
+      <section
+        id="services"
+        className="relative box-border flex w-full flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      >
+        {/* WorldMap as a dimmed, light background */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none flex items-center justify-center">
+          {/* Make the map much lighter by reducing opacity and adding a stronger white overlay */}
+          <div className="w-full h-full opacity-20">
+            <WorldMap dots={worldMapDots} lineColor="#0ea5e9" />
           </div>
-        </section>
-      </AltSection>
+          {/* Stronger white overlay for extra lightness */}
+          <div className="absolute inset-0 bg-white/70 dark:bg-black/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-white/70 dark:from-black/40 dark:via-black/20 dark:to-black/50" />
+        </div>
 
-      {/* Proof/Brands */}
-      <AltSection index={sectionIndex++}>
-        <section className={`${TOKENS.SECTION_PADDING} py-12`}>
-          <div className={TOKENS.CONTAINER_CLASS}>
-            <div className="text-center">
-              <p className={`${TOKENS.BODY_SMALL} ${TOKENS.TEXT_DARK} opacity-60`}>
-                Trusted by schools across India for future-ready education
-              </p>
-            </div>
-          </div>
-        </section>
-      </AltSection>
-
-      {/* CTA Band */}
-      <AltSection index={sectionIndex++}>
-        <section className={TOKENS.SECTION_PADDING}>
-          <div className={TOKENS.CONTAINER_CLASS}>
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className={`${TOKENS.H2_CLASS} ${TOKENS.TEXT_LIGHT} mb-4`}>
-                Ready to transform your school's approach to future skills?
+        <div className="relative z-10 box-border flex max-w-screen-xl flex-col items-start gap-8 sm:gap-12 lg:gap-16 w-full m-0 p-0">
+          {/* Who We Are Section */}
+          <section className="box-border flex max-w-screen-lg flex-col items-start gap-3 sm:gap-4 w-full m-0 p-0">
+            <header className="box-border flex items-center m-0 p-0">
+              <span className="box-border text-[#0C0504] text-sm sm:text-base font-semibold leading-6 m-0 p-0 uppercase tracking-widest">
+                Who We Are
+              </span>
+            </header>
+            <div className="box-border flex flex-col items-start gap-3 sm:gap-4 lg:gap-6 w-full m-0 p-0">
+              <h2 className="box-border w-full text-[#0C0504] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-medium leading-tight tracking-tight m-0 p-0 break-words">
+                Transforming Indian Education with Global Excellence
               </h2>
-              <p className={`${TOKENS.BODY_CLASS} ${TOKENS.TEXT_LIGHT} mb-8 opacity-90`}>
-                Fast pilot setup. Teacher-friendly implementation. NEP 2020 aligned curriculum.
+              <p className="box-border w-full text-[#0C0504] text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
+                School Grads is a future-focused education company dedicated to transforming Indian classrooms with globally trusted solutions. Backed by three generations of educators and innovators, we bring the best of Global pedagogy, Ed-tech apps, and school transformation models into local contexts.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                  Book a 20-minute consultation
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Request sample lesson pack
-                </Button>
+            </div>
+          </section>
+
+          {/* How We Help Section */}
+          <section className="box-border flex flex-col items-start gap-6 sm:gap-8 lg:gap-12 w-full m-0 p-0">
+            <header className="box-border flex max-w-screen-md flex-col items-start gap-3 sm:gap-4 w-full m-0 p-0">
+              <h3 className="box-border w-full text-[#0C0504] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight tracking-tight m-0 p-0 break-words">
+                How We Help
+              </h3>
+            </header>
+            {/* Services Grid */}
+            <div className="box-border w-full overflow-x-visible m-0 p-0">
+              <div className="box-border grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 m-0 p-0">
+                {services.map((service) => (
+                  <ServiceCard
+                    key={service.title}
+                    icon={service.icon}
+                    title={service.title}
+                    subtitle={service.subtitle}
+                    description={service.description}
+                  />
+                ))}
               </div>
             </div>
-          </div>
-        </section>
-      </AltSection>
+          </section>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+);
 
-      <Footer />
-    </div>
-  );
-};
-
-export default Services;
+export default memo(Services);

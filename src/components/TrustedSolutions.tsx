@@ -2,16 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe2, Users, Award } from 'lucide-react';
 
-// No bg for icons, fill color will be white
+// Use same family icon styles, icon white, no bg
 const ICONS = [
   <span className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-    <Globe2 className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="white" />
+    <Globe2 className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
   </span>,
   <span className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-    <Award className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="white" strokeWidth={2.2} />
+    <Award className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
   </span>,
   <span className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-    <Users className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="white" strokeWidth={2.2} />
+    <Users className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
   </span>,
 ];
 
@@ -111,11 +111,7 @@ const TrustedSolutions = () => {
               <p className="box-border text-white text-sm sm:text-base font-normal leading-6 m-0 p-0">
                 {stat.description}
               </p>
-              {/* Decorative underline pattern */}
-              <svg className="mt-2" width="60" height="8" viewBox="0 0 60 8" fill="none">
-                <ellipse cx="30" cy="4" rx="28" ry="3" fill="#9AEC2B" fillOpacity="0.18" />
-                <ellipse cx="30" cy="4" rx="18" ry="2" fill="#fff" fillOpacity="0.10" />
-              </svg>
+
             </motion.article>
           ))}
         </motion.div>
