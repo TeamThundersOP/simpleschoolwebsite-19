@@ -1,216 +1,311 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Baby, Smile, Palette, Music, Users, Award, Star, CheckCircle } from 'lucide-react';
+import { Check, ArrowRight, Star, Users, GraduationCap, School, Play, ChevronRight, Phone, Mail, Baby, Heart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { AltSection } from '@/components/blocks/alt-section';
-import { ImageContentSection } from '@/components/blocks/image-content-section';
-import { Feature197ImageLeft } from '@/components/blocks/feature197-image-left';
-import { TOKENS } from '@/design/tokens-from-home';
-
-const demoData = {
-  features: [
-    {
-      id: 1,
-      title: "Developmental Learning Stages",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=800",
-      description: "Age-appropriate curriculum carefully designed to match each child's developmental milestones and learning readiness.",
-    },
-    {
-      id: 2,
-      title: "Play-Based Education",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=800",
-      description: "Learning through play with hands-on activities that engage children and make education enjoyable and memorable.",
-    },
-    {
-      id: 3,
-      title: "Creative Arts Integration",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=800",
-      description: "Encouraging artistic development through various creative mediums, projects, and self-expression opportunities.",
-    },
-    {
-      id: 4,
-      title: "Social-Emotional Learning",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=800",
-      description: "Building emotional intelligence, social skills, and confidence in a nurturing and supportive environment.",
-    },
-  ],
-};
+import Seo from '@/components/Seo';
 
 const KindieDays = () => {
-  let sectionIndex = 0;
+  const [selectedChip, setSelectedChip] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    role: '',
+    organization: '',
+    email: '',
+    phone: '',
+    intent: ''
+  });
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
 
   return (
-    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0">
+    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0 overflow-x-clip">
       <Navbar />
-      <main className="w-full">
-        {/* HERO */}
-        <section className="box-border flex w-full min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-8 lg:gap-16 bg-[#021223] m-0 pt-[100px] sm:pt-[120px] lg:pt-[152px] pb-16 sm:pb-20 px-4 sm:px-8 lg:px-16 relative">
-          <div className={`${TOKENS.CONTAINER_CLASS} flex flex-col items-center gap-8 lg:gap-16 flex-1 w-full`}>
-            <motion.div
-              className="flex flex-col items-center text-center w-full gap-6 lg:gap-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className={`w-full ${TOKENS.H1_CLASS} ${TOKENS.TEXT_LIGHT} max-w-4xl`}>
-                Kindie Days: Nurturing Early Childhood Development
-              </h1>
-              <p className={`w-full ${TOKENS.BODY_CLASS} ${TOKENS.TEXT_LIGHT} max-w-3xl`}>
-                Through play-based learning and creative exploration in a joyful, supportive environment.
-              </p>
-            </motion.div>
-            
-            {/* Hero Video Placeholder */}
-            <div className="relative w-full max-w-4xl aspect-video bg-gray-900 rounded-2xl lg:rounded-[32px] overflow-hidden">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=1200" 
-                alt="Kindie Days Preview"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                <button className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
-                  <Play className="w-6 h-6 text-gray-900 ml-1" />
-                </button>
+      <Seo
+        title="Kindie Days – Nurturing Early Childhood Development"
+        description="Through play-based learning and creative exploration in a joyful, supportive environment. Trusted by 500+ families."
+        canonical="https://simpleschoolwebsite-19.onrender.com/kindie-days"
+      />
+      
+      <main id="main" className="w-full" role="main">
+        
+        {/* Hero (Compact) */}
+        <section className="box-border flex w-full flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl w-full items-center gap-8 lg:gap-16 m-0 p-0">
+            <div className="flex-1">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C0504] leading-tight">
+                  Kindie Days
+                </h1>
+                <p className="text-lg sm:text-xl text-[#0C0504] opacity-80">
+                  Nurturing early childhood development through play-based learning and creative exploration.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold">
+                    Enroll Today
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold">
+                    Schedule Visit
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+            <div className="hidden lg:block w-80">
+              <div className="w-full h-64 bg-gradient-to-br from-[#0C0504]/10 to-[#b2e61b]/10 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 bg-[#0C0504] rounded-full flex items-center justify-center">
+                  <Baby className="w-10 h-10 text-[#b2e61b]" />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* WHY / TRUST */}
-        <AltSection index={sectionIndex++}>
-          <section className={TOKENS.SECTION_PADDING}>
-            <div className={TOKENS.CONTAINER_CLASS}>
-              <div className="flex flex-col items-center text-center gap-8 lg:gap-12 max-w-4xl mx-auto">
-                <h2 className={`${TOKENS.H2_CLASS} ${TOKENS.TEXT_DARK}`}>
-                  Trusted Early Learning
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-                  <div className="flex flex-col items-center gap-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
-                      <Baby className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>8+ Years Excellence</h3>
-                  </div>
-                  <div className="flex flex-col items-center gap-4">
-                    <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
-                      <Users className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>500+ Happy Families</h3>
-                  </div>
-                  <div className="flex flex-col items-center gap-4">
-                    <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center">
-                      <Star className="w-8 h-8 text-purple-600" />
-                    </div>
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>98% Satisfaction</h3>
-                  </div>
+        {/* Trust Strip (Logos & Certifications) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-6 w-full m-0 p-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full">
+              {['Early Learning', 'Child Development', 'Play-Based Learning', 'Family Support', 'Community Partners'].map((partner, index) => (
+                <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm opacity-60 hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium text-gray-600">{partner}</span>
                 </div>
-              </div>
+              ))}
             </div>
-          </section>
-        </AltSection>
-
-        {/* Image-Content Section 1 */}
-        <AltSection index={sectionIndex++}>
-          <ImageContentSection
-            imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=1200"
-            imageAlt="Children learning through play"
-            title="Joyful Learning Through Play"
-            body={
-              <p>Our approach embraces the natural way children learn - through play, exploration, and discovery. Every activity is designed to nurture development while maintaining the joy and wonder of early childhood.</p>
-            }
-            align="left"
-            isDark={true}
-          />
-        </AltSection>
-
-        {/* BENEFITS */}
-        <AltSection index={sectionIndex++}>
-          <section className={TOKENS.SECTION_PADDING}>
-            <div className={TOKENS.CONTAINER_CLASS}>
-              <div className="flex flex-col gap-12 lg:gap-16">
-                <div className="text-center max-w-3xl mx-auto">
-                  <h2 className={`${TOKENS.H2_CLASS} ${TOKENS.TEXT_DARK} mb-4`}>
-                    Growing Together
-                  </h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className={TOKENS.CARD_BASE}>
-                    <Users className={TOKENS.ICON_SIZE + " text-blue-600"} />
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>For Children</h3>
-                    <p className={`${TOKENS.BODY_SMALL} ${TOKENS.TEXT_DARK}`}>
-                      Age-appropriate activities that nurture cognitive, social, emotional, and physical development.
-                    </p>
-                  </div>
-                  <div className={TOKENS.CARD_BASE}>
-                    <Award className={TOKENS.ICON_SIZE + " text-green-600"} />
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>For Parents</h3>
-                    <p className={`${TOKENS.BODY_SMALL} ${TOKENS.TEXT_DARK}`}>
-                      Peace of mind with qualified educators and developmentally appropriate practices.
-                    </p>
-                  </div>
-                  <div className={TOKENS.CARD_BASE}>
-                    <Star className={TOKENS.ICON_SIZE + " text-purple-600"} />
-                    <h3 className={`${TOKENS.H4_CLASS} ${TOKENS.TEXT_DARK}`}>For Families</h3>
-                    <p className={`${TOKENS.BODY_SMALL} ${TOKENS.TEXT_DARK}`}>
-                      Strong community connections and family involvement opportunities.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1" />
+                8+ Years Excellence
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                <Star className="w-3 h-3 mr-1" />
+                500+ Families
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+                <Heart className="w-3 h-3 mr-1" />
+                98% Satisfaction
+              </span>
             </div>
-          </section>
-        </AltSection>
+          </div>
+        </section>
 
-        {/* FEATURES + Feature197 */}
-        <AltSection index={sectionIndex++}>
-          <Feature197ImageLeft 
-            features={demoData.features}
-            title="Our Learning Approach"
-            description="Comprehensive early childhood education that nurtures every aspect of development"
-            isDark={true}
-          />
-        </AltSection>
-
-        {/* Image-Content Section 2 */}
-        <AltSection index={sectionIndex++}>
-          <ImageContentSection
-            imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/8ead1f9a8371bab419bab0afeb7ef53a7d9481f2?width=1200"
-            imageAlt="Creative learning environment"
-            title="Creative Learning Environment"
-            body={
-              <p>Our thoughtfully designed spaces encourage exploration, creativity, and social interaction. Every corner is crafted to inspire learning and wonder.</p>
-            }
-            align="right"
-            ctaLabel="Schedule Visit"
-            ctaHref="#visit"
-          />
-        </AltSection>
-
-        {/* CTA BAND */}
-        <AltSection index={sectionIndex++}>
-          <section className={`${TOKENS.SECTION_PADDING} text-center`}>
-            <div className={TOKENS.CONTAINER_CLASS}>
-              <div className="max-w-3xl mx-auto">
-                <h2 className={`${TOKENS.H2_CLASS} ${TOKENS.TEXT_LIGHT} mb-4`}>
-                  Give Your Child the Best Start
-                </h2>
-                <p className={`${TOKENS.BODY_CLASS} ${TOKENS.TEXT_LIGHT} mb-8`}>
-                  Nurturing development through joyful learning and creative exploration.
-                </p>
-                <div className="flex items-center gap-4 flex-wrap justify-center">
-                  <button className="flex justify-center items-center gap-2 bg-white text-[#0C0504] px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors min-w-[180px]">
-                    Enroll Today
-                  </button>
-                  <button className="flex justify-center items-center gap-2 border border-white/20 text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors min-w-[180px]">
-                    Schedule Visit
-                  </button>
-                </div>
-              </div>
+        {/* Who It's For (3 Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+              {[
+                {
+                  icon: <Baby className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Children (2-6 years)",
+                  points: ["Age-appropriate activities", "Cognitive development focus"]
+                },
+                {
+                  icon: <Users className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Parents",
+                  points: ["Peace of mind", "Qualified educators"]
+                },
+                {
+                  icon: <Heart className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Families",
+                  points: ["Community connections", "Family involvement"]
+                }
+              ].map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
+                >
+                  {card.icon}
+                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <ul className="space-y-2 text-center">
+                    {card.points.map((point, pointIndex) => (
+                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
-          </section>
-        </AltSection>
+          </div>
+        </section>
+
+        {/* Key Highlights (Bulleted) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+              {[
+                "Play-based learning approach",
+                "Developmental milestone tracking",
+                "Creative arts integration",
+                "Social-emotional learning"
+              ].map((highlight, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
+                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outcomes / Stats (3 Metric Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Proven Results</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
+              {[
+                { number: "500+", caption: "Happy families served" },
+                { number: "98%", caption: "Parent satisfaction rate" },
+                { number: "8+", caption: "Years of excellence" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center text-center p-6 bg-white rounded-2xl"
+                >
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Lead Capture (Short Form) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <div className="max-w-2xl text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Give Your Child the Best Start</h2>
+              <p className="text-[#0C0504] opacity-80 mb-8">
+                Join hundreds of families who trust Kindie Days for nurturing early childhood development.
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="w-full max-w-2xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Parent/Guardian Name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="role"
+                  placeholder="Child's Age"
+                  value={formData.role}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="organization"
+                  placeholder="Location/Area"
+                  value={formData.organization}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                />
+                <select
+                  name="intent"
+                  value={formData.intent}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                >
+                  <option value="">Select Intent</option>
+                  <option value="enrollment">Enrollment Information</option>
+                  <option value="visit">Schedule Visit</option>
+                  <option value="programs">Program Details</option>
+                  <option value="info">General Information</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                  <input type="checkbox" className="mt-1" required />
+                  I agree to receive communications about Kindie Days and understand that I can unsubscribe at any time.
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+              >
+                Submit Request
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
+
+      {/* CTA Bar (Sticky on Mobile) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
+        <div className="flex gap-2">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
+            <Phone className="w-4 h-4" />
+            Call
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Mail className="w-4 h-4" />
+            Visit
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Heart className="w-4 h-4" />
+            Enroll
+          </button>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

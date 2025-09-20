@@ -1,328 +1,312 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import VideoModal, { VideoThumbnail } from '@/components/VideoModal';
-import { CheckCircle, MapPin, Heart, Star, Coffee, Users, Award, Globe } from 'lucide-react';
-import { Feature197 } from '@/components/blocks/accordion-feature-section';
-import Section from '@/components/ui/section';
+import { motion } from 'framer-motion';
+import { Check, ArrowRight, Star, Users, GraduationCap, School, Play, ChevronRight, Phone, Mail, Globe } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-const demoData = {
-  features: [
-    {
-      id: 1,
-      title: "World-Class Education System",
-      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
-      description: "Experience the education system consistently ranked #1 globally for excellence, innovation, and student wellbeing.",
-    },
-    {
-      id: 2,
-      title: "Student-Centered Approach",
-      image: "https://shadcnblocks.com/images/block/placeholder-2.svg",
-      description: "Holistic development focus with emphasis on mental health, happiness, and individual learning styles and needs.",
-    },
-    {
-      id: 3,
-      title: "Cultural Immersion Experience",
-      image: "https://shadcnblocks.com/images/block/placeholder-3.svg",
-      description: "Authentic Finnish culture and lifestyle experience while learning about Nordic values and educational philosophy.",
-    },
-    {
-      id: 4,
-      title: "Innovative Teaching Methods",
-      image: "https://shadcnblocks.com/images/block/placeholder-4.svg",
-      description: "Discover the Finnish approach to stress-free, effective education with research-backed pedagogical practices.",
-    },
-    {
-      id: 5,
-      title: "Professional Development",
-      image: "https://shadcnblocks.com/images/block/placeholder-5.svg",
-      description: "Comprehensive professional development opportunities for educators to learn and implement Finnish teaching methods.",
-    },
-  ],
-};
+import Seo from '@/components/Seo';
 
 const FinnishExperience = () => {
-  const [videoModal, setVideoModal] = useState({
-    isOpen: false,
-    videoUrl: '',
-    title: '',
-    posterUrl: ''
+  const [selectedChip, setSelectedChip] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    role: '',
+    organization: '',
+    email: '',
+    phone: '',
+    intent: ''
   });
 
-  const openVideoModal = (videoUrl: string, title: string, posterUrl?: string) => {
-    setVideoModal({
-      isOpen: true,
-      videoUrl,
-      title,
-      posterUrl: posterUrl || ''
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
   };
 
-  const closeVideoModal = () => {
-    setVideoModal({
-      isOpen: false,
-      videoUrl: '',
-      title: '',
-      posterUrl: ''
-    });
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0">
+    <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0 overflow-x-clip">
       <Navbar />
-      <main className="w-full">
-        {/* Hero Section */}
-        <Section index={0} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl w-full items-center gap-12 lg:gap-20 m-0 p-0 max-lg:flex-col">
-            <div className="box-border flex flex-col items-start gap-6 lg:gap-8 flex-1 text-center lg:text-left m-0 p-0">
-              <h1 className="box-border w-full text-foreground text-4xl md:text-6xl font-bold leading-tight tracking-tight m-0 p-0 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Finnish Experience
-              </h1>
-              <p className="box-border w-full text-foreground text-2xl font-semibold leading-tight m-0 p-0">
-                Discover World-Renowned Education Excellence
-              </p>
-              <p className="box-border w-full text-muted-foreground text-xl font-normal leading-relaxed m-0 p-0">
-                Immerse yourself in the Finnish education system and Nordic learning culture that leads the world.
-              </p>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">World-class education system ranked #1 globally</span>
-              </div>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">Focus on student wellbeing and mental health</span>
-              </div>
-              <div className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground text-base">Stress-free, effective education approach</span>
-              </div>
-              <div className="box-border flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full m-0 p-0">
-                <Button size="lg">Explore Finland</Button>
-                <Button variant="outline" size="lg">Learn More</Button>
-              </div>
-            </div>
-            <div className="box-border flex-1 m-0 p-0">
-              <VideoThumbnail
-                videoUrl="https://example.com/finnish-hero.mp4"
-                title="Finnish Experience Demo"
-                posterUrl="https://api.builder.io/api/v1/image/assets/TEMP/finnish-hero.jpg"
-                onPlay={() => openVideoModal(
-                  "https://example.com/finnish-hero.mp4",
-                  "Finnish Experience - World-Class Education",
-                  "https://api.builder.io/api/v1/image/assets/TEMP/finnish-hero.jpg"
-                )}
-                className="w-full"
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* Trust Section */}
-        <Section index={1} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Why Finnish Education?
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full m-0 p-0">
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">#1</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Global Education Ranking</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">99%</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Literacy Rate</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border text-white text-4xl sm:text-5xl font-bold leading-tight m-0 p-0">20+</div>
-                <p className="box-border text-white text-base font-normal leading-6 m-0 p-0">Years Leading PISA</p>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Benefits Section */}
-        <Section index={2} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Experience Benefits
-              </h2>
-            </div>
-            <div className="box-border w-full overflow-x-auto lg:overflow-visible m-0 p-0">
-              <div className="box-border flex items-start gap-6 lg:gap-12 min-w-max lg:grid lg:grid-cols-3 lg:min-w-0 m-0 p-0">
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl m-0 p-0">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Educators
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Professional development opportunities to learn innovative teaching methods and implement world-class educational practices.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl m-0 p-0">
-                    <Award className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Students
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Experience student-centered learning with focus on wellbeing, creativity, and holistic development in a supportive environment.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="box-border flex flex-col items-start gap-6 lg:gap-8 w-72 lg:w-full flex-shrink-0 m-0 p-6 bg-gray-50 rounded-2xl lg:rounded-[32px]">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl m-0 p-0">
-                    <Globe className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full m-0 p-0">
-                    <h3 className="box-border w-full text-foreground text-lg sm:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
-                      For Organizations
-                    </h3>
-                    <p className="box-border w-full text-foreground text-sm sm:text-base font-normal leading-6 m-0 p-0">
-                      Transform institutional culture with Finnish educational philosophy and practices that promote excellence and innovation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Feature197 Section */}
-        <Section index={3}>
-          <Feature197 {...demoData} />
-        </Section>
-
-        {/* Experience Steps */}
-        <Section index={4} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Your Finnish Journey
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full m-0 p-0">
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">1</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Cultural Orientation</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Introduction to Finnish culture, values, and educational philosophy.</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">2</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Educational Immersion</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Hands-on experience with Finnish teaching methods and classroom practices.</p>
-              </div>
-              <div className="box-border flex flex-col items-center gap-4 text-center m-0 p-0">
-                <div className="box-border flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-bold text-xl m-0 p-0">3</div>
-                <h3 className="box-border text-foreground text-xl font-semibold leading-tight m-0 p-0">Implementation Support</h3>
-                <p className="box-border text-muted-foreground text-sm font-normal leading-6 m-0 p-0">Ongoing guidance to implement Finnish practices in your context.</p>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* Video Gallery */}
-        <Section index={5} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 lg:gap-20 w-full m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl text-center m-0 p-0">
-              <h2 className="box-border w-full text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Discover Finnish Education
-              </h2>
-            </div>
-            <div className="box-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full m-0 p-0">
-              <VideoThumbnail
-                videoUrl="https://example.com/finnish-overview.mp4"
-                title="Finnish Education System"
-                duration="3:20"
-                onPlay={() => openVideoModal(
-                  "https://example.com/finnish-overview.mp4",
-                  "Understanding Finnish Education"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/classroom-culture.mp4"
-                title="Finnish Classroom Culture"
-                duration="2:45"
-                onPlay={() => openVideoModal(
-                  "https://example.com/classroom-culture.mp4",
-                  "Inside Finnish Classrooms"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/wellbeing-approach.mp4"
-                title="Student Wellbeing Approach"
-                duration="2:55"
-                onPlay={() => openVideoModal(
-                  "https://example.com/wellbeing-approach.mp4",
-                  "Student Wellbeing in Finland"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/cultural-immersion.mp4"
-                title="Cultural Experience"
-                duration="3:10"
-                onPlay={() => openVideoModal(
-                  "https://example.com/cultural-immersion.mp4",
-                  "Finnish Cultural Experience"
-                )}
-              />
-              <VideoThumbnail
-                videoUrl="https://example.com/education-outcomes.mp4"
-                title="Educational Outcomes"
-                duration="2:40"
-                onPlay={() => openVideoModal(
-                  "https://example.com/education-outcomes.mp4",
-                  "Proven Educational Results"
-                )}
-              />
-            </div>
-          </div>
-        </Section>
-
-        {/* CTA Section */}
-        <Section index={6} className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 lg:gap-12 w-full text-center m-0 p-0">
-            <div className="box-border flex flex-col items-center gap-4 w-full max-w-3xl m-0 p-0">
-              <h2 className="box-border w-full text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0">
-                Experience Finnish Excellence
-              </h2>
-              <p className="box-border w-full text-muted-foreground text-base sm:text-lg font-normal leading-relaxed m-0 p-0">
-                World-class education with student-centered approach and proven excellence.
-              </p>
-            </div>
-            <div className="box-border flex flex-col sm:flex-row gap-4 justify-center w-full m-0 p-0">
-              <Button size="lg">
-                Explore Finland
-              </Button>
-              <Button size="lg" variant="outline">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </Section>
-      </main>
-      <Footer />
-      
-      <VideoModal
-        isOpen={videoModal.isOpen}
-        onClose={closeVideoModal}
-        videoUrl={videoModal.videoUrl}
-        title={videoModal.title}
-        posterUrl={videoModal.posterUrl}
+      <Seo
+        title="Finnish Experience – World-Class Education Excellence"
+        description="Immerse yourself in the Finnish education system and Nordic learning culture that leads the world. Experience #1 ranked education firsthand."
+        canonical="https://simpleschoolwebsite-19.onrender.com/finnish-experience"
       />
+      
+      <main id="main" className="w-full" role="main">
+        
+        {/* Hero (Compact) */}
+        <section className="box-border flex w-full flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl w-full items-center gap-8 lg:gap-16 m-0 p-0">
+            <div className="flex-1">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C0504] leading-tight">
+                  Finnish Experience
+                </h1>
+                <p className="text-lg sm:text-xl text-[#0C0504] opacity-80">
+                  Discover world-renowned education excellence and Nordic learning culture.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold">
+                    Explore Finland
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <button className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold">
+                    Learn More
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+            <div className="hidden lg:block w-80">
+              <div className="w-full h-64 bg-gradient-to-br from-[#0C0504]/10 to-[#b2e61b]/10 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 bg-[#0C0504] rounded-full flex items-center justify-center">
+                  <Globe className="w-10 h-10 text-[#b2e61b]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Strip (Logos & Certifications) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-6 w-full m-0 p-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full">
+              {['Education Finland', 'University Partners', 'PISA Rankings', 'Nordic Council', 'Global Schools'].map((partner, index) => (
+                <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm opacity-60 hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium text-gray-600">{partner}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1" />
+                #1 Global Ranking
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                <Star className="w-3 h-3 mr-1" />
+                PISA Leader
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1" />
+                99% Literacy
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* Who It's For (3 Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Who It's For</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+              {[
+                {
+                  icon: <Users className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Educators",
+                  points: ["Professional development", "Innovative teaching methods"]
+                },
+                {
+                  icon: <GraduationCap className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Students",
+                  points: ["Student-centered learning", "Wellbeing focus"]
+                },
+                {
+                  icon: <School className="w-8 h-8 text-[#b2e61b]" />,
+                  title: "Organizations",
+                  points: ["Institutional transformation", "Culture development"]
+                }
+              ].map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center gap-4 p-6 bg-gray-50 rounded-2xl h-full"
+                >
+                  {card.icon}
+                  <h3 className="text-xl font-semibold text-[#0C0504]">{card.title}</h3>
+                  <ul className="space-y-2 text-center">
+                    {card.points.map((point, pointIndex) => (
+                      <li key={pointIndex} className="text-[#0C0504] opacity-80">• {point}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Key Highlights (Bulleted) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Key Highlights</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+              {[
+                "World's #1 education system",
+                "Student wellbeing focused",
+                "Stress-free learning approach",
+                "20+ years PISA leadership"
+              ].map((highlight, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <Check className="w-5 h-5 text-[#b2e61b] flex-shrink-0" />
+                  <span className="text-[#0C0504] font-medium">{highlight}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outcomes / Stats (3 Metric Cards) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">Finnish Excellence</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
+              {[
+                { number: "#1", caption: "Global education ranking" },
+                { number: "99%", caption: "Literacy rate achieved" },
+                { number: "20+", caption: "Years leading PISA" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col items-center text-center p-6 bg-white rounded-2xl"
+                >
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b2e61b] mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-[#0C0504] opacity-80">{stat.caption}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Lead Capture (Short Form) */}
+        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
+            <div className="max-w-2xl text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] mb-4">Experience Finnish Excellence</h2>
+              <p className="text-[#0C0504] opacity-80 mb-8">
+                Join educators worldwide who have transformed their practice through Finnish educational philosophy.
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="w-full max-w-2xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="role"
+                  placeholder="Role/Position"
+                  value={formData.role}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="text"
+                  name="organization"
+                  placeholder="School/Organization"
+                  value={formData.organization}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                />
+                <select
+                  name="intent"
+                  value={formData.intent}
+                  onChange={handleFormChange}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b2e61b]"
+                  required
+                >
+                  <option value="">Select Intent</option>
+                  <option value="experience">Finnish Experience Program</option>
+                  <option value="consultation">Educational Consultation</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="info">General Information</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label className="flex items-start gap-2 text-sm text-[#0C0504] opacity-80">
+                  <input type="checkbox" className="mt-1" required />
+                  I agree to receive communications about Finnish Experience and understand that I can unsubscribe at any time.
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"
+              >
+                Submit Request
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      {/* CTA Bar (Sticky on Mobile) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50">
+        <div className="flex gap-2">
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#0C0504] text-white hover:bg-[#b2e61b] transition-all duration-300 font-semibold text-sm">
+            <Phone className="w-4 h-4" />
+            Call
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid border-[#0C0504] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Mail className="w-4 h-4" />
+            Info
+          </button>
+          <button className="flex-1 box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 py-2 rounded-full border-solid bg-[#b2e61b] text-[#0C0504] hover:bg-[#0C0504] hover:text-white transition-all duration-300 font-semibold text-sm">
+            <Globe className="w-4 h-4" />
+            Explore
+          </button>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
-
-export default FinnishExperience;
