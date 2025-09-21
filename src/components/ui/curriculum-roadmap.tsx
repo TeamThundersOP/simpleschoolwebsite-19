@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { ChevronDown, ChevronRight } from "lucide-react"
+import { ChevronDown, ChevronRight, GraduationCap, BookOpen, Code, Gamepad2, Cog, Brain } from "lucide-react"
 
 interface SubProgram {
   name: string
@@ -18,7 +18,7 @@ interface CurriculumStage {
 
 interface CurriculumRoadmapProps {
   stages: CurriculumStage[]
-  title?: string
+  title?: string | React.ReactNode
   description?: string
 }
 
@@ -37,12 +37,42 @@ const CurriculumRoadmap: React.FC<CurriculumRoadmapProps> = ({
     )
   }
 
+  // Helper function to get stage icon based on stage name
+  const getStageIcon = (stageName: string) => {
+    if (stageName.toLowerCase().includes('early')) {
+      return <GraduationCap className="w-4 h-4 text-highlight" />
+    } else if (stageName.toLowerCase().includes('lower') || stageName.toLowerCase().includes('primary')) {
+      return <BookOpen className="w-4 h-4 text-highlight" />
+    } else if (stageName.toLowerCase().includes('upper') || stageName.toLowerCase().includes('middle')) {
+      return <Code className="w-4 h-4 text-highlight" />
+    } else if (stageName.toLowerCase().includes('secondary') || stageName.toLowerCase().includes('high')) {
+      return <Cog className="w-4 h-4 text-highlight" />
+    } else {
+      return <Brain className="w-4 h-4 text-highlight" />
+    }
+  }
+
+  // Helper function to get program icon based on program name
+  const getProgramIcon = (programName: string) => {
+    if (programName.toLowerCase().includes('thinker') || programName.toLowerCase().includes('ai')) {
+      return <Brain className="w-4 h-4 text-highlight" />
+    } else if (programName.toLowerCase().includes('code') || programName.toLowerCase().includes('develop')) {
+      return <Code className="w-4 h-4 text-highlight" />
+    } else if (programName.toLowerCase().includes('game') || programName.toLowerCase().includes('create')) {
+      return <Gamepad2 className="w-4 h-4 text-highlight" />
+    } else if (programName.toLowerCase().includes('automate') || programName.toLowerCase().includes('sensor')) {
+      return <Cog className="w-4 h-4 text-highlight" />
+    } else {
+      return <BookOpen className="w-4 h-4 text-highlight" />
+    }
+  }
+
   return (
     <div className="w-full">
       <div className="text-center mb-12">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">
+        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">
           {title}
-        </h2>
+        </div>
         <p className="text-lg text-highlight/80 max-w-2xl mx-auto">
           {description}
         </p>
@@ -62,8 +92,10 @@ const CurriculumRoadmap: React.FC<CurriculumRoadmapProps> = ({
                 className="flex items-center gap-4 p-6 cursor-pointer"
                 onClick={() => toggleStage(index)}
               >
-                {/* Simple Dot Indicator */}
-                <div className="w-3 h-3 bg-highlight rounded-full flex-shrink-0" />
+                {/* Stage Icon */}
+                <div className="w-8 h-8 bg-highlight/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  {getStageIcon(stage.stage)}
+                </div>
                 
                 {/* Stage Info */}
                 <div className="flex-1">
@@ -95,7 +127,9 @@ const CurriculumRoadmap: React.FC<CurriculumRoadmapProps> = ({
                         key={programIndex}
                         className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"
                       >
-                        <div className="w-2 h-2 bg-highlight rounded-full mt-2 flex-shrink-0" />
+                        <div className="w-6 h-6 bg-highlight/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                          {getProgramIcon(program.name)}
+                        </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-highlight mb-2">
                             {program.name}

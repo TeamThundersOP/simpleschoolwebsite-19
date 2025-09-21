@@ -1,11 +1,22 @@
 import React from 'react';
 import { Code } from 'lucide-react';
 
+// Code School Finland Logo Component
+const CodeSchoolFinlandLogo = ({ className = "" }: { className?: string }) => (
+  <img 
+    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
+    alt="Code School Finland Logo" 
+    className={`h-12 w-auto ${className}`}
+  />
+);
+
 const AboutSection = () => {
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">About Code School Finland</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold">About Code School Finland</h2>
+        </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-muted-foreground mb-8">

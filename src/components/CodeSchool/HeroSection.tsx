@@ -2,15 +2,27 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Code } from 'lucide-react';
 
+// Code School Finland Logo Component
+const CodeSchoolFinlandLogo = ({ className = "" }: { className?: string }) => (
+  <img 
+    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
+    alt="Code School Finland Logo" 
+    className={`h-16 w-auto md:h-20 ${className}`}
+  />
+);
+
 const HeroSection = () => {
   return (
     <section className="bg-gradient-to-br from-primary/10 to-accent/10 py-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Code School Finland × School Grads
-            </h1>
+            <div className="mb-6">
+              <CodeSchoolFinlandLogo className="mb-4" />
+              <div className="text-2xl md:text-3xl font-bold text-gray-600">
+                × School Grads
+              </div>
+            </div>
             <p className="text-2xl font-semibold text-foreground mb-4">
               Transforming How Indian Schools Teach Coding, AI & Future Skills
             </p>

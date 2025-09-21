@@ -2,6 +2,23 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Star, Shield, Award } from 'lucide-react';
 
+// Moomin Language School Logo Component
+const MoominLanguageSchoolLogo = ({ className = "", size = "medium" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+  const sizeClasses = {
+    small: "h-6 w-auto",
+    medium: "h-8 w-auto md:h-12",
+    large: "h-16 w-auto md:h-20"
+  };
+
+  return (
+    <img 
+      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp" 
+      alt="Moomin Language School Logo" 
+      className={`${sizeClasses[size]} ${className}`}
+    />
+  );
+};
+
 const SchoolBenefitsSection = () => {
   const benefits = [
     {
@@ -29,7 +46,18 @@ const SchoolBenefitsSection = () => {
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Benefits for Schools & Managers</h2>
+        <div className="text-center">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <MoominLanguageSchoolLogo className="" size="medium" />
+            <span className="text-2xl md:text-3xl font-bold text-gray-700">×</span>
+            <img 
+              src="/lovable-uploads/logo.svg" 
+              alt="School Grads Logo" 
+              className="h-8 w-auto md:h-12" 
+            />
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">Benefits for Schools & Managers</h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
           {benefits.map((benefit, index) => (
             <motion.div

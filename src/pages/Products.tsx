@@ -176,15 +176,21 @@ const Products = () => {
                     transition={{ duration: 0.8, delay: 0.7 }}
                   >
                     <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0"></div>
+                      <div className="w-4 h-4 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Code className="w-2.5 h-2.5 text-white" />
+                      </div>
                       Coding, AI, robotics & future skills from basics to advanced
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0"></div>
+                      <div className="w-4 h-4 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Users className="w-2.5 h-2.5 text-white" />
+                      </div>
                       Designed for teachers with no prior coding experience
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0"></div>
+                      <div className="w-4 h-4 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-2.5 h-2.5 text-white" />
+                      </div>
                       Globally benchmarked, locally adaptable curriculum
                     </li>
                   </motion.ul>
@@ -352,7 +358,11 @@ const Products = () => {
                   <ul className="space-y-3">
                     {column.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-3 text-[#0C0504] text-sm">
-                        <div className="w-1.5 h-1.5 bg-[#021223] rounded-full flex-shrink-0 mt-2"></div>
+                        <div className="w-4 h-4 bg-[#021223]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                          {itemIndex === 0 ? <Code className="w-2.5 h-2.5 text-[#021223]" /> : 
+                           itemIndex === 1 ? <Lightbulb className="w-2.5 h-2.5 text-[#021223]" /> : 
+                           <Target className="w-2.5 h-2.5 text-[#021223]" />}
+                        </div>
                         {item}
                       </li>
                     ))}

@@ -7,6 +7,23 @@ import Seo from '@/components/Seo';
 import InteractiveBentoGallery from '@/components/blocks/interactive-bento-gallery';
 import CurriculumRoadmap from '@/components/ui/curriculum-roadmap';
 
+// Code School Finland Logo Component
+const CodeSchoolFinlandLogo = ({ className = "", size = "large" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+  const sizeClasses = {
+    small: "h-8 w-auto",
+    medium: "h-12 w-auto",
+    large: "h-16 w-auto md:h-20"
+  };
+
+  return (
+    <img 
+      src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
+      alt="Code School Finland Logo" 
+      className={`${sizeClasses[size]} ${className}`}
+    />
+  );
+};
+
 const CodeSchool = () => {
   const [selectedChip, setSelectedChip] = useState<number | null>(null);
   const [formData, setFormData] = useState({
@@ -43,8 +60,8 @@ const CodeSchool = () => {
       
       <main id="main" className="w-full" role="main">
         
-        {/* Hero (Compact) - Matching Home Page Style */}
-        <section className="box-border flex w-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px] flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[rgb(17,24,39)] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-x-hidden">
+        {/* Hero (Compact) - Light Version */}
+        <section className="box-border flex w-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px] flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-white m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-x-hidden">
           <div className="box-border flex max-w-screen-xl flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16 w-full m-0 p-0">
             {/* Content Section - Left */}
             <div className="box-border flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 gap-6 lg:gap-8 m-0 p-0">
@@ -54,16 +71,16 @@ const CodeSchool = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <motion.h1
-                  className="box-border w-full text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight m-0 p-0 break-words"
-                  initial={{ opacity: 0, y: 30 }}
+                <motion.div
+                  className="mb-6"
+                  initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  Code School Finland
-                </motion.h1>
+                  <CodeSchoolFinlandLogo className="" size="large" />
+                </motion.div>
                 <motion.h2
-                  className="box-border w-full text-white text-lg sm:text-xl md:text-2xl font-semibold leading-tight m-0 p-0 break-words"
+                  className="box-border w-full text-black text-lg sm:text-xl md:text-2xl font-semibold leading-tight m-0 p-0 break-words"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
@@ -71,7 +88,7 @@ const CodeSchool = () => {
                   Transforming How Indian Schools Teach Coding, AI & Future Skills
                 </motion.h2>
                 <motion.p
-                  className="box-border w-full text-white text-base md:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl break-words"
+                  className="box-border w-full text-gray-600 text-base md:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl break-words"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
@@ -86,16 +103,16 @@ const CodeSchool = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <motion.button
-                  className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-white hover:bg-gray-100 transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                  className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-gray-800 m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-gray-800 hover:bg-gray-700 transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="box-border text-highlight font-semibold leading-5 sm:leading-6 m-0 p-0">
+                  <span className="box-border font-semibold leading-5 sm:leading-6 m-0 p-0">
                     Book Consultation
                   </span>
                 </motion.button>
                 <motion.button
-                  className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-[rgba(255,255,255,0.30)] hover:bg-[rgba(255,255,255,0.08)] transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] text-white shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                  className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border-solid border-gray-300 hover:bg-gray-50 transition-colors text-sm sm:text-base font-semibold w-full sm:w-auto min-w-[120px] sm:min-w-[140px] text-gray-800 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -109,10 +126,10 @@ const CodeSchool = () => {
             {/* Images Section - Right */}
             <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
               <div className="relative w-full max-w-lg">
-                <div className="aspect-video bg-white/10 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
-                  <div className="w-full h-full flex items-center justify-center text-white">
+                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
+                  <div className="w-full h-full flex items-center justify-center text-gray-600">
                     <div className="text-center">
-                      <Code className="h-16 w-16 mx-auto mb-4 opacity-80 text-white" />
+                      <Code className="h-16 w-16 mx-auto mb-4 opacity-80 text-gray-600" />
                       <p className="text-lg font-medium">Finnish Coding Education</p>
                       <p className="text-sm opacity-70">Transform your classroom</p>
                     </div>
@@ -124,7 +141,7 @@ const CodeSchool = () => {
         </section>
 
         {/* Trust Strip (Logos & Certifications) */}
-        <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 overflow-x-hidden">
+        {/* <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 overflow-x-hidden">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-6 w-full m-0 p-0">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full">
               {['Code School Finland', 'School Grads', 'Education Finland', 'Finnish Schools', 'Global Partners'].map((partner, index) => (
@@ -148,7 +165,7 @@ const CodeSchool = () => {
               </span>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* School Grads Vision for India */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
@@ -451,7 +468,7 @@ const CodeSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <CurriculumRoadmap
-              title="Code School Finland × School Grads"
+              title={<><div className="flex flex-wrap items-center justify-center gap-4 mb-4"><CodeSchoolFinlandLogo className="" size="medium" /><span className="text-2xl md:text-3xl font-bold text-gray-700">×</span><img src="/lovable-uploads/logo.svg" alt="School Grads Logo" className="h-8 w-auto md:h-12" /></div></>}
               description="Curriculum Roadmap: Future Skills from K–12"
               stages={[
                 {
@@ -564,7 +581,9 @@ const CodeSchool = () => {
         {/* About Code School Finland */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504] text-center">About Code School Finland</h2>
+            <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504]">About Code School Finland</h2>
+            </div>
             <div className="text-center max-w-4xl">
               <p className="text-lg text-[#0C0504] leading-relaxed">
                 Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code School Finland creates practical teaching resources that help any teacher confidently teach coding, AI, robotics, and future skills. These materials are constantly improved with feedback from classrooms around the world.
