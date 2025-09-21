@@ -25,7 +25,9 @@ const FinnishExperience = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (import.meta.env.DEV) {
+      console.log('Form submitted:', formData);
+    }
   };
 
   return (
@@ -92,8 +94,8 @@ const FinnishExperience = () => {
                   </span>
                 </motion.button>
               </motion.div>
-            </div>
-
+                </div>
+                
             {/* Illustration Section - Right */}
             <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
               <div className="relative w-full max-w-lg">
@@ -103,7 +105,7 @@ const FinnishExperience = () => {
                       <Globe className="h-16 w-16 mx-auto mb-4 opacity-80" />
                       <p className="text-lg font-medium">World-Class Education</p>
                       <p className="text-sm opacity-70">Experience the Finnish way</p>
-                    </div>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -134,8 +136,8 @@ const FinnishExperience = () => {
                 <Check className="w-3 h-3 mr-1" />
                 99% Literacy
               </span>
-            </div>
-          </div>
+              </div>
+              </div>
         </section>
 
         {/* Who It's For (3 Cards) */}
@@ -310,7 +312,7 @@ const FinnishExperience = () => {
                   <input type="checkbox" className="mt-1" required />
                   I agree to receive communications about Finnish Experience and understand that I can unsubscribe at any time.
                 </label>
-              </div>
+            </div>
               <button
                 type="submit"
                 className="w-full box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid bg-highlight text-white hover:bg-[#b2e61b] hover:border-[#b2e61b] transition-all duration-300 font-semibold"

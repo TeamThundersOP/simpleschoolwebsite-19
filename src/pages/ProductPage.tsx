@@ -25,7 +25,9 @@ const ProductPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (import.meta.env.DEV) {
+      console.log('Form submitted:', formData);
+    }
   };
 
   return (

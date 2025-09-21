@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useLenis } from "@/hooks/use-lenis";
 import { FullPageLoader } from "@/components/ui/loader";
 import ScrollToTop from "@/components/ScrollToTop";
-import Index from "./pages/Index";
+const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Students = lazy(() => import("./pages/Students"));
 const Teachers = lazy(() => import("./pages/Teachers"));
