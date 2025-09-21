@@ -105,7 +105,7 @@ const Products = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <motion.section 
-          className="box-border flex w-full min-h-[900px] flex-col items-center gap-12 lg:gap-20 bg-[#021223] m-0 pt-[152px] pb-20 px-4 sm:px-8 lg:px-16 max-sm:min-h-[auto] max-sm:pt-[120px] max-sm:pb-[60px] relative"
+          className="box-border flex w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[#021223] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-8 lg:px-16 relative overflow-x-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
