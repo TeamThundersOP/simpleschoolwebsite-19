@@ -115,14 +115,14 @@ const Footer: React.FC = () => {
         <div className="box-border flex flex-wrap justify-between items-start w-full m-0 p-0 gap-8 sm:gap-10 md:gap-12">
           {/* Logo and Company Info */}
           <div className="box-border flex flex-col items-start gap-4 m-0 p-0 max-w-sm">
-            <Link to="/" className="box-border flex w-auto h-14 sm:h-16 md:h-20 justify-start items-center shrink-0 m-0 p-0">
+            <Link to="/" className="box-border flex w-auto h-12 sm:h-14 md:h-16 justify-start items-center shrink-0 m-0 p-0">
               <img 
                 src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png" 
                 alt="School Grads Logo" 
-                className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert drop-shadow-lg"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain brightness-0 invert drop-shadow-lg"
                 loading="lazy"
-                width={140}
-                height={64}
+                width={128}
+                height={56}
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">

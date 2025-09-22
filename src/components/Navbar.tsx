@@ -55,9 +55,9 @@ const Navbar = () => {
             <img
               src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png"
               alt="School Grads Logo"
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
-              width="112"
-              height="56"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              width="120"
+              height="48"
               loading="eager"
               decoding="async"
             />
