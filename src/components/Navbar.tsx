@@ -30,11 +30,10 @@ const Navbar = () => {
     };
   }, []);
 
-  // Removed services dropdown - now direct link
-
   const productsItems = [
     { name: "Code School", href: "/code-school" },
     { name: "Finnish Experience", href: "/finnish-experience" },
+    { name: "GraphoGame", href: "/graphogame" },
     { name: "Kindie Days", href: "/kindie-days" },
     { name: "Moomin Language School", href: "/moomin-language-school" },
   ];
@@ -46,128 +45,66 @@ const Navbar = () => {
   return (
     <header className="box-border flex w-full flex-col items-center fixed z-[1000] bg-white m-0 p-0 border-b-[rgba(0,0,0,0.10)] border-b border-solid top-0 shadow-sm">
       <div className="box-border flex h-[64px] sm:h-[72px] justify-between items-center w-full m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-0">
-        <div className="box-border flex justify-between items-center flex-1 max-w-screen-xl w-full m-0 p-0">
+        {/* Logo - Fixed position on left */}
+        <Link
+          to="/"
+          className="box-border flex justify-center items-center shrink-0 m-0 p-0"
+          aria-label="Home"
+        >
+          <img
+            src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png"
+            alt="School Grads Logo"
+            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+            width="160"
+            height="64"
+            loading="eager"
+            decoding="async"
+          />
+        </Link>
+
+        {/* Navigation - Centered */}
+        <nav className="box-border flex justify-center items-center gap-4 sm:gap-6 md:gap-8 m-0 p-0 max-md:hidden absolute left-1/2 transform -translate-x-1/2">
           <Link
             to="/"
-            className="box-border flex justify-center items-center shrink-0 m-0 p-0"
-            aria-label="Home"
+            className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
           >
-            <img
-              src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png"
-              alt="School Grads Logo"
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
-              width="120"
-              height="48"
-              loading="eager"
-              decoding="async"
-            />
+            Home
           </Link>
 
-          <nav className="box-border flex justify-center items-center gap-4 sm:gap-6 md:gap-8 m-0 p-0 max-md:hidden absolute left-1/2 transform -translate-x-1/2">
-            <Link
-              to="/"
-              className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
-            >
-              Home
-            </Link>
+          <Link
+            to="/services"
+            className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
+          >
+            Services
+          </Link>
 
-            {false && (
-              <Link
-                to="/services"
-                className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
-              >
-                Services
-              </Link>
-            )}
-
-            {/* Products Dropdown */}
-            <div className="relative dropdown-container">
-              <button
-                onClick={() => handleDropdownToggle("products")}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    handleDropdownToggle("products");
-                  }
-                }}
-                className="box-border flex items-center gap-1 text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
-                aria-haspopup="true"
-                aria-expanded={activeDropdown === "products"}
-                aria-label="Products menu"
-                tabIndex={0}
-              >
-                Products
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform ${activeDropdown === "products" ? "rotate-180" : ""}`}
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              {activeDropdown === "products" && (
-                <div
-                  className="absolute top-full left-0 mt-2 bg-card border border-border rounded-md shadow-lg min-w-[200px] z-50"
-                  role="menu"
-                  aria-label="Products submenu"
-                >
-                  {productsItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.href}
-                      className="block px-4 py-2 text-card-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:bg-accent focus:text-accent-foreground focus:outline-none"
-                      onClick={() => setActiveDropdown(null)}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link
-              to="/about"
-              className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
-            >
-              About Us
-            </Link>
-          </nav>
-
-          <div className="box-border flex justify-center items-center gap-2 sm:gap-3 md:gap-4 m-0 p-0">
+          {/* Products Dropdown */}
+          <div className="relative dropdown-container">
             <button
-              className="box-border flex justify-center items-center gap-1 sm:gap-2 border cursor-pointer bg-gray-900 m-0 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border-solid border-gray-900 hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              aria-label="Book an appointment"
+              onClick={() => handleDropdownToggle("products")}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleDropdownToggle("products");
+                }
+              }}
+              className="box-border flex items-center gap-1 text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === "products"}
+              aria-label="Products menu"
+              tabIndex={0}
             >
-              <span className="box-border text-white text-xs sm:text-sm md:text-base font-bold leading-4 sm:leading-5 md:leading-6 m-0 p-0">
-                Book Appointment
-              </span>
-            </button>
-            <button
-              className="md:hidden text-gray-900 p-1.5 sm:p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
+              Products
               <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5 sm:w-6 sm:h-6"
+                className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform ${activeDropdown === "products" ? "rotate-180" : ""}`}
               >
                 <path
-                  d="M3 12H21M3 6H21M3 18H21"
+                  d="M4 6L8 10L12 6"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
@@ -175,7 +112,68 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+            {activeDropdown === "products" && (
+              <div
+                className="absolute top-full left-0 mt-2 bg-card border border-border rounded-md shadow-lg min-w-[200px] z-50"
+                role="menu"
+                aria-label="Products submenu"
+              >
+                {productsItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className="block px-4 py-2 text-card-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:bg-accent focus:text-accent-foreground focus:outline-none"
+                    onClick={() => setActiveDropdown(null)}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
+
+          <Link
+            to="/about"
+            className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
+          >
+            About Us
+          </Link>
+        </nav>
+
+        {/* Right side actions - Fixed position on right */}
+        <div className="box-border flex justify-center items-center gap-2 sm:gap-3 md:gap-4 m-0 p-0">
+          <button
+            className="box-border flex justify-center items-center gap-1 sm:gap-2 border cursor-pointer bg-gray-900 m-0 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border-solid border-gray-900 hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+            aria-label="Book an appointment"
+          >
+            <span className="box-border text-white text-xs sm:text-sm md:text-base font-bold leading-4 sm:leading-5 md:leading-6 m-0 p-0">
+              Book Appointment
+            </span>
+          </button>
+          <button
+            className="md:hidden text-gray-900 p-1.5 sm:p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 sm:w-6 sm:h-6"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
       {isMenuOpen && (
@@ -188,16 +186,14 @@ const Navbar = () => {
               Home
             </Link>
 
-            {false && (
-              <Link
-                to="/services"
-                className="text-gray-900 text-base font-bold leading-6 cursor-pointer hover:text-gray-600 transition-colors"
-              >
-                Services
-              </Link>
-            )}
+            <Link
+              to="/services"
+              className="text-gray-900 text-base font-bold leading-6 cursor-pointer hover:text-gray-600 transition-colors"
+            >
+              Services
+            </Link>
 
-            {/* Mobile Products */}
+            {/* Mobile Products Dropdown */}
             <div>
               <button
                 onClick={() => handleDropdownToggle("products-mobile")}

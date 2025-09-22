@@ -1,43 +1,73 @@
-import React from 'react';
-import { TrendingDown, DollarSign, Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const WhyLiteracyMattersSection = () => {
   const facts = [
     {
-      icon: <TrendingDown className="w-6 h-6 text-red-600" />,
-      title: "Grade 4 Reading Crisis",
-      description: "Children who can't read by Grade 4 often struggle lifelong"
+      heading: "Grade 4 Reading Crisis:",
+      text: "Children who can't read by Grade 4 often struggle lifelong",
     },
     {
-      icon: <DollarSign className="w-6 h-6 text-red-600" />,
-      title: "Economic Impact",
-      description: "Illiteracy costs the global economy over $1 trillion annually"
+      heading: "Economic Impact:",
+      text: "Illiteracy costs the global economy over $1 trillion annually",
     },
     {
-      icon: <Heart className="w-6 h-6 text-green-600" />,
-      title: "Life Outcomes",
-      description: "Literacy is linked to higher earnings, better health, and reduced poverty"
-    }
+      heading: "Life Outcomes:",
+      text: "Literacy is linked to higher earnings, better health, and reduced poverty",
+    },
   ];
 
   return (
-    <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Why Literacy Matters</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {facts.map((fact, index) => (
-            <div key={index} className="relative group">
-              <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full flex-shrink-0">
-                  {fact.icon}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-highlight mb-2">{fact.title}</h3>
-                  <p className="text-highlight opacity-80 text-sm">{fact.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+    <section className="box-border flex w-full flex-col items-center gap-0 bg-gray-50 m-0 px-0 py-0">
+      {/* Hero Image Section with Overlay Text */}
+      <div className="relative w-full">
+        {/* Background Image */}
+        <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
+          <img
+            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+            alt="Children Reading and Learning"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Gradient overlay - clear at top, dark at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
+
+          {/* Overlay Content - positioned in lower section */}
+          <div className="relative z-10 flex flex-col items-center justify-end h-full text-center px-4 sm:px-6 pb-12 sm:pb-16 md:pb-24">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-12 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              Why Literacy Matters
+            </motion.h2>
+
+            {/* Bullet Points */}
+            <motion.div
+              className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-8 max-w-6xl w-full"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              {facts.map((point, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-3 sm:gap-4 text-left p-2 sm:p-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                >
+                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
+                    <span className="text-yellow-400 font-bold">{point.heading}</span> {point.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

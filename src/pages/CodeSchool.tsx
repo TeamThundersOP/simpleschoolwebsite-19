@@ -1,24 +1,57 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, ArrowRight, Star, Users, GraduationCap, School, Play, ChevronRight, Phone, Mail, Code, BookOpen, Target, Globe, Award, Clock, Brain, Lightbulb, Cog, MonitorSpeaker, Eye, Gamepad2, Database, Shield } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Seo from '@/components/Seo';
-import InteractiveBentoGallery from '@/components/blocks/interactive-bento-gallery';
-import CurriculumRoadmap from '@/components/ui/curriculum-roadmap';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Check,
+  ArrowRight,
+  Star,
+  Users,
+  GraduationCap,
+  School,
+  Play,
+  ChevronRight,
+  Phone,
+  Mail,
+  Code,
+  BookOpen,
+  Target,
+  Globe,
+  Award,
+  Clock,
+  Brain,
+  Lightbulb,
+  Cog,
+  MonitorSpeaker,
+  Eye,
+  Gamepad2,
+  Database,
+  Shield,
+  CheckCircle,
+} from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
+import InteractiveBentoGallery from "@/components/blocks/interactive-bento-gallery";
+import CurriculumRoadmap from "@/components/ui/curriculum-roadmap";
+import { Timeline, TimelineItem } from "@/components/ui/timeline";
 
 // Code School Finland Logo Component
-const CodeSchoolFinlandLogo = ({ className = "", size = "large" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+const CodeSchoolFinlandLogo = ({
+  className = "",
+  size = "large",
+}: {
+  className?: string;
+  size?: "small" | "medium" | "large";
+}) => {
   const sizeClasses = {
     small: "h-8 w-auto",
     medium: "h-12 w-auto",
-    large: "h-16 w-auto md:h-20"
+    large: "h-16 w-auto md:h-20",
   };
 
   return (
-    <img 
-      src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
-      alt="Code School Finland Logo" 
+    <img
+      src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png"
+      alt="Code School Finland Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
   );
@@ -27,25 +60,25 @@ const CodeSchoolFinlandLogo = ({ className = "", size = "large" }: { className?:
 const CodeSchool = () => {
   const [selectedChip, setSelectedChip] = useState<number | null>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    role: '',
-    organization: '',
-    email: '',
-    phone: '',
-    intent: ''
+    name: "",
+    role: "",
+    organization: "",
+    email: "",
+    phone: "",
+    intent: "",
   });
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (import.meta.env.DEV) {
-      console.log('Form submitted:', formData);
+      console.log("Form submitted:", formData);
     }
   };
 
@@ -57,9 +90,8 @@ const CodeSchool = () => {
         description="Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School Grads. Bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable."
         canonical="https://simpleschoolwebsite-19.onrender.com/code-school"
       />
-      
+
       <main id="main" className="w-full" role="main">
-        
         {/* Hero (Compact) - Light Version */}
         <section className="box-border flex w-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px] flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-white m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-x-hidden">
           <div className="box-border flex max-w-screen-xl flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16 w-full m-0 p-0">
@@ -93,7 +125,8 @@ const CodeSchool = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School Grads.
+                  Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School
+                  Grads.
                 </motion.p>
               </motion.div>
               <motion.div
@@ -170,10 +203,16 @@ const CodeSchool = () => {
         {/* School Grads Vision for India */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">School Grads Vision for India</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+              School Grads Vision for India
+            </h2>
             <div className="text-center max-w-4xl">
               <p className="text-lg text-highlight leading-relaxed mb-6">
-                At SchoolGrads, our mission is to bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable. With our partner, Code School Finland, we help schools give students—from early years to high school—practical skills in coding, AI, robotics, and future skills while also building their creativity, innovation, and problem-solving abilities.
+                At SchoolGrads, our mission is to bring the best global teaching practices to Indian
+                classrooms in a way that is easy, affordable, and scalable. With our partner, Code
+                School Finland, we help schools give students—from early years to high
+                school—practical skills in coding, AI, robotics, and future skills while also
+                building their creativity, innovation, and problem-solving abilities.
               </p>
             </div>
           </div>
@@ -182,7 +221,9 @@ const CodeSchool = () => {
         {/* What Students, Teachers & Schools Gain - 3 Cards */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What They Gain</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+              What They Gain
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 {
@@ -191,8 +232,8 @@ const CodeSchool = () => {
                   points: [
                     "Coding, AI, robotics, and future skills are taught from basics to advanced levels",
                     "Hands-on projects that build creativity, logic, and problem-solving",
-                    "Digital skills designed to match global standards and future needs"
-                  ]
+                    "Digital skills designed to match global standards and future needs",
+                  ],
                 },
                 {
                   icon: <GraduationCap className="w-8 h-8 text-highlight" />,
@@ -200,8 +241,8 @@ const CodeSchool = () => {
                   points: [
                     "Designed for teachers with no prior coding experience",
                     "Comes with ready-to-use lesson plans, worksheets, and assessments",
-                    "Short, practical training along with certification, plus continuous support from experts"
-                  ]
+                    "Short, practical training along with certification, plus continuous support from experts",
+                  ],
                 },
                 {
                   icon: <School className="w-8 h-8 text-highlight" />,
@@ -209,9 +250,9 @@ const CodeSchool = () => {
                   points: [
                     "Globally benchmarked curriculum, locally adaptable to boards and timetables",
                     "Stronger innovation profile and brand positioning",
-                    "Seamless NEP 2020 alignment for computational thinking & digital literacy"
-                  ]
-                }
+                    "Seamless NEP 2020 alignment for computational thinking & digital literacy",
+                  ],
+                },
               ].map((card, index) => (
                 <motion.div
                   key={index}
@@ -228,7 +269,10 @@ const CodeSchool = () => {
                     </div>
                     <ul className="space-y-3">
                       {card.points.map((point, pointIndex) => (
-                        <li key={pointIndex} className="flex items-start gap-2 text-highlight opacity-80">
+                        <li
+                          key={pointIndex}
+                          className="flex items-start gap-2 text-highlight opacity-80"
+                        >
                           <span className="text-highlight font-bold text-lg">•</span>
                           <span>{point}</span>
                         </li>
@@ -242,84 +286,115 @@ const CodeSchool = () => {
         </section>
 
         {/* Why Code School Finland */}
-        <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Why Code School Finland</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
-              {[
-                {
-                  icon: <Users className="w-6 h-6 text-highlight" />,
-                  title: "Built by educators",
-                  desc: "Co-created and tested with Finnish teachers"
-                },
-                {
-                  icon: <Globe className="w-6 h-6 text-highlight" />,
-                  title: "Trusted worldwide", 
-                  desc: "Implemented in 20+ countries, available in 7 languages"
-                },
-                {
-                  icon: <Award className="w-6 h-6 text-highlight" />,
-                  title: "Proven at scale",
-                  desc: "3,00,000+ learners, thousands of trained teachers"
-                },
-                {
-                  icon: <Clock className="w-6 h-6 text-highlight" />,
-                  title: "Faster adoption",
-                  desc: "Up to 80% less teacher training time, 90% less lesson prep"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+        <section className="box-border flex w-full flex-col items-center gap-0 bg-gray-50 m-0 px-0 py-0">
+          {/* Hero Image Section with Overlay Text */}
+          <div className="relative w-full">
+            {/* Background Image */}
+            <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+                alt="Code School Finland Community"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Gradient overlay - clear at top, dark at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
+
+              {/* Overlay Content - positioned in lower section */}
+              <div className="relative z-10 flex flex-col items-center justify-end h-full text-center px-4 sm:px-6 pb-12 sm:pb-16 md:pb-24">
+                <motion.h2
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-12 leading-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative group"
+                  transition={{ duration: 0.8 }}
                 >
-                  <div className="box-border flex h-full w-full p-4 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                    {item.icon}
-                    <div>
-                      <h3 className="font-semibold text-highlight mb-1">{item.title}</h3>
-                      <p className="text-highlight opacity-80 text-sm">{item.desc}</p>
-                    </div>
-                  </div>
+                  Why Code School Finland
+                </motion.h2>
+
+                {/* Bullet Points */}
+                <motion.div
+                  className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 lg:gap-8 max-w-6xl w-full"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  {[
+                    {
+                      heading: "Built by educators:",
+                      text: "Co-created and tested with Finnish teachers",
+                    },
+                    {
+                      heading: "Trusted worldwide:",
+                      text: "Implemented in 20+ countries, available in 7 languages",
+                    },
+                    {
+                      heading: "Proven at scale:",
+                      text: "3,00,000+ learners, thousands of trained teachers",
+                    },
+                    {
+                      heading: "Faster adoption:",
+                      text: "Up to 80% less teacher training time, 90% less lesson prep",
+                    },
+                  ].map((point, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-start gap-3 sm:gap-4 text-left p-2 sm:p-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    >
+                      <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
+                        <span className="text-yellow-400 font-bold">{point.heading}</span>{" "}
+                        {point.text}
+                      </p>
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
+              </div>
             </div>
-            
-            {/* Enhanced Quote Section */}
-            <div className="relative group col-span-full">
-              <div className="box-border flex h-full w-full p-8 sm:p-12 flex-col justify-center items-center gap-6 bg-gradient-to-br from-highlight/5 via-white to-highlight/10 m-0 rounded-3xl border-2 border-highlight/20 opacity-100 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-highlight/40 backdrop-blur-sm max-w-5xl text-center relative overflow-hidden">
+          </div>
+
+          {/* Enhanced Quote Section */}
+          <div className="relative group w-full bg-gray-50 py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="box-border flex h-full w-full p-6 sm:p-8 md:p-12 flex-col justify-center items-center gap-6 bg-gradient-to-br from-highlight/5 via-white to-highlight/10 m-0 rounded-3xl border-2 border-highlight/20 opacity-100 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-highlight/40 backdrop-blur-sm text-center relative overflow-hidden">
                 {/* Background Decoration */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-5">
                   <div className="absolute top-8 left-8 w-16 h-16 border-2 border-highlight rounded-full"></div>
                   <div className="absolute bottom-8 right-8 w-12 h-12 bg-highlight/20 rounded-full"></div>
                   <div className="absolute top-1/2 left-4 w-8 h-8 border border-highlight/30 rotate-45"></div>
                 </div>
-                
+
                 {/* Quote Icon */}
-                <div className="relative z-10 w-16 h-16 bg-highlight/10 rounded-full flex items-center justify-center mb-2">
-                  <svg className="w-8 h-8 text-highlight" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                <div className="relative z-10 w-12 sm:w-16 h-12 sm:h-16 bg-highlight/10 rounded-full flex items-center justify-center mb-2">
+                  <svg
+                    className="w-6 sm:w-8 h-6 sm:h-8 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
                   </svg>
                 </div>
-                
+
                 {/* Quote Text */}
-                <blockquote className="relative z-10 text-2xl sm:text-3xl md:text-4xl font-bold text-highlight leading-tight max-w-4xl">
+                <blockquote className="relative z-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-highlight leading-tight max-w-4xl">
                   "Great teachers don't need to be coders—they need the right tools."
                 </blockquote>
-                
+
                 {/* Attribution */}
                 <div className="relative z-10 flex flex-col items-center gap-3 mt-4">
                   <div className="w-16 h-px bg-highlight/30"></div>
-                  <cite className="not-italic text-base sm:text-lg font-semibold text-highlight/80">
+                  <cite className="not-italic text-sm sm:text-base md:text-lg font-semibold text-highlight/80">
                     Kaisu Pallaskallio
                   </cite>
-                  <p className="text-sm text-highlight/60 font-medium">
+                  <p className="text-xs sm:text-sm text-highlight/60 font-medium">
                     CEO & Co-Founder, Code School Finland
                   </p>
                 </div>
-                
+
                 {/* Accent Line */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-highlight/40 to-transparent"></div>
               </div>
@@ -330,29 +405,31 @@ const CodeSchool = () => {
         {/* What's Included */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What's Included</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+              What's Included
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
               {[
                 {
                   icon: <Target className="w-6 h-6 text-highlight" />,
                   title: "Custom Implementation Plan",
-                  desc: "Designed around your school's grades, subjects, and vision"
+                  desc: "Designed around your school's grades, subjects, and vision",
                 },
                 {
                   icon: <GraduationCap className="w-6 h-6 text-highlight" />,
                   title: "Flexible Teacher Training",
-                  desc: "Along with the certification, teachers get short, blended modules that fit into busy schedules"
+                  desc: "Along with the certification, teachers get short, blended modules that fit into busy schedules",
                 },
                 {
                   icon: <BookOpen className="w-6 h-6 text-highlight" />,
                   title: "Complete Classroom Kit",
-                  desc: "Lesson plans, worksheets, guides, projects, and assessment guides included"
+                  desc: "Lesson plans, worksheets, guides, projects, and assessment guides included",
                 },
                 {
                   icon: <Users className="w-6 h-6 text-highlight" />,
                   title: "Continuous Support",
-                  desc: "Live and offline expert guidance, regular resource updates, and a dedicated helpdesk"
-                }
+                  desc: "Live and offline expert guidance, regular resource updates, and a dedicated helpdesk",
+                },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -381,25 +458,30 @@ const CodeSchool = () => {
             {/* Pedagogy & Fit for India */}
             <div className="flex-1 relative group">
               <div className="box-border flex h-full w-full p-6 flex-col justify-start items-start gap-6 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">Pedagogy & Fit for India</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">
+                  Pedagogy & Fit for India
+                </h2>
                 <div className="space-y-4">
                   {[
                     {
-                      icon: <Lightbulb className="w-5 h-5 text-highlight" />,
-                      text: "Project-based & hands-on – Students learn by building, testing, and creating together"
+                      heading: "Project-based & hands-on",
+                      text: "Students learn by building, testing, and creating together through practical coding projects",
                     },
                     {
-                      icon: <Brain className="w-5 h-5 text-highlight" />,
-                      text: "Research-led – Focus on creativity, collaboration, and critical thinking"
+                      heading: "Research-led approach",
+                      text: "Focus on creativity, collaboration, and critical thinking skills for the digital age",
                     },
                     {
-                      icon: <Check className="w-5 h-5 text-highlight" />,
-                      text: "Aligned with NEP 2020 – Supports digital literacy and computational thinking goals"
-                    }
+                      heading: "Aligned with NEP 2020",
+                      text: "Supports digital literacy and computational thinking goals set by Indian education policy",
+                    },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      {item.icon}
-                      <span className="text-highlight">{item.text}</span>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-highlight">
+                        <span className="font-bold text-highlight">{item.heading}</span> –{" "}
+                        {item.text}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -409,25 +491,18 @@ const CodeSchool = () => {
             {/* Implementation with School Grads */}
             <div className="flex-1 relative group">
               <div className="box-border flex h-full w-full p-6 flex-col justify-start items-start gap-6 bg-white m-0 rounded-2xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">Implementation with School Grads</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-highlight mb-6">
+                  Implementation with School Grads
+                </h2>
                 <div className="space-y-4">
                   {[
-                    {
-                      icon: <Clock className="w-5 h-5 text-highlight" />,
-                      text: "Rapid onboarding for leadership and staff"
-                    },
-                    {
-                      icon: <Cog className="w-5 h-5 text-highlight" />,
-                      text: "Timetable integration across subjects and grades"
-                    },
-                    {
-                      icon: <Star className="w-5 h-5 text-highlight" />,
-                      text: "Monitoring, assessments, and showcase events (hackathons, exhibitions)"
-                    }
+                    "Rapid onboarding for leadership and staff with comprehensive training programs",
+                    "Timetable integration across subjects and grades for seamless curriculum delivery",
+                    "Monitoring, assessments, and showcase events including hackathons and exhibitions",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      {item.icon}
-                      <span className="text-highlight">{item.text}</span>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-highlight">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -439,12 +514,14 @@ const CodeSchool = () => {
         {/* Outcomes You Can Expect */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Outcomes You Can Expect</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+              Outcomes You Can Expect
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {[
                 "Teachers confidently leading coding & AI lessons without extra burden",
-                "Students who can design, code, and present real-world projects", 
-                "A visible \"future-skills\" identity for your school"
+                "Students who can design, code, and present real-world projects",
+                'A visible "future-skills" identity for your school',
               ].map((outcome, index) => (
                 <motion.div
                   key={index}
@@ -467,114 +544,117 @@ const CodeSchool = () => {
         {/* Curriculum Roadmap */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <CurriculumRoadmap
-              title={<><div className="flex flex-wrap items-center justify-center gap-4 mb-4"><CodeSchoolFinlandLogo className="" size="medium" /><span className="text-2xl md:text-3xl font-bold text-gray-700">×</span><img src="/lovable-uploads/logo.svg" alt="School Grads Logo" className="h-8 w-auto md:h-12" /></div></>}
-              description="Curriculum Roadmap: Future Skills from K–12"
-              stages={[
+            <div className="text-center mb-8">
+              <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                <CodeSchoolFinlandLogo className="" size="medium" />
+                <span className="text-2xl md:text-3xl font-bold text-gray-700">×</span>
+                <img
+                  src="/lovable-uploads/logo.svg"
+                  alt="School Grads Logo"
+                  className="h-8 w-auto md:h-12"
+                />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight mb-4">
+                Curriculum Roadmap: Future Skills from K–12
+              </h2>
+              <p className="text-lg text-highlight/80 max-w-3xl mx-auto">
+                A comprehensive journey through coding, AI, and future skills education from
+                kindergarten to grade 12.
+              </p>
+            </div>
+
+            <Timeline
+              variant="roadmap"
+              className="w-full max-w-4xl"
+              items={[
                 {
-                  stage: "Early Years (K–2)",
-                  ages: "Ages 5–7",
-                  programs: [
-                    {
-                      name: "Future Thinker",
-                      description: "Help young children develop computational thinking through playful activities that spark curiosity and prepare them for digital learning.",
-                      tags: ["Computational Thinking", "Play-based Learning"]
-                    }
-                  ]
+                  id: "early-years",
+                  title: "Early Years (K–2)",
+                  description:
+                    "Future Thinker: Help young children develop computational thinking through playful activities that spark curiosity and prepare them for digital learning. Focus on play-based learning and foundational computational thinking skills.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 5–7",
+                  timestamp: new Date("2024-01-15"),
                 },
                 {
-                  stage: "Lower Primary (Grades 1–3)",
-                  ages: "Ages 6–9",
-                  programs: [
-                    {
-                      name: "Little AI Learner",
-                      description: "Discover AI through engaging, unplugged activities and creative exploration for young learners.",
-                      tags: ["AI Basics", "Unplugged Activities"]
-                    },
-                    {
-                      name: "Junior Coder",
-                      description: "Develop computational thinking and problem-solving through hands-on ScratchJr activities.",
-                      tags: ["ScratchJr", "Problem Solving"]
-                    }
-                  ]
+                  id: "lower-primary",
+                  title: "Lower Primary (Grades 1–3)",
+                  description:
+                    "Little AI Learner & Junior Coder: Discover AI through engaging, unplugged activities and develop computational thinking through hands-on ScratchJr activities. Students learn AI basics and problem-solving skills.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 6–9",
+                  timestamp: new Date("2024-02-01"),
                 },
                 {
-                  stage: "Upper Primary (Grades 3–6)",
-                  ages: "Ages 8–11",
-                  programs: [
-                    {
-                      name: "Code & Create + AI",
-                      description: "Practise computational thinking by creating stories, games, and AI apps using Scratch.",
-                      tags: ["Scratch", "Game Development", "AI Apps"]
-                    }
-                  ]
+                  id: "upper-primary",
+                  title: "Upper Primary (Grades 3–6)",
+                  description:
+                    "Code & Create + AI: Practice computational thinking by creating stories, games, and AI apps using Scratch. Students build their first interactive projects and explore creative coding.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 8–11",
+                  timestamp: new Date("2024-02-15"),
                 },
                 {
-                  stage: "Middle School (Grades 3–8)",
-                  ages: "Ages 8–13",
-                  programs: [
-                    {
-                      name: "Automate",
-                      description: "Get practical experience in automation and embedded systems while building with sensors, processors, and actuators.",
-                      tags: ["Automation", "IoT", "Sensors"]
-                    },
-                    {
-                      name: "Develop & Test",
-                      description: "Design and build educational games by applying product development principles.",
-                      tags: ["Game Development", "Testing", "Product Design"]
-                    }
-                  ]
+                  id: "middle-school",
+                  title: "Middle School (Grades 3–8)",
+                  description:
+                    "Automate & Develop: Get practical experience in automation and embedded systems while building with sensors, processors, and actuators. Design and build educational games applying product development principles.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 8–13",
+                  timestamp: new Date("2024-03-01"),
                 },
                 {
-                  stage: "Lower Secondary (Grades 6–9)",
-                  ages: "Ages 11–15",
-                  programs: [
-                    {
-                      name: "Solutions & Syntax",
-                      description: "Build work-life skills through innovative, project-based learning in a textual programming course.",
-                      tags: ["Text Programming", "Project-based Learning"]
-                    },
-                    {
-                      name: "AI Vision",
-                      description: "Create machine vision and augmented reality projects to explore AI creatively.",
-                      tags: ["Machine Vision", "AR", "AI"]
-                    }
-                  ]
+                  id: "lower-secondary",
+                  title: "Lower Secondary (Grades 6–9)",
+                  description:
+                    "Solutions & Syntax + AI Vision: Build work-life skills through innovative, project-based learning in textual programming. Create machine vision and augmented reality projects to explore AI creatively.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 11–15",
+                  timestamp: new Date("2024-03-15"),
                 },
                 {
-                  stage: "Upper Secondary (Grades 8–12)",
-                  ages: "Ages 13–17",
-                  programs: [
-                    {
-                      name: "ICT Explorer",
-                      description: "Learn to navigate the internet and computer systems safely and independently.",
-                      tags: ["Digital Literacy", "Cybersecurity"]
-                    },
-                    {
-                      name: "Web Innovator",
-                      description: "Design stunning, functional webpages by progressing from basic web design to AI-enhanced applications.",
-                      tags: ["Web Development", "HTML/CSS", "AI Integration"]
-                    },
-                    {
-                      name: "Teachable Machine",
-                      description: "Investigate AI classifiers and social media profiling through experimental, creative projects.",
-                      tags: ["Machine Learning", "AI Ethics", "Data Analysis"]
-                    }
-                  ]
+                  id: "upper-secondary",
+                  title: "Upper Secondary (Grades 8–12)",
+                  description:
+                    "ICT Explorer, Web Innovator & Teachable Machine: Learn digital literacy and cybersecurity, design AI-enhanced web applications, and investigate AI classifiers through experimental projects.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 13–17",
+                  timestamp: new Date("2024-04-01"),
                 },
                 {
-                  stage: "Senior Secondary (Grades 9–12)",
-                  ages: "Ages 14–18",
-                  programs: [
-                    {
-                      name: "Sensor Challenger",
-                      description: "Conduct experiments with electromechanics and embedded systems to build sensor-activated games in a project-based course.",
-                      tags: ["Embedded Systems", "Hardware", "Game Development"]
-                    }
-                  ]
-                }
+                  id: "senior-secondary",
+                  title: "Senior Secondary (Grades 9–12)",
+                  description:
+                    "Sensor Challenger: Conduct experiments with electromechanics and embedded systems to build sensor-activated games in a project-based course. Advanced hardware integration and game development.",
+                  status: "completed",
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  badge: "Ages 14–18",
+                  timestamp: new Date("2024-04-15"),
+                },
               ]}
             />
+
+            {/* Key Learning Outcomes */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+              <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <div className="text-3xl font-bold text-blue-700 mb-2">7</div>
+                <div className="text-sm text-blue-600 font-medium">Grade Levels Covered</div>
+              </div>
+              <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200">
+                <div className="text-3xl font-bold text-green-700 mb-2">12+</div>
+                <div className="text-sm text-green-600 font-medium">Core Programs</div>
+              </div>
+              <div className="text-center p-6 bg-purple-50 rounded-xl border border-purple-200">
+                <div className="text-3xl font-bold text-purple-700 mb-2">100%</div>
+                <div className="text-sm text-purple-600 font-medium">NEP 2020 Aligned</div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -582,11 +662,16 @@ const CodeSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504]">About Code School Finland</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504]">
+                About Code School Finland
+              </h2>
             </div>
             <div className="text-center max-w-4xl">
               <p className="text-lg text-[#0C0504] leading-relaxed">
-                Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code School Finland creates practical teaching resources that help any teacher confidently teach coding, AI, robotics, and future skills. These materials are constantly improved with feedback from classrooms around the world.
+                Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code
+                School Finland creates practical teaching resources that help any teacher
+                confidently teach coding, AI, robotics, and future skills. These materials are
+                constantly improved with feedback from classrooms around the world.
               </p>
             </div>
           </div>
@@ -597,9 +682,10 @@ const CodeSchool = () => {
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0 text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Get Started</h2>
             <p className="text-lg text-white leading-relaxed max-w-3xl">
-              Bring future-ready skills to your classrooms, simply, effectively, and at scale. SchoolGrads takes care of the rollout, teacher training, and ongoing support.
+              Bring future-ready skills to your classrooms, simply, effectively, and at scale.
+              SchoolGrads takes care of the rollout, teacher training, and ongoing support.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button
                 className="box-border flex justify-center items-center gap-2 border cursor-pointer bg-white m-0 px-6 py-3 rounded-full border-solid border-white hover:bg-gray-100 transition-colors font-semibold text-[#0C0504] min-w-[200px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
@@ -628,7 +714,7 @@ const CodeSchool = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Interactive Bento Gallery Section */}
         <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-white m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <InteractiveBentoGallery
@@ -672,7 +758,7 @@ const CodeSchool = () => {
                 desc: "Real classroom integration",
                 url: "https://cdn.pixabay.com/video/2019/04/04/23264-329278009_large.mp4",
                 span: "",
-              }
+              },
             ]}
             title="Code School Finland Gallery"
             description="Experience our innovative approach to coding education in Indian classrooms"
