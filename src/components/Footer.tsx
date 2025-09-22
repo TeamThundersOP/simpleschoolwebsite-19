@@ -5,7 +5,6 @@ const footerLinks = {
   products: [
     { name: "Code School Finland", href: "/code-school" },
     { name: "Finnish Experience", href: "/finnish-experience" },
-    { name: "GraphoGame", href: "/grapho-game" },
     { name: "Kindie Days", href: "/kindie-days" },
     { name: "Moomin Language School", href: "/moomin-language-school" }
   ],

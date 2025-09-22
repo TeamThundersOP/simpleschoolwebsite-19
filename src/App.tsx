@@ -14,7 +14,6 @@ const Teachers = lazy(() => import("./pages/Teachers"));
 const SchoolManagement = lazy(() => import("./pages/SchoolManagement"));
 const CodeSchool = lazy(() => import("./pages/CodeSchool"));
 const FinnishExperience = lazy(() => import("./pages/FinnishExperience"));
-const GraphoGame = lazy(() => import("./pages/GraphoGame"));
 const KindieDays = lazy(() => import("./pages/KindieDays"));
 const MoominLanguageSchool = lazy(() => import("./pages/MoominLanguageSchool"));
 const About = lazy(() => import("./pages/About"));
@@ -48,7 +47,7 @@ const App = () => {
               <Route path="/school-management" element={<SchoolManagement />} />
               <Route path="/code-school" element={<CodeSchool />} />
               <Route path="/finnish-experience" element={<FinnishExperience />} />
-              <Route path="/grapho-game" element={<GraphoGame />} />
+              {false && <Route path="/grapho-game" element={null} />}
               <Route path="/kindie-days" element={<KindieDays />} />
               <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
               <Route path="/about" element={<About />} />
