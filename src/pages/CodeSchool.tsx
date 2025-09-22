@@ -662,12 +662,12 @@ const CodeSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C0504]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
                 About Code School Finland
               </h2>
             </div>
             <div className="text-center max-w-4xl">
-              <p className="text-lg text-[#0C0504] leading-relaxed">
+            <p className="text-lg text-highlight leading-relaxed">
                 Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code
                 School Finland creates practical teaching resources that help any teacher
                 confidently teach coding, AI, robotics, and future skills. These materials are
@@ -692,8 +692,8 @@ const CodeSchool = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <ArrowRight className="w-4 h-4 text-[#0C0504]" />
-                Book a 20-minute consultation
+                <ArrowRight className="w-4 h-4 text-highlight" />
+                <span className="text-highlight">Book a 20-minute consultation</span>
               </motion.button>
               <motion.button
                 className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-6 py-3 rounded-full border-solid border-[rgba(255,255,255,0.30)] hover:bg-[rgba(255,255,255,0.08)] transition-colors font-semibold text-white min-w-[200px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"

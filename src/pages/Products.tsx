@@ -131,7 +131,7 @@ const Products = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <motion.section 
-          className="box-border flex w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[#021223] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-8 lg:px-16 relative overflow-x-hidden"
+          className="box-border flex w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 bg-[rgb(17,24,39)] m-0 pt-[80px] sm:pt-[96px] md:pt-[112px] lg:pt-[128px] pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-8 lg:px-16 relative overflow-x-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -305,10 +305,10 @@ const Products = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="box-border w-full text-[#0C0504] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
+              <h2 className="box-border w-full text-highlight text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
                 School Grads Vision for India
               </h2>
-              <p className="box-border w-full text-[#0C0504] text-base sm:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl mx-auto">
+              <p className="box-border w-full text-highlight/80 text-base sm:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl mx-auto">
                 At SchoolGrads, our mission is to bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable. With our partner, Code School Finland, we help schools give students—from early years to high school—practical skills in coding, AI, robotics, and future skills while also building their creativity, innovation, and problem-solving abilities.
               </p>
             </motion.div>
@@ -351,17 +351,17 @@ const Products = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="bg-[#021223]/5 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <column.icon className="h-8 w-8 text-[#021223]" />
+                  <div className="bg-highlight/5 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <column.icon className="h-8 w-8 text-highlight" />
                   </div>
-                  <h3 className="font-medium text-[#0C0504] text-xl mb-4">{column.title}</h3>
+                  <h3 className="font-medium text-highlight text-xl mb-4">{column.title}</h3>
                   <ul className="space-y-3">
                     {column.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3 text-[#0C0504] text-sm">
-                        <div className="w-4 h-4 bg-[#021223]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                          {itemIndex === 0 ? <Code className="w-2.5 h-2.5 text-[#021223]" /> : 
-                           itemIndex === 1 ? <Lightbulb className="w-2.5 h-2.5 text-[#021223]" /> : 
-                           <Target className="w-2.5 h-2.5 text-[#021223]" />}
+                      <li key={itemIndex} className="flex items-start gap-3 text-highlight text-sm">
+                        <div className="w-4 h-4 bg-highlight/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                          {itemIndex === 0 ? <Code className="w-2.5 h-2.5 text-highlight" /> : 
+                           itemIndex === 1 ? <Lightbulb className="w-2.5 h-2.5 text-highlight" /> : 
+                           <Target className="w-2.5 h-2.5 text-highlight" />}
                         </div>
                         {item}
                       </li>
@@ -374,7 +374,7 @@ const Products = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[#03182F] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
+        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[rgb(17,24,39)] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <div className="box-border flex max-w-screen-xl flex-col items-start gap-12 lg:gap-20 w-full m-0 p-0">
             <motion.div 
               className="w-full text-center"
@@ -433,7 +433,7 @@ const Products = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="box-border w-full text-[#0C0504] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
+              <h2 className="box-border w-full text-highlight text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
                 Pedagogy & Fit for India
               </h2>
             </motion.div>
@@ -464,11 +464,11 @@ const Products = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="bg-[#021223]/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-8 w-8 text-[#021223]" />
+                  <div className="bg-highlight/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-8 w-8 text-highlight" />
                   </div>
-                  <h3 className="font-medium text-[#0C0504] text-lg mb-2">{item.title}</h3>
-                  <p className="text-sm text-[#0C0504]/80">{item.description}</p>
+                  <h3 className="font-medium text-highlight text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-highlight/80">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -476,7 +476,7 @@ const Products = () => {
         </section>
 
         {/* Implementation with School Grads Section */}
-        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[#03182F] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
+        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[rgb(17,24,39)] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <div className="box-border flex max-w-screen-xl flex-col items-start gap-12 lg:gap-20 w-full m-0 p-0">
             <motion.div 
               className="w-full text-center"
@@ -524,7 +524,7 @@ const Products = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="box-border w-full text-[#0C0504] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
+              <h2 className="box-border w-full text-highlight text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-4">
                 Outcomes You Can Expect
               </h2>
             </motion.div>
@@ -543,10 +543,10 @@ const Products = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="bg-[#021223]/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Lightbulb className="h-8 w-8 text-[#021223]" />
+                  <div className="bg-highlight/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Lightbulb className="h-8 w-8 text-highlight" />
                   </div>
-                  <p className="text-[#0C0504] text-sm">{outcome}</p>
+                  <p className="text-highlight text-sm">{outcome}</p>
                 </motion.div>
               ))}
             </div>
@@ -554,7 +554,7 @@ const Products = () => {
         </section>
 
         {/* Curriculum Roadmap Section */}
-        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[#03182F] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
+        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[rgb(17,24,39)] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <div className="box-border flex max-w-screen-xl flex-col items-start gap-12 lg:gap-20 w-full m-0 p-0">
             <motion.div 
               className="w-full text-center"
@@ -588,7 +588,7 @@ const Products = () => {
         </section>
 
         {/* Video Gallery Section */}
-        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[#021223] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
+        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[rgb(17,24,39)] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <div className="box-border flex max-w-screen-xl flex-col items-start gap-12 lg:gap-20 w-full m-0 p-0">
             <motion.div 
               className="w-full text-center"
@@ -637,10 +637,10 @@ const Products = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="box-border w-full text-[#0C0504] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-6">
+              <h2 className="box-border w-full text-highlight text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight m-0 p-0 mb-6">
                 About Code School Finland
               </h2>
-              <p className="box-border w-full text-[#0C0504] text-base sm:text-lg font-normal leading-relaxed m-0 p-0 max-w-3xl mx-auto">
+              <p className="box-border w-full text-highlight/80 text-base sm:text-lg font-normal leading-relaxed m-0 p-0 max-w-3xl mx-auto">
                 Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code School Finland creates practical teaching resources that help any teacher confidently teach coding, AI, robotics, and future skills. These materials are constantly improved with feedback from classrooms around the world.
               </p>
             </motion.div>
@@ -648,7 +648,7 @@ const Products = () => {
         </section>
 
         {/* Get Started CTA Section */}
-        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[#03182F] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
+        <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-[rgb(17,24,39)] m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-12 w-full text-center m-0 p-0">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
