@@ -8,16 +8,10 @@ const footerLinks = {
     { name: "Kindie Days", href: "/kindie-days" },
     { name: "Moomin Language School", href: "/moomin-language-school" }
   ],
-  services: [
-    { name: "For Students", href: "/students" },
-    { name: "For Teachers", href: "/teachers" },
-    { name: "School Management", href: "/school-management" },
-    { name: "All Services", href: "/services" }
-  ],
+  services: [],
   company: [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Product Page", href: "/product" },
     { name: "Contact", href: "#contact" }
   ],
   legal: [

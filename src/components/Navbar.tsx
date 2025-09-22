@@ -71,12 +71,14 @@ const Navbar = () => {
               Home
             </Link>
 
-            <Link
-              to="/services"
-              className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
-            >
-              Services
-            </Link>
+            {false && (
+              <Link
+                to="/services"
+                className="box-border text-gray-900 text-sm sm:text-base font-bold leading-5 sm:leading-6 cursor-pointer m-0 p-0 hover:text-gray-600 transition-colors"
+              >
+                Services
+              </Link>
+            )}
 
             {/* Products Dropdown */}
             <div className="relative dropdown-container">
@@ -186,12 +188,14 @@ const Navbar = () => {
               Home
             </Link>
 
-            <Link
-              to="/services"
-              className="text-gray-900 text-base font-bold leading-6 cursor-pointer hover:text-gray-600 transition-colors"
-            >
-              Services
-            </Link>
+            {false && (
+              <Link
+                to="/services"
+                className="text-gray-900 text-base font-bold leading-6 cursor-pointer hover:text-gray-600 transition-colors"
+              >
+                Services
+              </Link>
+            )}
 
             {/* Mobile Products */}
             <div>
