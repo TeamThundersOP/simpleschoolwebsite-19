@@ -28,8 +28,8 @@ const WhyItWorksSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
-            alt="Moomin Language School Learning"
+            src="/lovable-uploads/Moomin Language School/Playful-session_2.jpg"
+            alt="Moomin Language School Learning Session"
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Gradient overlay - clear at top, dark at bottom */}

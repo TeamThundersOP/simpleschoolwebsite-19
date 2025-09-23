@@ -156,16 +156,37 @@ const CodeSchool = () => {
               </motion.div>
             </div>
 
-            {/* Images Section - Right */}
+            {/* Video Section - Right */}
             <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
               <div className="relative w-full max-w-lg">
-                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
-                  <div className="w-full h-full flex items-center justify-center text-gray-600">
-                    <div className="text-center">
-                      <Code className="h-16 w-16 mx-auto mb-4 opacity-80 text-gray-600" />
-                      <p className="text-lg font-medium">Finnish Coding Education</p>
-                      <p className="text-sm opacity-70">Transform your classroom</p>
-                    </div>
+                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200 relative group">
+                  <video
+                    src="/lovable-uploads/Code School Finland/csf_pedagogy_animated_explanation (1080p).mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                    poster="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  {/* Custom volume control */}
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button
+                      className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors flex items-center justify-center w-10 h-10"
+                      onClick={(e) => {
+                        const video = e.currentTarget.parentElement?.parentElement?.querySelector(
+                          "video",
+                        ) as HTMLVideoElement;
+                        if (video) {
+                          video.muted = !video.muted;
+                        }
+                      }}
+                      title="Toggle volume"
+                    >
+                      🔊
+                    </button>
                   </div>
                 </div>
               </div>
@@ -292,8 +313,8 @@ const CodeSchool = () => {
             {/* Background Image */}
             <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
-                alt="Code School Finland Community"
+                src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                alt="Code School Finland Core Team"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Gradient overlay - clear at top, dark at bottom */}
@@ -662,12 +683,12 @@ const CodeSchool = () => {
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
             <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
                 About Code School Finland
               </h2>
             </div>
             <div className="text-center max-w-4xl">
-            <p className="text-lg text-highlight leading-relaxed">
+              <p className="text-lg text-highlight leading-relaxed">
                 Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code
                 School Finland creates practical teaching resources that help any teacher
                 confidently teach coding, AI, robotics, and future skills. These materials are
@@ -721,43 +742,59 @@ const CodeSchool = () => {
             mediaItems={[
               {
                 id: 1,
-                type: "image",
-                title: "Code School Finland Classroom",
-                desc: "Students engaged in coding activities",
-                url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80",
-                span: "",
+                type: "video",
+                title: "Code School Finland Pedagogy",
+                desc: "Animated explanation of Finnish coding education methodology",
+                url: "/lovable-uploads/Code School Finland/csf_pedagogy_animated_explanation (1080p).mp4",
+                span: "large",
               },
               {
                 id: 2,
-                type: "video",
-                title: "Teacher Training Session",
-                desc: "Professional development in action",
-                url: "https://cdn.pixabay.com/video/2022/03/06/109519-686204142_large.mp4",
-                span: "",
+                type: "image",
+                title: "CSF Core Team",
+                desc: "Meet the dedicated team behind Code School Finland",
+                url: "/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg",
+                span: "wide",
               },
               {
                 id: 3,
                 type: "image",
-                title: "AI Learning Lab",
-                desc: "Future-ready technology education",
-                url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-                span: "",
+                title: "Bobo AI Character",
+                desc: "Interactive AI learning companion for students",
+                url: "/lovable-uploads/Code School Finland/Bobo AI.png",
+                span: "standard",
               },
               {
                 id: 4,
                 type: "image",
-                title: "Student Project Showcase",
-                desc: "Creative coding achievements",
-                url: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-                span: "",
+                title: "Bobo and Small Bobo",
+                desc: "Engaging character duo for coding education",
+                url: "/lovable-uploads/Code School Finland/Bobo and small bobo.png",
+                span: "tall",
               },
               {
                 id: 5,
-                type: "video",
-                title: "Curriculum Implementation",
-                desc: "Real classroom integration",
-                url: "https://cdn.pixabay.com/video/2019/04/04/23264-329278009_large.mp4",
-                span: "",
+                type: "image",
+                title: "Bobo Computer Head",
+                desc: "Technology-focused learning character design",
+                url: "/lovable-uploads/Code School Finland/Bobo computer head.png",
+                span: "standard",
+              },
+              {
+                id: 6,
+                type: "image",
+                title: "Bobo Confused",
+                desc: "Problem-solving and debugging concepts",
+                url: "/lovable-uploads/Code School Finland/Bobo confused.png",
+                span: "standard",
+              },
+              {
+                id: 7,
+                type: "image",
+                title: "Bobo Download",
+                desc: "Digital literacy and software concepts",
+                url: "/lovable-uploads/Code School Finland/Bobo download.png",
+                span: "wide",
               },
             ]}
             title="Code School Finland Gallery"

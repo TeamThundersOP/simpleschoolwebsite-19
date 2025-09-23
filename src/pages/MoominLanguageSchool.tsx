@@ -1,49 +1,45 @@
-import React, { useState } from 'react';
-import { 
-  Play, 
-  Phone, 
-  Mail
-} from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Seo from '@/components/Seo';
-import InteractiveBentoGallery from '@/components/blocks/interactive-bento-gallery';
+import React, { useState } from "react";
+import { Play, Phone, Mail } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
+import InteractiveBentoGallery from "@/components/blocks/interactive-bento-gallery";
 
 // Moomin Language School Components
-import HeroSection from '@/components/MoominLanguageSchool/HeroSection';
-import TrustStripSection from '@/components/MoominLanguageSchool/TrustStripSection';
-import VisionSection from '@/components/MoominLanguageSchool/VisionSection';
-import HowItWorksSection from '@/components/MoominLanguageSchool/HowItWorksSection';
-import WhyItWorksSection from '@/components/MoominLanguageSchool/WhyItWorksSection';
-import ChildrenExperienceSection from '@/components/MoominLanguageSchool/ChildrenExperienceSection';
-import EducatorsSection from '@/components/MoominLanguageSchool/EducatorsSection';
-import SchoolBenefitsSection from '@/components/MoominLanguageSchool/SchoolBenefitsSection';
-import ResultsSection from '@/components/MoominLanguageSchool/ResultsSection';
-import GettingStartedSection from '@/components/MoominLanguageSchool/GettingStartedSection';
-import AtAGlanceSection from '@/components/MoominLanguageSchool/AtAGlanceSection';
-import GetStartedCTASection from '@/components/MoominLanguageSchool/GetStartedCTASection';
+import HeroSection from "@/components/MoominLanguageSchool/HeroSection";
+import TrustStripSection from "@/components/MoominLanguageSchool/TrustStripSection";
+import VisionSection from "@/components/MoominLanguageSchool/VisionSection";
+import HowItWorksSection from "@/components/MoominLanguageSchool/HowItWorksSection";
+import WhyItWorksSection from "@/components/MoominLanguageSchool/WhyItWorksSection";
+import ChildrenExperienceSection from "@/components/MoominLanguageSchool/ChildrenExperienceSection";
+import EducatorsSection from "@/components/MoominLanguageSchool/EducatorsSection";
+import SchoolBenefitsSection from "@/components/MoominLanguageSchool/SchoolBenefitsSection";
+import ResultsSection from "@/components/MoominLanguageSchool/ResultsSection";
+import GettingStartedSection from "@/components/MoominLanguageSchool/GettingStartedSection";
+import AtAGlanceSection from "@/components/MoominLanguageSchool/AtAGlanceSection";
+import GetStartedCTASection from "@/components/MoominLanguageSchool/GetStartedCTASection";
 
 const MoominLanguageSchool = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    role: '',
-    organization: '',
-    email: '',
-    phone: '',
-    intent: ''
+    name: "",
+    role: "",
+    organization: "",
+    email: "",
+    phone: "",
+    intent: "",
   });
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (import.meta.env.DEV) {
-      console.log('Form submitted:', formData);
+      console.log("Form submitted:", formData);
     }
   };
 
@@ -55,9 +51,8 @@ const MoominLanguageSchool = () => {
         description="Simple to start, joyful to teach, and loved by children. Moomin Language School helps children aged 3–8 years learn English naturally through short daily play on a learning app and lively weekly group sessions."
         canonical="https://simpleschoolwebsite-19.onrender.com/moomin-language-school"
       />
-      
+
       <main id="main" className="w-full" role="main">
-        
         {/* Hero Section */}
         <HeroSection />
 
@@ -93,7 +88,7 @@ const MoominLanguageSchool = () => {
 
         {/* Get Started CTA */}
         <GetStartedCTASection />
-        
+
         {/* Interactive Bento Gallery Section */}
         <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-white m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <InteractiveBentoGallery
@@ -101,43 +96,99 @@ const MoominLanguageSchool = () => {
               {
                 id: 1,
                 type: "image",
-                title: "Moomin Language School Classroom",
-                desc: "Children learning English with Moomin characters",
-                url: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80",
-                span: "",
+                title: "Moomin Language School App",
+                desc: "Interactive learning with Moomin characters",
+                url: "/lovable-uploads/Moomin Language School/App-and-tools.png",
+                span: "large", // Hero item - tools overview
               },
               {
                 id: 2,
-                type: "video",
-                title: "App Learning Session",
-                desc: "Interactive daily practice with Moomin",
-                url: "https://cdn.pixabay.com/video/2020/06/23/42878-430049606_large.mp4",
-                span: "",
+                type: "image",
+                title: "Children Learning English",
+                desc: "Kids enjoying Moomin Language School",
+                url: "/lovable-uploads/Moomin Language School/MoominLS Kids 2.webp",
+                span: "standard", // Portrait of kids
               },
               {
                 id: 3,
                 type: "image",
-                title: "Finnish Education Method",
-                desc: "Joyful learning environment",
-                url: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-                span: "",
+                title: "Playful Learning Sessions",
+                desc: "Engaging group activities with Moomin",
+                url: "/lovable-uploads/Moomin Language School/Playful-session_1.png",
+                span: "tall", // Group session photo
               },
               {
                 id: 4,
                 type: "image",
-                title: "Teacher Training",
-                desc: "Professional development support",
-                url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-                span: "",
+                title: "App Learning Experience",
+                desc: "Daily practice with Moomin characters",
+                url: "/lovable-uploads/Moomin Language School/App-use.jpg",
+                span: "wide", // App interface screenshot
               },
               {
                 id: 5,
-                type: "video",
-                title: "Group Learning Activities",
-                desc: "Weekly playful sessions",
-                url: "https://cdn.pixabay.com/video/2022/05/31/119013-712900325_large.mp4",
-                span: "",
-              }
+                type: "image",
+                title: "Happy Learning Children",
+                desc: "Students enjoying Finnish-style English learning",
+                url: "/lovable-uploads/Moomin Language School/MoominLS Kids 4.png",
+                span: "standard", // Kids with devices
+              },
+              {
+                id: 6,
+                type: "image",
+                title: "Educational Tools",
+                desc: "Comprehensive learning materials and tools",
+                url: "/lovable-uploads/Moomin Language School/tools.png",
+                span: "standard", // Tool icons
+              },
+              {
+                id: 7,
+                type: "image",
+                title: "Young Learners",
+                desc: "Children engaged in Moomin Language activities",
+                url: "/lovable-uploads/Moomin Language School/Children_1.png",
+                span: "tall", // Classroom scene
+              },
+              {
+                id: 8,
+                type: "image",
+                title: "Learning Banner",
+                desc: "Moomin Language School promotional materials",
+                url: "/lovable-uploads/Moomin Language School/Banner_1.png",
+                span: "wide", // Marketing banner
+              },
+              {
+                id: 9,
+                type: "image",
+                title: "Children in Classroom",
+                desc: "Students engaged in Finnish-style learning",
+                url: "/lovable-uploads/Moomin Language School/Children_2.jpg",
+                span: "standard", // Classroom photo
+              },
+              {
+                id: 10,
+                type: "image",
+                title: "Founders Team",
+                desc: "Meet the team behind Moomin Language School",
+                url: "/lovable-uploads/Moomin Language School/Founders 2.jpg",
+                span: "tall", // Team portrait
+              },
+              {
+                id: 11,
+                type: "image",
+                title: "Young Moomin Learners",
+                desc: "Children enjoying Moomin-based English learning",
+                url: "/lovable-uploads/Moomin Language School/MoominLS Kids.png",
+                span: "wide", // Group of kids learning
+              },
+              {
+                id: 12,
+                type: "image",
+                title: "Creative Learning",
+                desc: "Fun and engaging Moomin language activities",
+                url: "/lovable-uploads/Moomin Language School/MoominLS kids 3.ong.png",
+                span: "standard", // Individual child
+              },
             ]}
             title="Moomin Language School Gallery"
             description="Experience joyful English learning in the Finnish way"
