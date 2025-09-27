@@ -2,31 +2,31 @@ import React, { useRef, useEffect } from "react";
 
 const leftImages = [
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/80b8d4c4368f57d1a679e5cdf038d34eca5f4d99?width=623",
-    alt: "Educational environment",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
+    alt: "School Grads educational programs in action",
   },
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/948bd8919e8bbec333014a204acb18af2633946f?width=623",
-    alt: "Students learning",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
+    alt: "Students engaged in innovative learning experiences",
   },
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/e63b1d63cbd27af7036663df83041e4641f0f134?width=623",
-    alt: "Educational tools",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
+    alt: "Interactive classroom sessions with global pedagogy",
   },
 ];
 
 const rightImages = [
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/68c487557f681f8a5d55ed95b51389df3e5febeb?width=623",
-    alt: "Modern classroom",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
+    alt: "Modern learning environments with School Grads",
   },
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/4ffcfae24b1435a6b406a1734e2c1acb37974c9f?width=623",
-    alt: "Teacher training",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
+    alt: "Teacher empowerment and professional development",
   },
   {
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/eb17782e5f0f164e0bd079840c1e5e91853a5ced?width=623",
-    alt: "Educational innovation",
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg",
+    alt: "Educational innovation and digital transformation",
   },
 ];
 

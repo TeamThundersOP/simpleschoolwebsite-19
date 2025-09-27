@@ -8,43 +8,44 @@ const Products = () => {
       description:
         "Empowering Indian schools with world-class coding, AI, and future-skills education—rooted in Finnish pedagogy, tailored for NEP 2020, and made simple for teachers and students alike.",
       features: ["Coding & AI Education", "Finnish Pedagogy", "NEP 2020 Aligned"],
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=789",
+      image: "/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png",
       link: "/code-school",
+      logoStyle: "contain",
     },
     {
       title: "Finnish Experience",
       description:
         "Bringing the world's most admired education methods to schools, leaders, and learners through Finnish pedagogy, EdTech, training, and immersive Finnish Experience® programs.",
       features: ["Finnish Pedagogy", "Leadership Training", "School Transformation"],
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/8ead1f9a8371bab419bab0afeb7ef53a7d9481f2?width=789",
+      image: "/lovable-uploads/FEDS-LOGO-FE-3.png",
       link: "/finnish-experience",
+      logoStyle: "contain",
     },
     // {
     //   title: "GraphoGame",
     //   description: "A research-backed reading app that helps children aged 4–9 learn to read through fun, adaptive, phonics-based play—making literacy accessible at home, in schools, and at scale.",
     //   features: ["Phonics-based Learning", "Research-backed", "Adaptive Gameplay"],
-    //   image: "https://api.builder.io/api/v1/image/assets/TEMP/e7840efc9c98d295910c74f7a2f3fce9ee02d64f?width=789",
-    //   link: "/grapho-game"
+    //   image: "/lovable-uploads/Group-215.svg",
+    //   link: "/grapho-game",
+    //   logoStyle: "contain"
     // },
     {
       title: "Kindie Days",
       description:
         "A Finnish early education platform that empowers preschools with smart apps, playful lesson plans, and teacher training—making learning visible, consistent, and joyful for children and families.",
       features: ["Early Education", "Smart Apps", "Teacher Training"],
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/3d273cd537999680136574d674e15be22eb8c484?width=789",
+      image: "/lovable-uploads/kdlogobroadjpgcopy.jpg",
       link: "/kindie-days",
+      logoStyle: "contain",
     },
     {
       title: "Moomin Language School",
       description:
         "A playful, Finnish-designed program that helps children aged 3–8 learn English naturally through daily app practice and weekly group sessions—making language learning fun, stress-free, and effective.",
       features: ["Language Learning", "Moomin Characters", "Story-driven"],
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/8ead1f9a8371bab419bab0afeb7ef53a7d9481f2?width=789",
+      image: "/lovable-uploads/MoominLS_logo_text3-1.png.webp",
       link: "/moomin-language-school",
+      logoStyle: "contain",
     },
   ];
 
@@ -88,11 +89,11 @@ const Products = () => {
                 key={index}
                 className="box-border flex flex-col justify-between items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4 h-full"
               >
-                <div className="box-border w-full overflow-hidden rounded-xl sm:rounded-2xl">
+                <div className="box-border w-full flex items-center justify-center bg-white border border-gray-100 rounded-xl sm:rounded-2xl p-6 sm:p-8">
                   <img
                     src={product.image}
-                    alt={product.title}
-                    className="box-border h-40 sm:h-48 md:h-52 lg:h-56 w-full aspect-[74/45] object-cover m-0 p-0 rounded-xl sm:rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                    alt={`${product.title} Logo`}
+                    className="box-border h-20 sm:h-24 md:h-28 lg:h-32 w-auto max-w-full object-contain m-0 p-0 transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <div className="box-border flex flex-col items-start gap-3 sm:gap-4 lg:gap-6 w-full m-0 p-0">

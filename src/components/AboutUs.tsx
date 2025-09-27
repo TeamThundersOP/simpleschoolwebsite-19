@@ -72,8 +72,8 @@ const AboutUs = () => {
             </div>
           </div>
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/43d51e42581e42c1cd3ce13625944e73c55a3263?width=1200"
-            alt="Educational excellence in action"
+            src="/lovable-uploads/School Grads/IMG-20250924-WA0007.jpg"
+            alt="School Grads empowering educational excellence through global pedagogy and innovative learning solutions"
             className="box-border h-80 sm:h-96 lg:h-[640px] w-full lg:flex-1 aspect-[15/16] object-cover m-0 p-0 rounded-2xl"
           />
         </div>

@@ -744,7 +744,7 @@ const CodeSchool = () => {
                 id: 1,
                 type: "video",
                 title: "Code School Finland Pedagogy",
-                desc: "Animated explanation of Finnish coding education methodology",
+                desc: "Animated explanation of Finnish coding education methodology and classroom implementation",
                 url: "/lovable-uploads/Code School Finland/csf_pedagogy_animated_explanation (1080p).mp4",
                 span: "large",
               },
@@ -752,53 +752,53 @@ const CodeSchool = () => {
                 id: 2,
                 type: "image",
                 title: "CSF Core Team",
-                desc: "Meet the dedicated team behind Code School Finland",
+                desc: "Meet the dedicated educators and innovators behind Code School Finland's world-class curriculum",
                 url: "/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg",
                 span: "wide",
               },
               {
                 id: 3,
                 type: "image",
-                title: "Bobo AI Character",
-                desc: "Interactive AI learning companion for students",
+                title: "Bobo AI Learning Companion",
+                desc: "Interactive AI character that guides students through coding concepts with engaging storytelling",
                 url: "/lovable-uploads/Code School Finland/Bobo AI.png",
                 span: "standard",
               },
               {
                 id: 4,
                 type: "image",
-                title: "Bobo and Small Bobo",
-                desc: "Engaging character duo for coding education",
+                title: "Bobo Character Family",
+                desc: "Engaging character duo designed to make coding education fun and accessible for all ages",
                 url: "/lovable-uploads/Code School Finland/Bobo and small bobo.png",
                 span: "tall",
               },
               {
                 id: 5,
                 type: "image",
-                title: "Bobo Computer Head",
-                desc: "Technology-focused learning character design",
+                title: "Digital Literacy Focus",
+                desc: "Technology-focused learning character representing computational thinking and digital skills",
                 url: "/lovable-uploads/Code School Finland/Bobo computer head.png",
                 span: "standard",
               },
               {
                 id: 6,
                 type: "image",
-                title: "Bobo Confused",
-                desc: "Problem-solving and debugging concepts",
+                title: "Problem-Solving Skills",
+                desc: "Teaching debugging concepts and critical thinking through relatable character expressions",
                 url: "/lovable-uploads/Code School Finland/Bobo confused.png",
                 span: "standard",
               },
               {
                 id: 7,
                 type: "image",
-                title: "Bobo Download",
-                desc: "Digital literacy and software concepts",
+                title: "Digital Citizenship",
+                desc: "Introducing students to software concepts, downloading, and responsible technology use",
                 url: "/lovable-uploads/Code School Finland/Bobo download.png",
                 span: "wide",
               },
             ]}
-            title="Code School Finland Gallery"
-            description="Experience our innovative approach to coding education in Indian classrooms"
+            title="Code School Finland Experience Gallery"
+            description="Discover our innovative approach to bringing Finnish coding education to Indian classrooms through engaging characters, proven pedagogy, and world-class curriculum"
           />
         </section>
 
