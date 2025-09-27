@@ -62,7 +62,7 @@ const Index = () => {
       <Navbar />
       <Seo
         title="Simple School – Modern Education Solutions"
-        description="Discover innovative educational programs including CodeSchool, GraphoGame, and Moomin Language School. Quality education solutions for students and teachers."
+        description="Discover innovative educational programs including CodeSchool and Moomin Language School. Quality education solutions for students and teachers."
         canonical="https://simpleschoolwebsite-19.onrender.com/"
       />
       <main id="main" className="w-full" role="main">

@@ -5,7 +5,6 @@ const footerLinks = {
   products: [
     "Code School Finland",
     "Finnish Experience",
-    "GraphoGame",
     "Kindie Days",
     "Moomin Language School",
   ],

@@ -187,23 +187,7 @@ const About = () => {
                     </p>
                   </div>
                 </article>
-                <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
-                  <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
-                    <img
-                      src="/lovable-uploads/Group-215.svg"
-                      alt="GraphoGame"
-                      className="h-8 w-auto"
-                    />
-                  </div>
-                  <div className="box-border flex flex-col items-start gap-2 w-full m-0 p-0">
-                    <h4 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-white">
-                      GraphoGame
-                    </h4>
-                    <p className="box-border w-full text-[#0C0504] text-sm md:text-base font-normal leading-5 sm:leading-6 m-0 p-0 break-words transition-colors duration-300 group-hover:text-gray-300">
-                      World's most researched digital literacy game for children
-                    </p>
-                  </div>
-                </article>
+                {/* GraphoGame card removed per visibility request */}
                 <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
                   <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
                     <img

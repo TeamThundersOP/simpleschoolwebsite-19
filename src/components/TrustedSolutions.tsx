@@ -36,24 +36,23 @@ const stats = [
 const TrustedSolutions = () => {
   return (
     <section
-      className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden"
-      style={{
-        backgroundColor: '#0b1b45',
-        backgroundImage: `url('/assets/pattern-schoolgrads.svg')`,
-        backgroundRepeat: 'repeat',
-        backgroundSize: '160px 160px',
-        backgroundPosition: 'center',
-      }}
+      className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden bg-[rgb(2,18,35)]"
     >
-      {/* Subtle overlay for readability */}
+      {/* Background pattern using EduPat.svg from public */}
+      <div
+        className="absolute inset-0 bg-[url('/EduPat.svg')] bg-repeat bg-center opacity-[0.70] pointer-events-none select-none"
+        aria-hidden="true"
+      />
+
+      {/* Gradient overlay for readability */}
       <div
         className="absolute inset-0 z-0 pointer-events-none select-none"
         aria-hidden="true"
         style={{
-          background: 'rgba(11,27,69,0.92)', // #0b1b45 with opacity for overlay
-          backdropFilter: 'blur(0.5px)',
+          background: 'rgba(2,18,35,0.88)',
         }}
       />
+
       <div className="relative z-10 box-border flex max-w-screen-xl flex-col items-start gap-12 lg:gap-20 w-full m-0 p-0">
         <div className="box-border flex max-w-screen-md flex-col items-start gap-4 w-full m-0 p-0">
           <div className="box-border flex items-center m-0 p-0">
@@ -70,39 +69,6 @@ const TrustedSolutions = () => {
             </p>
           </div>
         </div>
-
-        {/* Trust Strip - Company Logos */}
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full mb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
-        >
-          {/* Placeholder trust indicators */}
-          {Array.from({ length: 5 }).map((_, index) => (
-            <motion.div
-              key={index}
-              className="flex items-center justify-center p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20"
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: { opacity: 1, scale: 1 }
-              }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="text-white/60 text-xs font-medium">
-                Partner {index + 1}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Stats Section */}
         <motion.div
@@ -149,6 +115,8 @@ const TrustedSolutions = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Removed unused animations after switching to static SVG background */}
     </section>
   );
 };
