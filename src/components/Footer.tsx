@@ -61,16 +61,16 @@ const SocialIcon: React.FC<SocialIconProps> = ({ type, href }) => {
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#021223] text-white w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 py-12 lg:py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/">
               <img
-                src="/lovable-uploads/af002aad-49a7-49c6-bd8f-d66970d17721.png"
+                src="/Logo-Inverted.svg"
                 alt="School Grads Logo"
-                className="h-16 w-auto brightness-0 invert"
+                className="h-16 w-auto"
                 loading="lazy"
                 width={120}
                 height={64}

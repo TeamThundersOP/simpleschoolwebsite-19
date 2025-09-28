@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <header className="box-border flex w-full flex-col items-center fixed z-[1000] bg-white m-0 p-0 border-b-[rgba(0,0,0,0.10)] border-b border-solid top-0 shadow-sm">
-      <div className="box-border flex h-[64px] sm:h-[72px] justify-between items-center w-full m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-0">
+      <div className="box-border flex h-[64px] sm:h-[72px] justify-between items-center w-full m-0 px-4 sm:px-6 md:px-8 lg:px-16 py-0">
         {/* Logo - Fixed position on left */}
         <Link
           to="/"
