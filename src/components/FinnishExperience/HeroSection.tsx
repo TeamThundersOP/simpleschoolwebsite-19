@@ -1,18 +1,24 @@
-import React from 'react';
-import { Globe, Star } from 'lucide-react';
+import React from "react";
+import { Globe, Star } from "lucide-react";
 
 // Finnish Experience Logo Component
-const FinnishExperienceLogo = ({ className = "", size = "large" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+const FinnishExperienceLogo = ({
+  className = "",
+  size = "large",
+}: {
+  className?: string;
+  size?: "small" | "medium" | "large";
+}) => {
   const sizeClasses = {
     small: "h-8 w-auto",
     medium: "h-12 w-auto",
-    large: "h-16 w-auto md:h-20"
+    large: "h-16 w-auto md:h-20",
   };
 
   return (
-    <img 
-      src="/lovable-uploads/FEDS-LOGO-FE-3.png" 
-      alt="Finnish Education Solutions Logo" 
+    <img
+      src="/lovable-uploads/FEDS-LOGO-FE-3.png"
+      alt="Finnish Education Solutions Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
   );
@@ -27,13 +33,13 @@ const HeroSection = () => {
           <div className="box-border flex flex-col justify-center items-center lg:items-start gap-4 lg:gap-6 w-full m-0 p-0">
             <div className="mb-6">
               <FinnishExperienceLogo className="mb-4" size="large" />
-
             </div>
             <h2 className="box-border w-full text-black text-lg sm:text-xl md:text-2xl font-semibold leading-tight m-0 p-0 break-words">
               Bringing the Finnish Experience® to India
             </h2>
             <p className="box-border w-full text-gray-600 text-base md:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl break-words">
-              Transform your school with the world's most admired education practices. Join 1,000 schools in the Finnish Experience® movement.
+              Transform your school with the world's most admired education practices. Join 1,000
+              schools in the Finnish Experience® movement.
             </p>
           </div>
           <div className="box-border flex flex-col sm:flex-row items-center gap-3 sm:gap-4 m-0 p-0 w-full sm:w-auto justify-center lg:justify-start">

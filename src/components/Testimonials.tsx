@@ -2,38 +2,98 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Gallery images (could be testimonials in the future)
+// Gallery images from School Grads folder
 const images = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Students collaborating in classroom",
-    category: "Classroom"
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
+    alt: "School Grads educational excellence in action",
+    category: "Education",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Teacher training workshop",
-    category: "Workshop"
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
+    alt: "Students engaged in innovative learning",
+    category: "Learning",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1543269664-7eef42226a21?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Educational innovation lab",
-    category: "Innovation"
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
+    alt: "Interactive classroom sessions",
+    category: "Classroom",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Students presenting project",
-    category: "Presentation"
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
+    alt: "Educational innovation and technology",
+    category: "Innovation",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Outdoor learning activity",
-    category: "Outdoor"
-  }
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
+    alt: "Modern learning environments",
+    category: "Modern Learning",
+  },
+  {
+    id: 6,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg",
+    alt: "Teacher empowerment and training",
+    category: "Training",
+  },
+  {
+    id: 7,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0007.jpg",
+    alt: "Global pedagogy implementation",
+    category: "Pedagogy",
+  },
+  {
+    id: 8,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0009.jpg",
+    alt: "Educational transformation in progress",
+    category: "Transformation",
+  },
+  {
+    id: 9,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0010.jpg",
+    alt: "Student achievement and success",
+    category: "Achievement",
+  },
+  {
+    id: 10,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0011.jpg",
+    alt: "Collaborative learning experiences",
+    category: "Collaboration",
+  },
+  {
+    id: 11,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0012.jpg",
+    alt: "School excellence and recognition",
+    category: "Excellence",
+  },
+  {
+    id: 12,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0013.jpg",
+    alt: "Future-ready education solutions",
+    category: "Future Ready",
+  },
+  {
+    id: 13,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0014.jpg",
+    alt: "Educational leadership development",
+    category: "Leadership",
+  },
+  {
+    id: 14,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0015.jpg",
+    alt: "Global education standards",
+    category: "Global Standards",
+  },
+  {
+    id: 15,
+    src: "/lovable-uploads/School Grads/IMG-20250924-WA0017.jpg",
+    alt: "Educational impact and outcomes",
+    category: "Impact",
+  },
 ];
 
 const AUTO_SCROLL_INTERVAL = 5000;
@@ -58,8 +118,8 @@ const Testimonials = () => {
 
   const getVisibleImages = () => {
     const result = [];
-    for (let i = 0; i < 5; i++) {
-      const index = (currentIndex + i) % images.length;
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i - 1 + images.length) % images.length;
       result.push({ ...images[index], position: i });
     }
     return result;
@@ -80,7 +140,7 @@ const Testimonials = () => {
           </div>
           <div className="box-border flex flex-col items-center gap-4 sm:gap-6 lg:gap-8 w-full m-0 p-0">
             <h2 className="box-border w-full text-[#0C0504] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight m-0 p-0 break-words">
-              Join our events and courses on education and training and connect in real life
+              Join our events and courses
             </h2>
           </div>
         </div>
@@ -96,7 +156,7 @@ const Testimonials = () => {
             >
               <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#0C0504]" />
             </button>
-            
+
             <button
               aria-label="Next"
               onClick={nextSlide}
@@ -106,21 +166,19 @@ const Testimonials = () => {
             </button>
 
             {/* Image Container */}
-            <div className="flex items-center justify-center gap-3 sm:gap-5 lg:gap-8 px-16 sm:px-20 lg:px-24 py-12 lg:py-16">
+            <div className="flex items-center justify-center gap-6 sm:gap-8 lg:gap-12 px-8 sm:px-12 lg:px-16 py-12 lg:py-16">
               {getVisibleImages().map((image, index) => (
                 <motion.div
                   key={`${image.id}-${currentIndex}`}
-                  className={`relative overflow-hidden rounded-xl shadow-md transition-all duration-300 ${
-                    index === 2 
-                      ? 'w-80 h-56 sm:w-96 sm:h-64 md:w-[28rem] md:h-80 lg:w-[36rem] lg:h-96 xl:w-[42rem] xl:h-[28rem] z-10 shadow-xl' 
-                      : index === 1 || index === 3
-                        ? 'w-56 h-40 sm:w-64 sm:h-44 md:w-80 md:h-56 lg:w-96 lg:h-64 xl:w-[28rem] xl:h-80 opacity-80'
-                        : 'w-40 h-28 sm:w-48 sm:h-32 md:w-56 md:h-40 lg:w-64 lg:h-44 xl:w-80 xl:h-56 opacity-60'
+                  className={`relative overflow-hidden rounded-xl shadow-md transition-all duration-300 aspect-video ${
+                    index === 1
+                      ? "w-[48rem] sm:w-[56rem] md:w-[64rem] lg:w-[72rem] xl:w-[80rem] 2xl:w-[88rem] z-10 shadow-xl"
+                      : "w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-70"
                   }`}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ 
-                    opacity: index === 2 ? 1 : index === 1 || index === 3 ? 0.8 : 0.6,
-                    scale: index === 2 ? 1 : index === 1 || index === 3 ? 0.85 : 0.7
+                  animate={{
+                    opacity: index === 1 ? 1 : 0.7,
+                    scale: index === 1 ? 1 : 0.8,
                   }}
                   transition={{ duration: 0.4 }}
                 >
@@ -128,15 +186,10 @@ const Testimonials = () => {
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                    onClick={() => setCurrentIndex((currentIndex + index - 2 + images.length) % images.length)}
+                    onClick={() =>
+                      setCurrentIndex((currentIndex + index - 1 + images.length) % images.length)
+                    }
                   />
-                  {index === 2 && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 lg:p-6">
-                      <div className="text-white text-sm sm:text-base lg:text-lg font-medium">
-                        {image.category}
-                      </div>
-                    </div>
-                  )}
                 </motion.div>
               ))}
             </div>

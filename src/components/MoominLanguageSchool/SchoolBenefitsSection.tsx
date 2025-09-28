@@ -1,19 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Clock, Star, Shield, Award } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Clock, Star, Shield, Award } from "lucide-react";
 
 // Moomin Language School Logo Component
-const MoominLanguageSchoolLogo = ({ className = "", size = "medium" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+const MoominLanguageSchoolLogo = ({
+  className = "",
+  size = "medium",
+}: {
+  className?: string;
+  size?: "small" | "medium" | "large";
+}) => {
   const sizeClasses = {
     small: "h-6 w-auto",
     medium: "h-8 w-auto md:h-12",
-    large: "h-16 w-auto md:h-20"
+    large: "h-16 w-auto md:h-20",
   };
 
   return (
-    <img 
-      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp" 
-      alt="Moomin Language School Logo" 
+    <img
+      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp"
+      alt="Moomin Language School Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
   );
@@ -24,23 +30,23 @@ const SchoolBenefitsSection = () => {
     {
       icon: <Clock className="w-6 h-6 text-highlight" />,
       title: "Quick rollout with existing staff",
-      description: "No need for specialist English teachers"
+      description: "No need for specialist English teachers",
     },
     {
       icon: <Star className="w-6 h-6 text-highlight" />,
       title: "Training materials improve teachers",
-      description: "Own language and pedagogy skills"
+      description: "Own language and pedagogy skills",
     },
     {
       icon: <Shield className="w-6 h-6 text-highlight" />,
       title: "Unique program rooted in Finnish education",
-      description: "Differentiator for parents"
+      description: "Differentiator for parents",
     },
     {
       icon: <Award className="w-6 h-6 text-highlight" />,
       title: "Strengthens school's brand",
-      description: "As innovative and globally aligned"
-    }
+      description: "As innovative and globally aligned",
+    },
   ];
 
   return (
@@ -50,13 +56,15 @@ const SchoolBenefitsSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
             <MoominLanguageSchoolLogo className="" size="medium" />
             <span className="text-2xl md:text-3xl font-bold text-gray-700">×</span>
-            <img 
-              src="/lovable-uploads/logo.svg" 
-              alt="School Grads Logo" 
-              className="h-8 w-auto md:h-12" 
+            <img
+              src="/lovable-uploads/logo.svg"
+              alt="School Grads Logo"
+              className="h-8 w-auto md:h-12"
             />
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">Benefits for Schools & Managers</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
+            Benefits for Schools & Managers
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
           {benefits.map((benefit, index) => (

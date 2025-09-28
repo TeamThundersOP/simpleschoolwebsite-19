@@ -1,19 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Heart } from "lucide-react";
 
 // Moomin Language School Logo Component
-const MoominLanguageSchoolLogo = ({ className = "", size = "large" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+const MoominLanguageSchoolLogo = ({
+  className = "",
+  size = "large",
+}: {
+  className?: string;
+  size?: "small" | "medium" | "large";
+}) => {
   const sizeClasses = {
     small: "h-8 w-auto",
     medium: "h-12 w-auto",
-    large: "h-16 w-auto md:h-20"
+    large: "h-16 w-auto md:h-20",
   };
 
   return (
-    <img 
-      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp" 
-      alt="Moomin Language School Logo" 
+    <img
+      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp"
+      alt="Moomin Language School Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
   );
@@ -53,7 +59,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Simple to start, joyful to teach, and loved by children. Helping children aged 3–8 years learn English naturally.
+              Simple to start, joyful to teach, and loved by children. Helping children aged 3–8
+              years learn English naturally.
             </motion.p>
           </motion.div>
           <motion.div

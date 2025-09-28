@@ -1,40 +1,42 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, Users, Monitor, GraduationCap, Headphones } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { BookOpen, Users, Monitor, GraduationCap, Headphones } from "lucide-react";
 
 const EducatorsSection = () => {
   const benefits = [
     {
       icon: <BookOpen className="w-6 h-6 text-highlight" />,
       title: "500+ ready-made lesson plans",
-      description: "With songs, activities, and printables"
+      description: "With songs, activities, and printables",
     },
     {
       icon: <Users className="w-6 h-6 text-highlight" />,
       title: "Differentiation tips",
-      description: "Focus on 21st-century skills (communication, collaboration, creativity)"
+      description: "Focus on 21st-century skills (communication, collaboration, creativity)",
     },
     {
       icon: <Monitor className="w-6 h-6 text-highlight" />,
       title: "Online tools",
-      description: "Manage groups, track progress, and preview lessons"
+      description: "Manage groups, track progress, and preview lessons",
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-highlight" />,
       title: "Teacher-friendly setup",
-      description: "No advanced English or extra prep required"
+      description: "No advanced English or extra prep required",
     },
     {
       icon: <Headphones className="w-6 h-6 text-highlight" />,
       title: "Full onboarding",
-      description: "And ongoing support"
-    }
+      description: "And ongoing support",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What Educators Get</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          What Educators Get
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {benefits.map((benefit, index) => (
             <motion.div

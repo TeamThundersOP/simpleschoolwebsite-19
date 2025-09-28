@@ -1,35 +1,37 @@
-import React from 'react';
-import { Award, Check, Star, Flag } from 'lucide-react';
+import React from "react";
+import { Award, Check, Star, Flag } from "lucide-react";
 
 const EvidenceRecognitionSection = () => {
   const achievements = [
     {
       icon: <Award className="w-6 h-6 text-highlight" />,
       title: "20+ years of research",
-      description: "University-led research foundation"
+      description: "University-led research foundation",
     },
     {
       icon: <Check className="w-6 h-6 text-highlight" />,
       title: "Global endorsement",
-      description: "Ministries of Education and NGOs worldwide"
+      description: "Ministries of Education and NGOs worldwide",
     },
     {
       icon: <Star className="w-6 h-6 text-highlight" />,
       title: "UNESCO recognition",
-      description: "Recognized as a proven literacy solution"
+      description: "Recognized as a proven literacy solution",
     },
     {
       icon: <Flag className="w-6 h-6 text-highlight" />,
       title: "National adoption",
-      description: "Finland, Norway, France, USA, Colombia, Argentina, Chile, Brazil"
-    }
+      description: "Finland, Norway, France, USA, Colombia, Argentina, Chile, Brazil",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Evidence & Recognition</h2>
-        
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          Evidence & Recognition
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
           {achievements.map((achievement, index) => (
             <div key={index} className="relative group">
@@ -49,9 +51,13 @@ const EvidenceRecognitionSection = () => {
         {/* Brazil Highlight */}
         <div className="bg-green-50 border border-green-200 rounded-xl p-6 max-w-4xl">
           <div className="text-center">
-            <h3 className="font-semibold text-highlight mb-3 text-lg">Brazil Collaboration Success Story</h3>
+            <h3 className="font-semibold text-highlight mb-3 text-lg">
+              Brazil Collaboration Success Story
+            </h3>
             <p className="text-highlight leading-relaxed">
-              The Brazilian government rolled out GraphoGame through nationwide literacy campaigns, helping millions of children learn to read. It quickly became a top-ranked app in the country.
+              The Brazilian government rolled out GraphoGame through nationwide literacy campaigns,
+              helping millions of children learn to read. It quickly became a top-ranked app in the
+              country.
             </p>
           </div>
         </div>

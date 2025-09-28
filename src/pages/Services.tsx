@@ -45,15 +45,16 @@ const services = [
 ];
 
 // Extracted ServiceCard for reusability and memoization
-const ServiceCard = memo(function ServiceCard({ icon, title, subtitle, description }: typeof services[0]) {
+const ServiceCard = memo(function ServiceCard({
+  icon,
+  title,
+  subtitle,
+  description,
+}: (typeof services)[0]) {
   return (
-    <article
-      className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group"
-    >
+    <article className="box-border flex flex-col items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group">
       <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
-        <div className="transition-colors duration-300 group-hover:[&>*]:text-white">
-          {icon}
-        </div>
+        <div className="transition-colors duration-300 group-hover:[&>*]:text-white">{icon}</div>
       </div>
       <h2 className="box-border w-full text-[#0C0504] text-lg sm:text-xl md:text-2xl font-semibold leading-tight tracking-tight m-0 p-0 transition-colors duration-300 group-hover:text-white">
         {title}
@@ -100,7 +101,10 @@ const Services = () => (
                 Transforming Indian Education with Global Excellence
               </h2>
               <p className="box-border w-full text-[#0C0504] text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
-                School Grads is a future-focused education company dedicated to transforming Indian classrooms with globally trusted solutions. Backed by three generations of educators and innovators, we bring the best of Global pedagogy, Ed-tech apps, and school transformation models into local contexts.
+                School Grads is a future-focused education company dedicated to transforming Indian
+                classrooms with globally trusted solutions. Backed by three generations of educators
+                and innovators, we bring the best of Global pedagogy, Ed-tech apps, and school
+                transformation models into local contexts.
               </p>
             </div>
           </section>

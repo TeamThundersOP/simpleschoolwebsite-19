@@ -1,37 +1,41 @@
-import React from 'react';
-import { Volume2, TrendingUp, Gamepad2, Wifi } from 'lucide-react';
+import React from "react";
+import { Volume2, TrendingUp, Gamepad2, Wifi } from "lucide-react";
 
 const WhatIsGraphoGameSection = () => {
   const features = [
     {
       icon: <Volume2 className="w-6 h-6 text-highlight" />,
       title: "Phonics-based learning",
-      description: "Teaches letters, sounds, and words step by step"
+      description: "Teaches letters, sounds, and words step by step",
     },
     {
       icon: <TrendingUp className="w-6 h-6 text-highlight" />,
       title: "Adaptive pathways",
-      description: "Adjusts to each child's pace for personalized progress"
+      description: "Adjusts to each child's pace for personalized progress",
     },
     {
       icon: <Gamepad2 className="w-6 h-6 text-highlight" />,
       title: "Game-like play",
-      description: "Keeps children engaged and motivated without ads"
+      description: "Keeps children engaged and motivated without ads",
     },
     {
       icon: <Wifi className="w-6 h-6 text-highlight" />,
       title: "Low-resource access",
-      description: "Works offline after download, free to users in sponsored regions"
-    }
+      description: "Works offline after download, free to users in sponsored regions",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">What is GraphoGame?</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          What is GraphoGame?
+        </h2>
         <div className="text-center max-w-4xl mb-8">
           <p className="text-lg text-highlight leading-relaxed mb-6">
-            GraphoGame is the world's most researched digital literacy game for children aged 3–9 years. Built in collaboration with leading universities, it makes learning to read fun, simple, and effective by combining:
+            GraphoGame is the world's most researched digital literacy game for children aged 3–9
+            years. Built in collaboration with leading universities, it makes learning to read fun,
+            simple, and effective by combining:
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">

@@ -9,10 +9,6 @@ type Props = {
 
 export function AltSection({ index, children, className = "" }: Props) {
   const bg = index % 2 === 0 ? TOKENS.WHITE_BG_CLASS : TOKENS.BLUE_BG_CLASS;
-  
-  return (
-    <div className={`${bg} w-full ${className}`}>
-      {children}
-    </div>
-  );
+
+  return <div className={`${bg} w-full ${className}`}>{children}</div>;
 }

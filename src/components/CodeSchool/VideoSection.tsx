@@ -1,14 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const VideoSection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-6 text-highlight">See Code School Finland in Action</h2>
+        <h2 className="text-4xl font-bold text-center mb-6 text-highlight">
+          See Code School Finland in Action
+        </h2>
         <p className="text-center text-highlight/80 mb-12 max-w-2xl mx-auto">
           Watch how our program transforms classrooms and empowers both teachers and students
         </p>
-        
+
         {/* Video Slot */}
         <div className="max-w-4xl mx-auto">
           <div className="aspect-video bg-white rounded-2xl overflow-hidden shadow-lg border border-[rgba(0,0,0,0.12)]">

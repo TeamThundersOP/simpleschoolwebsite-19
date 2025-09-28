@@ -13,10 +13,7 @@ interface MapProps {
   lineColor?: string;
 }
 
-export function WorldMap({
-  dots = [],
-  lineColor = "#020316",
-}: MapProps) {
+export function WorldMap({ dots = [], lineColor = "#020316" }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
@@ -36,10 +33,7 @@ export function WorldMap({
     return { x, y };
   };
 
-  const createCurvedPath = (
-    start: { x: number; y: number },
-    end: { x: number; y: number }
-  ) => {
+  const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: number }) => {
     const midX = (start.x + end.x) / 2;
     const midY = Math.min(start.y, end.y) - 50;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;

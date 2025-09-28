@@ -68,7 +68,10 @@ const Services = () => {
               Transforming Indian Education with Global Excellence
             </h2>
             <p className="box-border w-full text-[#0C0504] text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
-              School Grads is a future-focused education company dedicated to transforming Indian classrooms with globally trusted solutions. Backed by three generations of educators and innovators, we bring the best of Global pedagogy, Ed-tech apps, and school transformation models into local contexts.
+              School Grads is a future-focused education company dedicated to transforming Indian
+              classrooms with globally trusted solutions. Backed by three generations of educators
+              and innovators, we bring the best of Global pedagogy, Ed-tech apps, and school
+              transformation models into local contexts.
             </p>
           </div>
         </div>
@@ -117,7 +120,16 @@ const Services = () => {
             </h4>
             <div className="overflow-x-auto whitespace-nowrap gap-2 pb-2">
               <div className="inline-flex gap-2">
-                {['Finnish Pedagogy', 'Digital Learning', 'Teacher Training', 'Curriculum Design', 'Assessment Tools', 'Student Engagement', 'Educational Technology', 'Learning Analytics'].map((chip, index) => (
+                {[
+                  "Finnish Pedagogy",
+                  "Digital Learning",
+                  "Teacher Training",
+                  "Curriculum Design",
+                  "Assessment Tools",
+                  "Student Engagement",
+                  "Educational Technology",
+                  "Learning Analytics",
+                ].map((chip, index) => (
                   <span
                     key={index}
                     className="inline-flex items-center px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20 whitespace-nowrap hover:bg-primary/20 transition-colors cursor-pointer"

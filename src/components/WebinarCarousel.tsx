@@ -74,7 +74,7 @@ const webinars: Webinar[] = [
 
 const WebinarCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? webinars.length - 1 : prev - 1));
   };
@@ -92,7 +92,7 @@ const WebinarCarousel = () => {
       <div className="box-border flex max-w-screen-xl flex-col items-start gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full m-0 p-0">
         {/* Header */}
         <div className="box-border flex max-w-screen-md flex-col items-start gap-3 sm:gap-4 w-full m-0 p-0">
-            <div className="box-border flex items-center m-0 p-0">
+          <div className="box-border flex items-center m-0 p-0">
             <div className="box-border text-highlight text-sm sm:text-base font-semibold leading-6 m-0 p-0 uppercase tracking-widest">
               Events
             </div>
@@ -102,14 +102,15 @@ const WebinarCarousel = () => {
               Upcoming Webinars
             </h2>
             <p className="box-border w-full text-highlight text-sm sm:text-base md:text-lg font-normal leading-relaxed m-0 p-0 break-words">
-              Join our expert-led webinars to learn about the latest trends in education and innovative teaching methods from global experts.
+              Join our expert-led webinars to learn about the latest trends in education and
+              innovative teaching methods from global experts.
             </p>
           </div>
         </div>
 
         {/* Carousel Container */}
         <div className="box-border flex flex-col items-start gap-8 sm:gap-12 lg:gap-16 w-full m-0 p-0">
-          <motion.div 
+          <motion.div
             className="box-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full m-0 p-0 relative"
             initial="hidden"
             whileInView="visible"
@@ -118,9 +119,9 @@ const WebinarCarousel = () => {
               hidden: {},
               visible: {
                 transition: {
-                  staggerChildren: 0.15
-                }
-              }
+                  staggerChildren: 0.15,
+                },
+              },
             }}
           >
             {/* Navigation Buttons */}
@@ -131,7 +132,7 @@ const WebinarCarousel = () => {
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-highlight" />
             </button>
-            
+
             <button
               onClick={handleNext}
               className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 bg-white border border-gray-200 rounded-full shadow-lg hover:bg-gray-50 p-2 sm:p-3 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
@@ -143,14 +144,14 @@ const WebinarCarousel = () => {
             {Array.from({ length: 3 }).map((_, i) => {
               const webinarIndex = (currentIndex + i) % webinars.length;
               const webinar = webinars[webinarIndex];
-              
+
               return (
                 <motion.article
                   key={`${webinar.id}-${i}`}
                   className="box-border flex flex-col justify-between items-start gap-4 sm:gap-6 lg:gap-8 flex-1 m-0 p-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl rounded-xl sm:rounded-2xl hover:bg-gray-50/50 p-3 sm:p-4 -m-3 sm:-m-4 h-full"
                   variants={{
                     hidden: { opacity: 0, y: 50 },
-                    visible: { opacity: 1, y: 0 }
+                    visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.6 }}
                 >
@@ -184,21 +185,24 @@ const WebinarCarousel = () => {
                         </div>
                       </div>
                     </div>
-                    <button 
+                    <button
                       className="box-border flex justify-center items-center gap-2 border cursor-pointer m-0 px-3 sm:px-4 py-2 sm:py-2.5 mt-2 sm:mt-4 rounded-full border-solid transition-all duration-300 hover:shadow-lg hover:scale-105 w-full text-center"
                       style={{
                         backgroundColor: "hsl(var(--highlight))",
                         color: "#fff",
                         borderColor: "hsl(var(--highlight))",
-                        transition: "background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s",
+                        transition:
+                          "background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s",
                       }}
-                      onMouseEnter={e => {
+                      onMouseEnter={(e) => {
                         (e.currentTarget as HTMLElement).style.backgroundColor = "#b2e61b";
                         (e.currentTarget as HTMLElement).style.borderColor = "#b2e61b";
                       }}
-                      onMouseLeave={e => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor = "hsl(var(--highlight))";
-                        (e.currentTarget as HTMLElement).style.borderColor = "hsl(var(--highlight))";
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.backgroundColor =
+                          "hsl(var(--highlight))";
+                        (e.currentTarget as HTMLElement).style.borderColor =
+                          "hsl(var(--highlight))";
                       }}
                     >
                       <span
@@ -207,8 +211,20 @@ const WebinarCarousel = () => {
                       >
                         Join Webinar
                       </span>
-                      <svg width="16" height="16" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.5 12.5L19.5 12.5M19.5 12.5L12.5 5.5M19.5 12.5L12.5 19.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.5 12.5L19.5 12.5M19.5 12.5L12.5 5.5M19.5 12.5L12.5 19.5"
+                          stroke="#fff"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                       </svg>
                     </button>
                   </div>

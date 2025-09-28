@@ -1,12 +1,12 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Code } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Code } from "lucide-react";
 
 // Code School Finland Logo Component
 const CodeSchoolFinlandLogo = ({ className = "" }: { className?: string }) => (
-  <img 
-    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
-    alt="Code School Finland Logo" 
+  <img
+    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png"
+    alt="Code School Finland Logo"
     className={`h-16 w-auto md:h-20 ${className}`}
   />
 );
@@ -19,21 +19,24 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <div className="mb-6">
               <CodeSchoolFinlandLogo className="mb-4" />
-              <div className="text-2xl md:text-3xl font-bold text-highlight/70">
-                × School Grads
-              </div>
+              <div className="text-2xl md:text-3xl font-bold text-highlight/70">× School Grads</div>
             </div>
             <p className="text-2xl font-semibold text-highlight mb-4">
               Transforming How Indian Schools Teach Coding, AI & Future Skills
             </p>
             <p className="text-xl text-highlight/70 mb-8">
-              Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School Grads.
+              Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School
+              Grads.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-highlight text-white hover:bg-highlight/90">
                 Book Consultation
               </Button>
-              <Button variant="outline" size="lg" className="border-highlight text-highlight hover:bg-highlight hover:text-white">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-highlight text-highlight hover:bg-highlight hover:text-white"
+              >
                 Request Sample Pack
               </Button>
             </div>

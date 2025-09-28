@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address');
+      setError("Please enter a valid email address");
       return;
     }
 
     // Simulate form submission
-    setError('');
+    setError("");
     setIsSubmitted(true);
-    setEmail('');
-    
+    setEmail("");
+
     // Reset success message after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -35,11 +35,15 @@ const Newsletter = () => {
               Stay Updated with Our Newsletter
             </h2>
             <p className="box-border w-full text-white text-lg font-normal leading-[27px] m-0 p-0">
-              Get the latest updates on educational programs, teaching tools, and industry insights delivered to your inbox.
+              Get the latest updates on educational programs, teaching tools, and industry insights
+              delivered to your inbox.
             </p>
           </div>
           <div className="box-border flex w-[513px] flex-col items-start gap-4 m-0 p-0 max-md:w-full">
-            <form onSubmit={handleSubmit} className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col max-sm:gap-3">
+            <form
+              onSubmit={handleSubmit}
+              className="box-border flex items-start gap-4 w-full m-0 p-0 max-sm:flex-col max-sm:gap-3"
+            >
               <div className="box-border flex items-center gap-2 flex-1 bg-[rgba(255,255,255,0.00)] m-0 px-0 py-2 border-b-[rgba(255,255,255,0.20)] border-b border-solid">
                 <input
                   type="email"
@@ -56,16 +60,12 @@ const Newsletter = () => {
                 disabled={isSubmitted}
               >
                 <span className="box-border text-highlight text-base font-normal leading-6 m-0 p-0">
-                  {isSubmitted ? 'Subscribed!' : 'Sign Up'}
+                  {isSubmitted ? "Subscribed!" : "Sign Up"}
                 </span>
               </button>
             </form>
-            {error && (
-              <p className="text-red-400 text-sm">{error}</p>
-            )}
-            {isSubmitted && (
-              <p className="text-green-400 text-sm">Thank you for subscribing!</p>
-            )}
+            {error && <p className="text-red-400 text-sm">{error}</p>}
+            {isSubmitted && <p className="text-green-400 text-sm">Thank you for subscribing!</p>}
             <p className="box-border w-full text-white text-xs font-normal leading-[18px] m-0 p-0">
               By clicking Sign Up you're confirming that you agree with our Terms and Conditions.
             </p>

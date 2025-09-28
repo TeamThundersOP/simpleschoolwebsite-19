@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, fix/static-react-hardening ]
+    branches: [main, fix/static-react-hardening]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -45,4 +45,3 @@ jobs:
         with:
           name: lighthouse-reports
           path: .lhr-ci
-

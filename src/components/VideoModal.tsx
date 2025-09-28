@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { X, Play } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect } from "react";
+import { X, Play } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -13,19 +13,19 @@ interface VideoModalProps {
 const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, title, posterUrl }) => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
@@ -47,7 +47,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
           exit={{ opacity: 0 }}
           onClick={onClose}
         />
-        
+
         {/* Modal Content */}
         <motion.div
           className="relative w-full max-w-4xl mx-auto bg-[#021223] rounded-2xl overflow-hidden shadow-2xl"
@@ -67,7 +67,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
               <X className="w-5 h-5 text-white" />
             </button>
           </div>
-          
+
           {/* Video Container */}
           <div className="relative aspect-video bg-black">
             <video
@@ -103,7 +103,7 @@ export const VideoThumbnail: React.FC<VideoThumbnailProps> = ({
   duration,
   posterUrl,
   onPlay,
-  className = ""
+  className = "",
 }) => {
   return (
     <motion.div
@@ -114,17 +114,13 @@ export const VideoThumbnail: React.FC<VideoThumbnailProps> = ({
     >
       <div className="relative aspect-video bg-muted rounded-2xl overflow-hidden">
         {posterUrl ? (
-          <img
-            src={posterUrl}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          <img src={posterUrl} alt={title} className="w-full h-full object-cover" />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
             <Play className="w-12 h-12 text-white/60" />
           </div>
         )}
-        
+
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
           <motion.div
@@ -143,7 +139,7 @@ export const VideoThumbnail: React.FC<VideoThumbnailProps> = ({
           </div>
         )}
       </div>
-      
+
       <h4 className="mt-3 text-white text-sm font-medium">{title}</h4>
     </motion.div>
   );

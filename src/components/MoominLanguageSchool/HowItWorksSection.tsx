@@ -1,30 +1,34 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Smartphone, Users, Clock } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Smartphone, Users, Clock } from "lucide-react";
 
 const HowItWorksSection = () => {
   const workSteps = [
     {
       icon: <Smartphone className="w-8 h-8 text-highlight" />,
       title: "Daily App Practice",
-      description: "5–15 minutes per child, focusing on vocabulary, pronunciation, and simple grammar."
+      description:
+        "5–15 minutes per child, focusing on vocabulary, pronunciation, and simple grammar.",
     },
     {
       icon: <Users className="w-8 h-8 text-highlight" />,
       title: "Weekly Playful Session",
-      description: "45 minutes of movement games, songs, stories, drama, and crafts."
+      description: "45 minutes of movement games, songs, stories, drama, and crafts.",
     },
     {
       icon: <Clock className="w-8 h-8 text-highlight" />,
       title: "Built for Early Learners",
-      description: "No reading or writing required; safe, limited screen time; modeled by native speakers."
-    }
+      description:
+        "No reading or writing required; safe, limited screen time; modeled by native speakers.",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">How It Works</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          How It Works
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           {workSteps.map((step, index) => (
             <motion.div

@@ -1,44 +1,46 @@
-import React from 'react';
-import { Clock, Smartphone, Users, BookOpen, Headphones, GraduationCap } from 'lucide-react';
+import React from "react";
+import { Clock, Smartphone, Users, BookOpen, Headphones, GraduationCap } from "lucide-react";
 
 const AtAGlanceSection = () => {
   const details = [
     {
       icon: <Clock className="w-6 h-6 text-highlight" />,
       label: "Ages",
-      value: "3–8 years"
+      value: "3–8 years",
     },
     {
       icon: <Smartphone className="w-6 h-6 text-highlight" />,
       label: "Daily app",
-      value: "5–15 minutes"
+      value: "5–15 minutes",
     },
     {
       icon: <Users className="w-6 h-6 text-highlight" />,
       label: "Weekly group session",
-      value: "~45 minutes"
+      value: "~45 minutes",
     },
     {
       icon: <BookOpen className="w-6 h-6 text-highlight" />,
       label: "Content",
-      value: "1,000+ exercises, 1,700 words, 2,500 phrases"
+      value: "1,000+ exercises, 1,700 words, 2,500 phrases",
     },
     {
       icon: <Headphones className="w-6 h-6 text-highlight" />,
       label: "Audio",
-      value: "Native voice actors (American English)"
+      value: "Native voice actors (American English)",
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-highlight" />,
       label: "Support",
-      value: "Teacher-ready materials & full support"
-    }
+      value: "Teacher-ready materials & full support",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">At a Glance</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          At a Glance
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {details.map((detail, index) => (
             <div key={index} className="relative group">

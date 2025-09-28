@@ -1,23 +1,18 @@
-import React from 'react';
-import { 
-  Play, 
-  Phone, 
-  Mail,
-  Globe
-} from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Seo from '@/components/Seo';
-import InteractiveBentoGallery from '@/components/blocks/interactive-bento-gallery';
+import React from "react";
+import { Play, Phone, Mail, Globe } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
+import InteractiveBentoGallery from "@/components/blocks/interactive-bento-gallery";
 
 // Finnish Experience Components
-import HeroSection from '@/components/FinnishExperience/HeroSection';
-import TrustStripSection from '@/components/FinnishExperience/TrustStripSection';
-import VisionSection from '@/components/FinnishExperience/VisionSection';
-import WhatWeOfferSection from '@/components/FinnishExperience/WhatWeOfferSection';
-import PartnershipModelsSection from '@/components/FinnishExperience/PartnershipModelsSection';
-import WhyChooseSection from '@/components/FinnishExperience/WhyChooseSection';
-import GetStartedCTASection from '@/components/FinnishExperience/GetStartedCTASection';
+import HeroSection from "@/components/FinnishExperience/HeroSection";
+import TrustStripSection from "@/components/FinnishExperience/TrustStripSection";
+import VisionSection from "@/components/FinnishExperience/VisionSection";
+import WhatWeOfferSection from "@/components/FinnishExperience/WhatWeOfferSection";
+import PartnershipModelsSection from "@/components/FinnishExperience/PartnershipModelsSection";
+import WhyChooseSection from "@/components/FinnishExperience/WhyChooseSection";
+import GetStartedCTASection from "@/components/FinnishExperience/GetStartedCTASection";
 
 const FinnishExperience = () => {
   return (
@@ -28,9 +23,8 @@ const FinnishExperience = () => {
         description="Transform your school with world-class Finnish pedagogy. Join 1,000 schools in the Finnish Experience® movement with proven education practices."
         canonical="https://simpleschoolwebsite-19.onrender.com/finnish-experience"
       />
-      
+
       <main id="main" className="w-full" role="main">
-        
         {/* Hero Section */}
         <HeroSection />
 
@@ -51,7 +45,7 @@ const FinnishExperience = () => {
 
         {/* Get Started CTA */}
         <GetStartedCTASection />
-        
+
         {/* Interactive Bento Gallery Section */}
         <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-white m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <InteractiveBentoGallery
@@ -95,7 +89,7 @@ const FinnishExperience = () => {
                 desc: "Expert-led conferences and training",
                 url: "https://cdn.pixabay.com/video/2019/04/04/23264-329278009_large.mp4",
                 span: "",
-              }
+              },
             ]}
             title="Finnish Education Solutions Gallery"
             description="Discover world-class Finnish pedagogy and transformative learning experiences"

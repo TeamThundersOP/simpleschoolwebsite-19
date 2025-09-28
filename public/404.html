@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,13 +11,10 @@
   </body>
   <script>
     // SPA redirect fallback
-    (function(){
-      var redirect = '/';
-      if (location.pathname && location.pathname !== '/') redirect = '/';
+    (function () {
+      var redirect = "/";
+      if (location.pathname && location.pathname !== "/") redirect = "/";
       location.replace(redirect);
     })();
   </script>
 </html>
-
-
-

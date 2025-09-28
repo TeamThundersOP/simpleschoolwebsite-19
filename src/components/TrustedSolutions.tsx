@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Globe2, Users, Award } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Globe2, Users, Award } from "lucide-react";
 
 // Use same family icon styles, icon white, no bg
 const ICONS = [
@@ -19,25 +19,25 @@ const stats = [
   {
     number: "10+",
     label: "Global Products",
-    description: "From 3 leading education nations, offering internationally acclaimed models for schools."
+    description:
+      "From 3 leading education nations, offering internationally acclaimed models for schools.",
   },
   {
     number: "40+",
     label: "Countries",
-    description: "Our partners' solutions are trusted and implemented in classrooms around the world."
+    description:
+      "Our partners' solutions are trusted and implemented in classrooms around the world.",
   },
   {
     number: "1 Million+",
     label: "Students",
-    description: "Benefiting from these innovative tools as part of their daily learning journey."
-  }
+    description: "Benefiting from these innovative tools as part of their daily learning journey.",
+  },
 ];
 
 const TrustedSolutions = () => {
   return (
-    <section
-      className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden bg-[rgb(2,18,35)]"
-    >
+    <section className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden bg-[rgb(2,18,35)]">
       {/* Background pattern using EduPat.svg from public */}
       <div
         className="absolute inset-0 bg-[url('/EduPat.svg')] bg-repeat bg-center opacity-[0.70] pointer-events-none select-none"
@@ -49,7 +49,7 @@ const TrustedSolutions = () => {
         className="absolute inset-0 z-0 pointer-events-none select-none"
         aria-hidden="true"
         style={{
-          background: 'rgba(2,18,35,0.88)',
+          background: "rgba(2,18,35,0.88)",
         }}
       />
 
@@ -65,7 +65,9 @@ const TrustedSolutions = () => {
               Trusted Global Solutions with Proven Impact
             </h2>
             <p className="box-border w-full text-white text-base sm:text-lg font-normal leading-relaxed m-0 p-0">
-              Our solutions, developed by globally awarded partners, are trusted for their quality, innovation, and decades of service to schools worldwide. Backed by recognition and success across continents, these programs continue to shape the future of education.
+              Our solutions, developed by globally awarded partners, are trusted for their quality,
+              innovation, and decades of service to schools worldwide. Backed by recognition and
+              success across continents, these programs continue to shape the future of education.
             </p>
           </div>
         </div>
@@ -80,9 +82,9 @@ const TrustedSolutions = () => {
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.2
-              }
-            }
+                staggerChildren: 0.2,
+              },
+            },
           }}
         >
           {stats.map((stat, index) => (
@@ -91,7 +93,7 @@ const TrustedSolutions = () => {
               className="box-border flex flex-col items-center gap-4 lg:gap-6 w-full text-center m-0 p-0 relative"
               variants={{
                 hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 }
+                visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
             >
@@ -110,7 +112,6 @@ const TrustedSolutions = () => {
               <p className="box-border text-white text-sm sm:text-base font-normal leading-6 m-0 p-0">
                 {stat.description}
               </p>
-
             </motion.article>
           ))}
         </motion.div>

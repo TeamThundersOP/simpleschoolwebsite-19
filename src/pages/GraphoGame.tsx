@@ -1,29 +1,24 @@
-import React from 'react';
-import { 
-  Play, 
-  Phone, 
-  Mail
-} from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Seo from '@/components/Seo';
-import InteractiveBentoGallery from '@/components/blocks/interactive-bento-gallery';
+import React from "react";
+import { Play, Phone, Mail } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
+import InteractiveBentoGallery from "@/components/blocks/interactive-bento-gallery";
 
 // GraphoGame Components
-import HeroSection from '@/components/GraphoGame/HeroSection';
-import TrustStripSection from '@/components/GraphoGame/TrustStripSection';
-import VisionSection from '@/components/GraphoGame/VisionSection';
-import WhatIsGraphoGameSection from '@/components/GraphoGame/WhatIsGraphoGameSection';
-import WhyLiteracyMattersSection from '@/components/GraphoGame/WhyLiteracyMattersSection';
-import GlobalResearchSection from '@/components/GraphoGame/GlobalResearchSection';
-import EvidenceRecognitionSection from '@/components/GraphoGame/EvidenceRecognitionSection';
-import ProvenImpactSection from '@/components/GraphoGame/ProvenImpactSection';
-import WhoBenefitsSection from '@/components/GraphoGame/WhoBenefitsSection';
-import WhyChooseSection from '@/components/GraphoGame/WhyChooseSection';
-import GetStartedCTASection from '@/components/GraphoGame/GetStartedCTASection';
+import HeroSection from "@/components/GraphoGame/HeroSection";
+import TrustStripSection from "@/components/GraphoGame/TrustStripSection";
+import VisionSection from "@/components/GraphoGame/VisionSection";
+import WhatIsGraphoGameSection from "@/components/GraphoGame/WhatIsGraphoGameSection";
+import WhyLiteracyMattersSection from "@/components/GraphoGame/WhyLiteracyMattersSection";
+import GlobalResearchSection from "@/components/GraphoGame/GlobalResearchSection";
+import EvidenceRecognitionSection from "@/components/GraphoGame/EvidenceRecognitionSection";
+import ProvenImpactSection from "@/components/GraphoGame/ProvenImpactSection";
+import WhoBenefitsSection from "@/components/GraphoGame/WhoBenefitsSection";
+import WhyChooseSection from "@/components/GraphoGame/WhyChooseSection";
+import GetStartedCTASection from "@/components/GraphoGame/GetStartedCTASection";
 
 const GraphoGame = () => {
-
   return (
     <div className="min-h-screen flex flex-col items-start w-full relative m-0 p-0 overflow-x-clip">
       <Navbar />
@@ -32,9 +27,8 @@ const GraphoGame = () => {
         description="Making learning to read fun and effective through scientifically-designed interactive games. Trusted by over 1 million children worldwide."
         canonical="https://simpleschoolwebsite-19.onrender.com/grapho-game"
       />
-      
+
       <main id="main" className="w-full" role="main">
-        
         {/* Hero Section */}
         <HeroSection />
 
@@ -67,7 +61,7 @@ const GraphoGame = () => {
 
         {/* Get Started CTA */}
         <GetStartedCTASection />
-        
+
         {/* Interactive Bento Gallery Section */}
         <section className="box-border flex w-full flex-col items-center gap-12 lg:gap-20 bg-white m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28">
           <InteractiveBentoGallery
@@ -111,7 +105,7 @@ const GraphoGame = () => {
                 desc: "Personalized reading pathways",
                 url: "https://cdn.pixabay.com/video/2022/05/31/119013-712900325_large.mp4",
                 span: "",
-              }
+              },
             ]}
             title="GraphoGame Gallery"
             description="Experience the world's most researched digital literacy game"

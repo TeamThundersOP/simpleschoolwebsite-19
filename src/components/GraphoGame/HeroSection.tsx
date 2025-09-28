@@ -1,18 +1,24 @@
-import React from 'react';
-import { BookOpen } from 'lucide-react';
+import React from "react";
+import { BookOpen } from "lucide-react";
 
 // GraphoGame Logo Component
-const GraphoGameLogo = ({ className = "", size = "large" }: { className?: string; size?: "small" | "medium" | "large" }) => {
+const GraphoGameLogo = ({
+  className = "",
+  size = "large",
+}: {
+  className?: string;
+  size?: "small" | "medium" | "large";
+}) => {
   const sizeClasses = {
     small: "h-8 w-auto",
     medium: "h-12 w-auto",
-    large: "h-16 w-auto md:h-20"
+    large: "h-16 w-auto md:h-20",
   };
 
   return (
-    <img 
-      src="/lovable-uploads/Group-215.svg" 
-      alt="GraphoGame Logo" 
+    <img
+      src="/lovable-uploads/Group-215.svg"
+      alt="GraphoGame Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
   );
@@ -27,13 +33,13 @@ const HeroSection = () => {
           <div className="box-border flex flex-col justify-center items-center lg:items-start gap-4 lg:gap-6 w-full m-0 p-0">
             <div className="mb-6">
               <GraphoGameLogo className="mb-4" size="large" />
-
             </div>
             <h2 className="box-border w-full text-black text-lg sm:text-xl md:text-2xl font-semibold leading-tight m-0 p-0 break-words">
               Ending Illiteracy, At Scale
             </h2>
             <p className="box-border w-full text-gray-600 text-base md:text-lg font-normal leading-relaxed m-0 p-0 max-w-2xl break-words">
-              The world's most researched digital literacy game for children aged 3–9 years. Making learning to read fun, simple, and effective.
+              The world's most researched digital literacy game for children aged 3–9 years. Making
+              learning to read fun, simple, and effective.
             </p>
           </div>
           <div className="box-border flex flex-col sm:flex-row items-center gap-3 sm:gap-4 m-0 p-0 w-full sm:w-auto justify-center lg:justify-start">

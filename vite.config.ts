@@ -10,10 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     allowedHosts: ["simpleschoolwebsite-19.onrender.com"],
   },
-  plugins: [
-    react(),
-    ...(mode === 'development' ? [componentTagger()] : []),
-  ],
+  plugins: [react(), ...(mode === "development" ? [componentTagger()] : [])],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

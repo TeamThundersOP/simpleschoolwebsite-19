@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Download, UserCheck, Tablet, Users, Monitor } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Download, UserCheck, Tablet, Users, Monitor } from "lucide-react";
 
 const GettingStartedSection = () => {
   const steps = [
@@ -8,38 +8,40 @@ const GettingStartedSection = () => {
       number: "1",
       icon: <Download className="w-6 h-6 text-highlight" />,
       title: "Install the app",
-      description: "And set up teacher accounts"
+      description: "And set up teacher accounts",
     },
     {
-      number: "2", 
+      number: "2",
       icon: <UserCheck className="w-6 h-6 text-highlight" />,
       title: "Create child profiles",
-      description: "With photos and Moomin characters"
+      description: "With photos and Moomin characters",
     },
     {
       number: "3",
       icon: <Tablet className="w-6 h-6 text-highlight" />,
       title: "Introduce daily play",
-      description: "1 tablet can serve 5 children"
+      description: "1 tablet can serve 5 children",
     },
     {
       number: "4",
       icon: <Users className="w-6 h-6 text-highlight" />,
       title: "Run weekly group sessions",
-      description: "For small groups (10–12 children)"
+      description: "For small groups (10–12 children)",
     },
     {
       number: "5",
       icon: <Monitor className="w-6 h-6 text-highlight" />,
       title: "Monitor progress",
-      description: "With online tools"
-    }
+      description: "With online tools",
+    },
   ];
 
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">Getting Started is Simple</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          Getting Started is Simple
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
             <motion.div

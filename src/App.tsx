@@ -25,7 +25,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useLenis();
-  
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -47,7 +47,7 @@ const App = () => {
               <Route path="/school-management" element={<SchoolManagement />} />
               <Route path="/code-school" element={<CodeSchool />} />
               <Route path="/finnish-experience" element={<FinnishExperience />} />
-              {false && <Route path="/grapho-game" element={null} />}
+              {/* <Route path="/grapho-game" element={null} /> */}
               <Route path="/kindie-days" element={<KindieDays />} />
               <Route path="/moomin-language-school" element={<MoominLanguageSchool />} />
               <Route path="/about" element={<About />} />

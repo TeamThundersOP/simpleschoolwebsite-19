@@ -1,11 +1,11 @@
-import React from 'react';
-import { Code } from 'lucide-react';
+import React from "react";
+import { Code } from "lucide-react";
 
 // Code School Finland Logo Component
 const CodeSchoolFinlandLogo = ({ className = "" }: { className?: string }) => (
-  <img 
-    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png" 
-    alt="Code School Finland Logo" 
+  <img
+    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png"
+    alt="Code School Finland Logo"
     className={`h-12 w-auto ${className}`}
   />
 );
@@ -20,10 +20,13 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-highlight/80 mb-8">
-              Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code School Finland creates practical teaching resources that help any teacher confidently teach coding, AI, robotics, and future skills.
+              Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code
+              School Finland creates practical teaching resources that help any teacher confidently
+              teach coding, AI, robotics, and future skills.
             </p>
             <p className="text-lg text-highlight/80">
-              These materials are constantly improved with feedback from classrooms around the world.
+              These materials are constantly improved with feedback from classrooms around the
+              world.
             </p>
           </div>
           <div className="relative">

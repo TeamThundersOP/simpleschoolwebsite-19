@@ -1,14 +1,19 @@
-import React from 'react';
-import { Target, GraduationCap, Users } from 'lucide-react';
+import React from "react";
+import { Target, GraduationCap, Users } from "lucide-react";
 
 const VisionSection = () => {
   return (
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-gray-50 m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">School Grads Vision</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
+          School Grads Vision
+        </h2>
         <div className="text-center max-w-4xl">
           <p className="text-lg text-highlight leading-relaxed mb-8">
-            At School Grads, our mission is to bring world-class literacy solutions to Indian schools. With GraphoGame, we aim to end illiteracy at scale, empower teachers, and give every child the chance to read with confidence aligned with NEP 2020's foundational learning goals.
+            At School Grads, our mission is to bring world-class literacy solutions to Indian
+            schools. With GraphoGame, we aim to end illiteracy at scale, empower teachers, and give
+            every child the chance to read with confidence aligned with NEP 2020's foundational
+            learning goals.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="text-center">

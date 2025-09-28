@@ -75,8 +75,8 @@ const Index = () => {
         <Feature197 {...demoData} />
         <Team />
         <Testimonials />
-        <WebinarCarousel />
-        <ImageGallery />
+        {/* <WebinarCarousel /> */}
+        {/* <ImageGallery /> */}
         <Newsletter />
         <Contact />
       </main>

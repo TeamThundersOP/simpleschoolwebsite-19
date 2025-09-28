@@ -6,8 +6,17 @@ const TrustStripSection = () => {
     <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 overflow-x-hidden">
       <div className="box-border flex max-w-screen-xl flex-col items-center gap-6 w-full m-0 p-0">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center w-full">
-          {['Moomin Characters', 'School Grads', 'Finland Education', 'Learning Apps', 'Happy Children'].map((partner, index) => (
-            <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm opacity-60 hover:opacity-100 transition-opacity">
+          {[
+            "Moomin Characters",
+            "School Grads",
+            "Finland Education",
+            "Learning Apps",
+            "Happy Children",
+          ].map((partner, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm opacity-60 hover:opacity-100 transition-opacity"
+            >
               <span className="text-sm font-medium text-gray-600">{partner}</span>
             </div>
           ))}

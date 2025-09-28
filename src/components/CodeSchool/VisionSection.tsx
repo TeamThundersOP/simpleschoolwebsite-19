@@ -1,18 +1,23 @@
-import React from 'react';
-import { Globe } from 'lucide-react';
+import React from "react";
+import { Globe } from "lucide-react";
 
 const VisionSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-highlight">School Grads Vision for India</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-highlight">
+          School Grads Vision for India
+        </h2>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-highlight/80 mb-8">
-              At SchoolGrads, our mission is to bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable.
+              At SchoolGrads, our mission is to bring the best global teaching practices to Indian
+              classrooms in a way that is easy, affordable, and scalable.
             </p>
             <p className="text-lg text-highlight/80">
-              With our partner, Code School Finland, we help schools give students—from early years to high school—practical skills in coding, AI, robotics, and future skills while also building their creativity, innovation, and problem-solving abilities.
+              With our partner, Code School Finland, we help schools give students—from early years
+              to high school—practical skills in coding, AI, robotics, and future skills while also
+              building their creativity, innovation, and problem-solving abilities.
             </p>
           </div>
           <div className="relative">

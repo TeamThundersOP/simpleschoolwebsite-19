@@ -2,12 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const footerLinks = {
-  products: [
-    "Code School Finland",
-    "Finnish Experience",
-    "Kindie Days",
-    "Moomin Language School",
-  ],
+  products: ["Code School Finland", "Finnish Experience", "Kindie Days", "Moomin Language School"],
   company: ["Home", "About Us", "Contact"],
   legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
 };
