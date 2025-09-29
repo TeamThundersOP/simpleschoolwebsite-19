@@ -50,7 +50,7 @@ const WhyChooseSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+            src="/lovable-uploads/School Grads/IMG-20250924-WA0012.jpg"
             alt="GraphoGame Learning Community"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -77,9 +77,9 @@ const WhyChooseSection = () => {
             <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 lg:gap-8 max-w-6xl w-full">
               {reasons.map((point, index) => (
                 <div key={index} className="flex items-start gap-3 sm:gap-4 text-left p-2 sm:p-4">
-                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-[#b2e600] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
-                    <span className="text-yellow-400 font-bold">{point.heading}</span> {point.text}
+                    <span className="text-[#b2e600] font-bold">{point.heading}</span> {point.text}
                   </p>
                 </div>
               ))}
@@ -91,7 +91,7 @@ const WhyChooseSection = () => {
       {/* Bottom CTA Section */}
       <div className="relative group w-full bg-gray-50 py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+          <div className="bg-[#004080]/5 border border-[#004080]/20 rounded-xl p-6">
             <p className="text-highlight font-semibold text-lg">
               Join over 1 million children worldwide who are learning to read with GraphoGame and
               School Grads.

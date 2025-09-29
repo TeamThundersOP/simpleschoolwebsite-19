@@ -19,21 +19,21 @@ const worldMapDots = [
 
 const services = [
   {
-    icon: <GraduationCap className="w-10 h-10 text-blue-500" />,
+    icon: <GraduationCap className="w-10 h-10 text-[#004080]" />,
     title: "For Students",
     subtitle: "Future-Ready Learning (Pre-School to K–12)",
     description:
       "Programs in Coding, AI, English, Maths, Science, Robotics, and Future Skills designed for preschool to high school learners. We build strong foundations and advance skills step by step, preparing students with confidence, creativity, and problem-solving abilities to excel in academics, adapt to challenges, and succeed in future personal and professional journeys.",
   },
   {
-    icon: <Users className="w-10 h-10 text-green-500" />,
+    icon: <Users className="w-10 h-10 text-[#b2e600]" />,
     title: "For Teachers",
     subtitle: "Professional Development, Training & Certification",
     description:
       "Training, certification, and continuous upskilling programs empower teachers to adopt innovative pedagogy. Teachers access lesson plans, digital resources, and classroom strategies to confidently teach future-ready subjects. With expert mentorship, they strengthen instructional practices, improve student outcomes, and achieve professional growth, equipping them to excel as impactful teachers in today’s evolving educational environment.",
   },
   {
-    icon: <Building2 className="w-10 h-10 text-purple-500" />,
+    icon: <Building2 className="w-10 h-10 text-[#001f3f]" />,
     title: "For School Leaders",
     subtitle: "School Transformation & Consultation",
     description:

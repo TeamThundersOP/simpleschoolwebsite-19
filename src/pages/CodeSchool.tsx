@@ -205,16 +205,16 @@ const CodeSchool = () => {
               ))}
             </div>
             <div className="flex flex-wrap gap-2 justify-center">
-              <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-                <Check className="w-3 h-3 mr-1 text-green-800" />
+              <span className="inline-flex items-center px-3 py-1 bg-[#b2e600]/10 text-[#004080] text-xs font-medium rounded-full">
+                <Check className="w-3 h-3 mr-1 text-[#004080]" />
                 3,00,000+ Learners
               </span>
-              <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                <Globe className="w-3 h-3 mr-1 text-blue-800" />
+              <span className="inline-flex items-center px-3 py-1 bg-[#004080]/10 text-[#001f3f] text-xs font-medium rounded-full">
+                <Globe className="w-3 h-3 mr-1 text-[#001f3f]" />
                 20+ Countries
               </span>
-              <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
-                <Star className="w-3 h-3 mr-1 text-purple-800" />
+              <span className="inline-flex items-center px-3 py-1 bg-[#001f3f]/10 text-[#004080] text-xs font-medium rounded-full">
+                <Star className="w-3 h-3 mr-1 text-[#004080]" />
                 7 Languages
               </span>
             </div>
@@ -315,10 +315,10 @@ const CodeSchool = () => {
               <img
                 src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
                 alt="Code School Finland Core Team"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-top"
               />
-              {/* Gradient overlay - clear at top, dark at bottom */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black/60"></div>
 
               {/* Overlay Content - positioned in lower section */}
               <div className="relative z-10 flex flex-col items-center justify-end h-full text-center px-4 sm:px-6 pb-12 sm:pb-16 md:pb-24">
@@ -366,58 +366,13 @@ const CodeSchool = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     >
-                      <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mt-2 flex-shrink-0"></div>
                       <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
-                        <span className="text-yellow-400 font-bold">{point.heading}</span>{" "}
-                        {point.text}
+                        <span className="text-white font-bold">{point.heading}</span> {point.text}
                       </p>
                     </motion.div>
                   ))}
                 </motion.div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced Quote Section */}
-          <div className="relative group w-full bg-gray-50 py-8 sm:py-12 md:py-16 px-4 sm:px-6">
-            <div className="max-w-5xl mx-auto">
-              <div className="box-border flex h-full w-full p-6 sm:p-8 md:p-12 flex-col justify-center items-center gap-6 bg-gradient-to-br from-highlight/5 via-white to-highlight/10 m-0 rounded-3xl border-2 border-highlight/20 opacity-100 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-highlight/40 backdrop-blur-sm text-center relative overflow-hidden">
-                {/* Background Decoration */}
-                <div className="absolute top-0 left-0 w-full h-full opacity-5">
-                  <div className="absolute top-8 left-8 w-16 h-16 border-2 border-highlight rounded-full"></div>
-                  <div className="absolute bottom-8 right-8 w-12 h-12 bg-highlight/20 rounded-full"></div>
-                  <div className="absolute top-1/2 left-4 w-8 h-8 border border-highlight/30 rotate-45"></div>
-                </div>
-
-                {/* Quote Icon */}
-                <div className="relative z-10 w-12 sm:w-16 h-12 sm:h-16 bg-highlight/10 rounded-full flex items-center justify-center mb-2">
-                  <svg
-                    className="w-6 sm:w-8 h-6 sm:h-8 text-highlight"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                  </svg>
-                </div>
-
-                {/* Quote Text */}
-                <blockquote className="relative z-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-highlight leading-tight max-w-4xl">
-                  "Great teachers don't need to be coders—they need the right tools."
-                </blockquote>
-
-                {/* Attribution */}
-                <div className="relative z-10 flex flex-col items-center gap-3 mt-4">
-                  <div className="w-16 h-px bg-highlight/30"></div>
-                  <cite className="not-italic text-sm sm:text-base md:text-lg font-semibold text-highlight/80">
-                    Kaisu Pallaskallio
-                  </cite>
-                  <p className="text-xs sm:text-sm text-highlight/60 font-medium">
-                    CEO & Co-Founder, Code School Finland
-                  </p>
-                </div>
-
-                {/* Accent Line */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-highlight/40 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -429,46 +384,62 @@ const CodeSchool = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight text-center">
               What's Included
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-              {[
-                {
-                  icon: <Target className="w-6 h-6 text-highlight" />,
-                  title: "Custom Implementation Plan",
-                  desc: "Designed around your school's grades, subjects, and vision",
-                },
-                {
-                  icon: <GraduationCap className="w-6 h-6 text-highlight" />,
-                  title: "Flexible Teacher Training",
-                  desc: "Along with the certification, teachers get short, blended modules that fit into busy schedules",
-                },
-                {
-                  icon: <BookOpen className="w-6 h-6 text-highlight" />,
-                  title: "Complete Classroom Kit",
-                  desc: "Lesson plans, worksheets, guides, projects, and assessment guides included",
-                },
-                {
-                  icon: <Users className="w-6 h-6 text-highlight" />,
-                  title: "Continuous Support",
-                  desc: "Live and offline expert guidance, regular resource updates, and a dedicated helpdesk",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative group"
-                >
-                  <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                    {item.icon}
-                    <div>
-                      <h3 className="font-semibold text-highlight mb-2">{item.title}</h3>
-                      <p className="text-highlight opacity-80">{item.desc}</p>
+
+            {/* Image and Content Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full items-center">
+              {/* Content Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                {[
+                  {
+                    icon: <Target className="w-6 h-6 text-highlight" />,
+                    title: "Custom Implementation Plan",
+                    desc: "Designed around your school's grades, subjects, and vision",
+                  },
+                  {
+                    icon: <GraduationCap className="w-6 h-6 text-highlight" />,
+                    title: "Flexible Teacher Training",
+                    desc: "Along with the certification, teachers get short, blended modules that fit into busy schedules",
+                  },
+                  {
+                    icon: <BookOpen className="w-6 h-6 text-highlight" />,
+                    title: "Complete Classroom Kit",
+                    desc: "Lesson plans, worksheets, guides, projects, and assessment guides included",
+                  },
+                  {
+                    icon: <Users className="w-6 h-6 text-highlight" />,
+                    title: "Continuous Support",
+                    desc: "Live and offline expert guidance, regular resource updates, and a dedicated helpdesk",
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="relative group"
+                  >
+                    <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
+                      {item.icon}
+                      <div>
+                        <h3 className="font-semibold text-highlight mb-2">{item.title}</h3>
+                        <p className="text-highlight opacity-80">{item.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Image Section */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-md">
+                  <img
+                    src="/lovable-uploads/Code School Finland/Bobo AI.png"
+                    alt="Bobo AI Learning Companion"
+                    className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -498,7 +469,7 @@ const CodeSchool = () => {
                     },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full mt-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#004080] rounded-full mt-3 flex-shrink-0"></div>
                       <span className="text-highlight">
                         <span className="font-bold text-highlight">{item.heading}</span> –{" "}
                         {item.text}
@@ -522,7 +493,7 @@ const CodeSchool = () => {
                     "Monitoring, assessments, and showcase events including hackathons and exhibitions",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full mt-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#b2e600] rounded-full mt-3 flex-shrink-0"></div>
                       <span className="text-highlight">{item}</span>
                     </div>
                   ))}
@@ -663,17 +634,17 @@ const CodeSchool = () => {
 
             {/* Key Learning Outcomes */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-              <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
-                <div className="text-3xl font-bold text-blue-700 mb-2">7</div>
-                <div className="text-sm text-blue-600 font-medium">Grade Levels Covered</div>
+              <div className="text-center p-6 bg-[#004080]/5 rounded-xl border border-[#004080]/20">
+                <div className="text-3xl font-bold text-[#004080] mb-2">7</div>
+                <div className="text-sm text-[#001f3f] font-medium">Grade Levels Covered</div>
               </div>
-              <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200">
-                <div className="text-3xl font-bold text-green-700 mb-2">12+</div>
-                <div className="text-sm text-green-600 font-medium">Core Programs</div>
+              <div className="text-center p-6 bg-[#b2e600]/5 rounded-xl border border-[#b2e600]/20">
+                <div className="text-3xl font-bold text-[#b2e600] mb-2">12+</div>
+                <div className="text-sm text-[#001f3f] font-medium">Core Programs</div>
               </div>
-              <div className="text-center p-6 bg-purple-50 rounded-xl border border-purple-200">
-                <div className="text-3xl font-bold text-purple-700 mb-2">100%</div>
-                <div className="text-sm text-purple-600 font-medium">NEP 2020 Aligned</div>
+              <div className="text-center p-6 bg-[#001f3f]/5 rounded-xl border border-[#001f3f]/20">
+                <div className="text-3xl font-bold text-[#001f3f] mb-2">100%</div>
+                <div className="text-sm text-[#004080] font-medium">NEP 2020 Aligned</div>
               </div>
             </div>
           </div>
@@ -681,19 +652,33 @@ const CodeSchool = () => {
 
         {/* About Code School Finland */}
         <section className="box-border flex w-full flex-col items-center gap-8 sm:gap-12 bg-white m-0 px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
-          <div className="box-border flex max-w-screen-xl flex-col items-center gap-8 w-full m-0 p-0">
-            <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
-                About Code School Finland
-              </h2>
+          <div className="box-border flex max-w-screen-xl flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full m-0 p-0">
+            {/* Content Section */}
+            <div className="box-border flex flex-col items-start gap-6 w-full lg:w-1/2 m-0 p-0">
+              <div className="text-center lg:text-left">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-highlight">
+                  About Code School Finland
+                </h2>
+              </div>
+              <div className="text-center lg:text-left max-w-4xl">
+                <p className="text-lg text-highlight leading-relaxed">
+                  Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader,
+                  Code School Finland creates practical teaching resources that help any teacher
+                  confidently teach coding, AI, robotics, and future skills. These materials are
+                  constantly improved with feedback from classrooms around the world.
+                </p>
+              </div>
             </div>
-            <div className="text-center max-w-4xl">
-              <p className="text-lg text-highlight leading-relaxed">
-                Founded in 2017 by Kaisu Pallaskallio, a computer scientist and EdTech leader, Code
-                School Finland creates practical teaching resources that help any teacher
-                confidently teach coding, AI, robotics, and future skills. These materials are
-                constantly improved with feedback from classrooms around the world.
-              </p>
+
+            {/* Image Section */}
+            <div className="box-border w-full lg:w-1/2 flex justify-center m-0 p-0">
+              <div className="relative w-full max-w-lg">
+                <img
+                  src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                  alt="Code School Finland Core Team"
+                  className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

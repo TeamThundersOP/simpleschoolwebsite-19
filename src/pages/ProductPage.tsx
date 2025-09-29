@@ -105,15 +105,15 @@ const ProductPage = () => {
               )}
             </div>
             <div className="flex flex-wrap gap-2 justify-center">
-              <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+              <span className="inline-flex items-center px-3 py-1 bg-[#b2e600]/10 text-[#004080] text-xs font-medium rounded-full">
                 <Check className="w-3 h-3 mr-1" />
                 UNESCO Certified
               </span>
-              <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+              <span className="inline-flex items-center px-3 py-1 bg-[#004080]/10 text-[#001f3f] text-xs font-medium rounded-full">
                 <Star className="w-3 h-3 mr-1" />
                 Award Winner 2024
               </span>
-              <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+              <span className="inline-flex items-center px-3 py-1 bg-[#001f3f]/10 text-[#004080] text-xs font-medium rounded-full">
                 <Check className="w-3 h-3 mr-1" />
                 ISO Compliant
               </span>
@@ -340,7 +340,7 @@ const ProductPage = () => {
             <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl text-center">
               <div className="flex justify-center mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={star} className="w-5 h-5 text-[#b2e600] fill-current" />
                 ))}
               </div>
               <blockquote className="text-lg text-highlight mb-4">

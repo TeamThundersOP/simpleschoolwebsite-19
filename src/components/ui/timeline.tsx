@@ -50,8 +50,8 @@ const Timeline: React.FC<TimelineProps> = ({ items, className, variant = "defaul
     switch (status) {
       case "completed":
         return {
-          border: "border-green-500 bg-green-50",
-          text: "text-green-700",
+          border: "border-[#b2e600] bg-[#b2e600]/5",
+          text: "text-[#004080]",
           bg: "bg-green-100",
         };
       case "active":

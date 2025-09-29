@@ -67,7 +67,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "15px",
       zIndex: 50,
       direction: "left" as Direction,
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      src: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
     },
     {
       id: 2,
@@ -76,7 +76,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&w=1200&q=80",
+      src: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
     },
     {
       id: 3,
@@ -85,7 +85,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
+      src: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+      src: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
     },
     {
       id: 5,
@@ -103,7 +103,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "44px",
       zIndex: 10,
       direction: "left" as Direction,
-      src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
+      src: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
     },
   ];
 

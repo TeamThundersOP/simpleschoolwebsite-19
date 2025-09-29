@@ -22,20 +22,20 @@ const TrustStripSection = () => {
           ))}
         </div>
         <div className="flex flex-wrap gap-2 justify-center">
-          <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-            <Check className="w-3 h-3 mr-1 text-green-800" />
+          <span className="inline-flex items-center px-3 py-1 bg-[#b2e600]/10 text-[#004080] text-xs font-medium rounded-full">
+            <Check className="w-3 h-3 mr-1 text-[#004080]" />
             Ages 3–8 Years
           </span>
-          <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-            <Globe className="w-3 h-3 mr-1 text-blue-800" />
+          <span className="inline-flex items-center px-3 py-1 bg-[#004080]/10 text-[#001f3f] text-xs font-medium rounded-full">
+            <Globe className="w-3 h-3 mr-1 text-[#001f3f]" />
             1,700 Words
           </span>
-          <span className="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
-            <Star className="w-3 h-3 mr-1 text-purple-800" />
+          <span className="inline-flex items-center px-3 py-1 bg-[#001f3f]/10 text-[#004080] text-xs font-medium rounded-full">
+            <Star className="w-3 h-3 mr-1 text-[#004080]" />
             2,500 Phrases
           </span>
-          <span className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">
-            <Clock className="w-3 h-3 mr-1 text-orange-800" />
+          <span className="inline-flex items-center px-3 py-1 bg-[#b2e600]/10 text-[#001f3f] text-xs font-medium rounded-full">
+            <Clock className="w-3 h-3 mr-1 text-[#001f3f]" />
             5-15 Min Daily
           </span>
         </div>

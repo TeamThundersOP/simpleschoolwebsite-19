@@ -94,13 +94,11 @@ const HeroSection = () => {
         <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
           <div className="relative w-full max-w-lg">
             <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
-              <div className="w-full h-full flex items-center justify-center text-gray-600">
-                <div className="text-center">
-                  <Heart className="h-16 w-16 mx-auto mb-4 opacity-80 text-gray-600" />
-                  <p className="text-lg font-medium">Joyful English Learning</p>
-                  <p className="text-sm opacity-70">Loved by children</p>
-                </div>
-              </div>
+              <img
+                src="/lovable-uploads/Moomin Language School/MoominLS Kids 2.webp"
+                alt="Children learning with Moomin Language School"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

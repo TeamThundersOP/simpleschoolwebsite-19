@@ -92,7 +92,7 @@ const About = () => {
                   <div className="box-border flex items-start gap-4 lg:gap-6 w-full m-0 px-0 py-2 max-md:flex-col max-md:gap-6">
                     <article className="box-border flex flex-col items-start gap-3 lg:gap-4 flex-1 m-0 p-0">
                       <div>
-                        <Target className="w-10 h-10 sm:w-12 sm:h-12 text-blue-400" />
+                        <Target className="w-10 h-10 sm:w-12 sm:h-12 text-[#004080]" />
                       </div>
                       <h3 className="box-border w-full text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
                         Our Mission
@@ -106,7 +106,7 @@ const About = () => {
                     </article>
                     <article className="box-border flex flex-col items-start gap-3 lg:gap-4 flex-1 m-0 p-0">
                       <div>
-                        <Lightbulb className="w-10 h-10 sm:w-12 sm:h-12 text-green-400" />
+                        <Lightbulb className="w-10 h-10 sm:w-12 sm:h-12 text-[#b2e600]" />
                       </div>
                       <h3 className="box-border w-full text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-medium leading-tight tracking-tight m-0 p-0">
                         Our Vision
@@ -328,7 +328,7 @@ const About = () => {
                 </h2>
                 <div className="box-border flex flex-col items-start gap-4 w-full m-0 p-0">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-[#004080] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Global Standards, Local Context
@@ -340,7 +340,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-[#004080] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Affordable & Scalable</h3>
                       <p className="text-gray-600">
@@ -350,7 +350,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-[#004080] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Complete Implementation Support
@@ -362,7 +362,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-[#004080] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Proven Track Record</h3>
                       <p className="text-gray-600">
@@ -377,19 +377,19 @@ const About = () => {
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
+                      <div className="text-3xl font-bold text-[#004080] mb-2">1000+</div>
                       <div className="text-sm text-gray-600">Schools Worldwide</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-green-600 mb-2">20+</div>
+                      <div className="text-3xl font-bold text-[#b2e600] mb-2">20+</div>
                       <div className="text-sm text-gray-600">Countries</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-600 mb-2">300K+</div>
+                      <div className="text-3xl font-bold text-[#001f3f] mb-2">300K+</div>
                       <div className="text-sm text-gray-600">Students Impacted</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-orange-600 mb-2">7</div>
+                      <div className="text-3xl font-bold text-[#b2e600] mb-2">7</div>
                       <div className="text-sm text-gray-600">Languages</div>
                     </div>
                   </div>

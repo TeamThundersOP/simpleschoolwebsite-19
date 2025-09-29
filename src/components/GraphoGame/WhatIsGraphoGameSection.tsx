@@ -53,7 +53,7 @@ const WhatIsGraphoGameSection = () => {
             </div>
           ))}
         </div>
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-2xl text-center">
+        <div className="bg-[#004080]/5 border border-[#004080]/20 rounded-xl p-6 max-w-2xl text-center">
           <p className="text-highlight font-semibold">
             Just 10–15 minutes a day, 4 times a week is enough to show measurable improvement.
           </p>

@@ -38,8 +38,8 @@ All colors MUST be HSL.
 
     --radius: 0.8rem;
 
-    /* Highlight brand color (rgb(17 24 39)) in HSL */
-    --highlight: 221 39% 11%;
+    /* Highlight brand color (logo primary blue #004080) in HSL */
+    --highlight: 210 100% 25%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -197,5 +197,29 @@ All colors MUST be HSL.
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Text truncation utilities for gallery optimization */
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }

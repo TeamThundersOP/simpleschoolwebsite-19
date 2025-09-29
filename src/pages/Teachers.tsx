@@ -89,24 +89,12 @@ const Teachers = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div
-                  className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden group cursor-pointer"
-                  onClick={() =>
-                    openVideoModal(
-                      "https://example.com/videos/teacher-hero.mp4",
-                      "Teacher Resources Overview",
-                    )
-                  }
-                >
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
-                    <motion.div
-                      className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Play className="w-6 h-6 text-[#021223] ml-1" />
-                    </motion.div>
-                  </div>
+                <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden">
+                  <img
+                    src="/lovable-uploads/School Grads/IMG-20250924-WA0013.jpg"
+                    alt="Teacher Resources Platform"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </motion.div>
             </div>

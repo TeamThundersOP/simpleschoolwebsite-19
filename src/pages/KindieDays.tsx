@@ -138,13 +138,11 @@ const KindieDays = () => {
             <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
               <div className="relative w-full max-w-lg">
                 <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
-                  <div className="w-full h-full flex items-center justify-center text-gray-600">
-                    <div className="text-center">
-                      <Baby className="h-16 w-16 mx-auto mb-4 opacity-80 text-gray-600" />
-                      <p className="text-lg font-medium">Finnish Early Education</p>
-                      <p className="text-sm opacity-70">Playful learning excellence</p>
-                    </div>
-                  </div>
+                  <img
+                    src="/lovable-uploads/kdlogobroadjpgcopy.jpg"
+                    alt="Kindie Days Early Education"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -235,11 +233,12 @@ const KindieDays = () => {
           <div className="relative w-full">
             {/* Background Image */}
             <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
-                alt="Children Playing and Learning"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <Baby className="h-16 w-16 mx-auto mb-4 opacity-60" />
+                  <p className="text-lg font-medium">Playful Learning Image</p>
+                </div>
+              </div>
               {/* Gradient overlay - clear at top, dark at bottom */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
 
@@ -282,9 +281,9 @@ const KindieDays = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     >
-                      <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 sm:w-3 h-2 sm:h-3 bg-[#b2e600] rounded-full mt-2 flex-shrink-0"></div>
                       <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
-                        <span className="text-yellow-400 font-bold">{point.heading}</span>{" "}
+                        <span className="text-[#b2e600] font-bold">{point.heading}</span>{" "}
                         {point.text}
                       </p>
                     </motion.div>
@@ -361,7 +360,7 @@ const KindieDays = () => {
                           key={pointIndex}
                           className="flex items-start gap-2 text-highlight opacity-80"
                         >
-                          <span className="text-yellow-400 font-bold text-lg">•</span>
+                          <span className="text-[#b2e600] font-bold text-lg">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -390,7 +389,7 @@ const KindieDays = () => {
                     "Supports consistent quality across classrooms",
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <span className="text-yellow-400 font-bold text-lg mt-1">•</span>
+                      <span className="text-[#b2e600] font-bold text-lg mt-1">•</span>
                       <span className="text-highlight opacity-80 leading-relaxed">{benefit}</span>
                     </div>
                   ))}

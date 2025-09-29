@@ -59,13 +59,13 @@ const PartnershipModelsSection = () => {
   const getHighlightColor = (type: string) => {
     switch (type) {
       case "flagship":
-        return "border-l-yellow-500 bg-yellow-50";
+        return "border-l-[#b2e600] bg-[#b2e600]/5";
       case "partner":
-        return "border-l-blue-500 bg-blue-50";
+        return "border-l-[#004080] bg-[#004080]/5";
       case "basic":
-        return "border-l-green-500 bg-green-50";
+        return "border-l-[#001f3f] bg-[#001f3f]/5";
       case "kindergarten":
-        return "border-l-purple-500 bg-purple-50";
+        return "border-l-[#004080] bg-[#004080]/5";
       default:
         return "border-l-gray-500 bg-gray-50";
     }

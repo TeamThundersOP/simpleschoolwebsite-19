@@ -35,7 +35,7 @@ const ProvenImpactSection = () => {
           {impacts.map((impact, index) => (
             <div key={index} className="relative group">
               <div className="box-border flex h-full w-full p-6 items-start gap-4 bg-white m-0 rounded-xl border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-full flex-shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#b2e600]/5 rounded-full flex-shrink-0">
                   {impact.icon}
                 </div>
                 <div>

@@ -64,8 +64,8 @@ const Newsletter = () => {
                 </span>
               </button>
             </form>
-            {error && <p className="text-red-400 text-sm">{error}</p>}
-            {isSubmitted && <p className="text-green-400 text-sm">Thank you for subscribing!</p>}
+            {error && <p className="text-[#001f3f] text-sm">{error}</p>}
+            {isSubmitted && <p className="text-[#b2e600] text-sm">Thank you for subscribing!</p>}
             <p className="box-border w-full text-white text-xs font-normal leading-[18px] m-0 p-0">
               By clicking Sign Up you're confirming that you agree with our Terms and Conditions.
             </p>

@@ -28,7 +28,7 @@ const WhyChooseSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+            src="/lovable-uploads/School Grads/IMG-20250924-WA0011.jpg"
             alt="Finnish Education Experience"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -64,9 +64,9 @@ const WhyChooseSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 >
-                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 sm:w-3 h-2 sm:h-3 bg-[#b2e600] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-medium">
-                    <span className="text-yellow-400 font-bold">{point.heading}</span> {point.text}
+                    <span className="text-[#b2e600] font-bold">{point.heading}</span> {point.text}
                   </p>
                 </motion.div>
               ))}
@@ -78,7 +78,7 @@ const WhyChooseSection = () => {
       {/* Call to Action Section */}
       <div className="relative group w-full bg-gray-50 py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-3xl text-center mx-auto">
+          <div className="bg-[#004080]/5 border border-[#004080]/20 rounded-xl p-6 max-w-3xl text-center mx-auto">
             <p className="text-highlight font-semibold text-lg">
               Join the movement with School Grads and be part of transforming 1,000 schools in India
               into Finnish Experience® Schools.

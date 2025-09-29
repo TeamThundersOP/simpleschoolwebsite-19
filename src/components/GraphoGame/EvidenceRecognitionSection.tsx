@@ -49,7 +49,7 @@ const EvidenceRecognitionSection = () => {
         </div>
 
         {/* Brazil Highlight */}
-        <div className="bg-green-50 border border-green-200 rounded-xl p-6 max-w-4xl">
+        <div className="bg-[#b2e600]/5 border border-[#b2e600]/20 rounded-xl p-6 max-w-4xl">
           <div className="text-center">
             <h3 className="font-semibold text-highlight mb-3 text-lg">
               Brazil Collaboration Success Story

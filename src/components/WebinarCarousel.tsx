@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Clock, ChevronLeft, ChevronRight, User } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface Webinar {
@@ -12,8 +12,22 @@ interface Webinar {
   title: string;
 }
 
-const COMMON_PHOTO =
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const createPlaceholderImage = () => {
+  // Create a data URL for a simple placeholder with User icon
+  const svg = `
+    <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#f3f4f6"/>
+      <g transform="translate(150, 100)">
+        <circle cx="50" cy="40" r="25" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+        <path d="M25 90 Q25 70 50 70 Q75 70 75 90" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+      </g>
+      <text x="50%" y="85%" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Speaker Profile</text>
+    </svg>
+  `;
+  return `data:image/svg+xml;base64,${btoa(svg)}`;
+};
+
+const COMMON_PHOTO = createPlaceholderImage();
 
 const webinars: Webinar[] = [
   {

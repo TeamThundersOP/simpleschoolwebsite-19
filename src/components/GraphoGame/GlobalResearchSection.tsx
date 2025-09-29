@@ -50,8 +50,8 @@ const GlobalResearchSection = () => {
           {collaborations.map((collab, index) => (
             <div key={index} className="relative group">
               <div className="box-border flex h-full w-full p-4 items-start gap-3 bg-white m-0 rounded-lg border-[rgba(0,0,0,0.12)] border-solid border opacity-100 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 backdrop-blur-sm">
-                <div className="flex items-center justify-center w-10 h-10 bg-blue-50 rounded-full flex-shrink-0">
-                  <GraduationCap className="w-5 h-5 text-blue-600" />
+                <div className="flex items-center justify-center w-10 h-10 bg-[#004080]/5 rounded-full flex-shrink-0">
+                  <GraduationCap className="w-5 h-5 text-[#004080]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-highlight mb-1 text-sm">{collab.university}</h3>
@@ -62,9 +62,9 @@ const GlobalResearchSection = () => {
           ))}
         </div>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-3xl text-center">
+        <div className="bg-[#004080]/5 border border-[#004080]/20 rounded-xl p-6 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Globe className="w-6 h-6 text-blue-600" />
+            <Globe className="w-6 h-6 text-[#004080]" />
             <p className="text-highlight font-semibold">
               GraphoGame has been researched in 17+ languages, backed by leading universities
               worldwide.
