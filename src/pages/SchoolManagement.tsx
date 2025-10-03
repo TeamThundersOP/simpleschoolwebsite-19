@@ -91,7 +91,7 @@ const SchoolManagement = () => {
               >
                 <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden">
                   <img
-                    src="/lovable-uploads/School Grads/IMG-20250924-WA0012.jpg"
+                    src="/assets/gallery/classroom-2.jpg"
                     alt="School Management Solutions"
                     className="w-full h-full object-cover"
                   />

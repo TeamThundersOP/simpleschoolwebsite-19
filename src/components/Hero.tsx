@@ -2,30 +2,30 @@ import React, { useRef, useEffect } from "react";
 
 const leftImages = [
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
+    src: "/assets/images/education-excellence-1.jpg",
     alt: "School Grads educational programs in action",
   },
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
+    src: "/assets/gallery/classroom-2.jpg",
     alt: "Students engaged in innovative learning experiences",
   },
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
+    src: "/assets/gallery/students-learning.jpg",
     alt: "Interactive classroom sessions with global pedagogy",
   },
 ];
 
 const rightImages = [
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
+    src: "/assets/gallery/classroom-1.jpg",
     alt: "Modern learning environments with School Grads",
   },
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
+    src: "/assets/gallery/educational-activities.jpg",
     alt: "Teacher empowerment and professional development",
   },
   {
-    src: "/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg",
+    src: "/assets/gallery/classroom-3.jpg",
     alt: "Educational innovation and digital transformation",
   },
 ];
@@ -40,7 +40,7 @@ const Hero = () => {
     if (!container) return;
 
     let isHovered = false;
-    const scrollAmount = 0.5; // px per frame
+    const scrollAmount = 1; // px per frame
     const direction = 1;
 
     const handleMouseEnter = () => {
@@ -53,20 +53,39 @@ const Hero = () => {
     container.addEventListener("mouseenter", handleMouseEnter);
     container.addEventListener("mouseleave", handleMouseLeave);
 
+    // Clone the images for seamless looping
+    const cloneImages = () => {
+      const images = container.querySelectorAll("img");
+      images.forEach((img) => {
+        const clone = img.cloneNode(true) as HTMLImageElement;
+        container.appendChild(clone);
+      });
+    };
+
+    // Initialize the scroll position and clone images
+    const initScroll = () => {
+      container.scrollLeft = 0;
+      cloneImages();
+    };
+
     const scrollImages = () => {
       if (!container) return;
       if (!isHovered) {
-        // If reached end, scroll back to start for infinite loop
-        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth - 2) {
+        container.scrollLeft += scrollAmount * direction;
+
+        // Reset scroll position when reaching the end for infinite loop
+        if (container.scrollLeft >= container.scrollWidth / 2) {
           container.scrollLeft = 0;
-        } else {
-          container.scrollLeft += scrollAmount * direction;
         }
       }
       scrollInterval.current = setTimeout(scrollImages, 16); // ~60fps
     };
 
-    scrollImages();
+    // Initialize and start scrolling
+    setTimeout(() => {
+      initScroll();
+      scrollImages();
+    }, 100);
 
     return () => {
       if (scrollInterval.current) clearTimeout(scrollInterval.current);
@@ -148,23 +167,22 @@ const Hero = () => {
               ref={scrollRef}
               style={{
                 scrollBehavior: "smooth",
-                overflowX: "auto",
+                overflowX: "hidden",
                 WebkitOverflowScrolling: "touch",
+                width: "max-content",
               }}
             >
-              {/* Duplicate images for seamless infinite scroll */}
-              {[...leftImages, ...rightImages, ...leftImages, ...rightImages].map(
-                (img, idx, arr) => (
-                  <img
-                    key={img.src + idx}
-                    src={img.src}
-                    alt={img.alt}
-                    className={`box-border h-32 w-40 shrink-0 aspect-[77/82] object-cover m-0 p-0 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105${idx !== arr.length - 1 ? " mr-3" : ""}`}
-                    loading="lazy"
-                    style={{ minWidth: 160, maxWidth: 180 }}
-                  />
-                ),
-              )}
+              {/* Images for continuous loop */}
+              {[...leftImages, ...rightImages].map((img, idx) => (
+                <img
+                  key={`${img.src}-${idx}`}
+                  src={img.src}
+                  alt={img.alt}
+                  className="box-border h-32 w-40 shrink-0 aspect-[77/82] object-cover m-0 p-0 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 mr-3"
+                  loading="lazy"
+                  style={{ minWidth: 160, maxWidth: 180 }}
+                />
+              ))}
             </div>
             {/* Desktop: original two columns */}
             <React.Fragment>

@@ -49,7 +49,7 @@ const MoominLanguageSchool = () => {
       <Seo
         title="Moomin Language School × School Grads – Early English in the Finnish Way!"
         description="Simple to start, joyful to teach, and loved by children. Moomin Language School helps children aged 3–8 years learn English naturally through short daily play on a learning app and lively weekly group sessions."
-        canonical="https://simpleschoolwebsite-19.onrender.com/moomin-language-school"
+        canonical="https://schoolgrads.ai/moomin-language-school"
       />
 
       <main id="main" className="w-full" role="main">
@@ -98,7 +98,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Moomin Language School App",
                 desc: "Interactive learning with Moomin characters",
-                url: "/lovable-uploads/Moomin Language School/App-and-tools.png",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "large", // Hero item - tools overview
               },
               {
@@ -106,7 +106,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Children Learning English",
                 desc: "Kids enjoying Moomin Language School",
-                url: "/lovable-uploads/Moomin Language School/MoominLS Kids 2.webp",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "standard", // Portrait of kids
               },
               {
@@ -114,7 +114,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Playful Learning Sessions",
                 desc: "Engaging group activities with Moomin",
-                url: "/lovable-uploads/Moomin Language School/Playful-session_1.png",
+                url: "/assets/gallery/educational-activities.jpg",
                 span: "tall", // Group session photo
               },
               {
@@ -122,7 +122,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "App Learning Experience",
                 desc: "Daily practice with Moomin characters",
-                url: "/lovable-uploads/Moomin Language School/App-use.jpg",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "wide", // App interface screenshot
               },
               {
@@ -130,7 +130,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Happy Learning Children",
                 desc: "Students enjoying Finnish-style English learning",
-                url: "/lovable-uploads/Moomin Language School/MoominLS Kids 4.png",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "standard", // Kids with devices
               },
               {
@@ -138,7 +138,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Educational Tools",
                 desc: "Comprehensive learning materials and tools",
-                url: "/lovable-uploads/Moomin Language School/tools.png",
+                url: "/assets/gallery/educational-activities.jpg",
                 span: "standard", // Tool icons
               },
               {
@@ -146,7 +146,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Young Learners",
                 desc: "Children engaged in Moomin Language activities",
-                url: "/lovable-uploads/Moomin Language School/Children_1.png",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "tall", // Classroom scene
               },
               {
@@ -154,7 +154,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Learning Banner",
                 desc: "Moomin Language School promotional materials",
-                url: "/lovable-uploads/Moomin Language School/Banner_1.png",
+                url: "/assets/gallery/educational-activities.jpg",
                 span: "wide", // Marketing banner
               },
               {
@@ -162,7 +162,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Children in Classroom",
                 desc: "Students engaged in Finnish-style learning",
-                url: "/lovable-uploads/Moomin Language School/Children_2.jpg",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "standard", // Classroom photo
               },
               {
@@ -170,7 +170,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Founders Team",
                 desc: "Meet the team behind Moomin Language School",
-                url: "/lovable-uploads/Moomin Language School/Founders 2.jpg",
+                url: "/assets/gallery/team-meeting.jpg",
                 span: "tall", // Team portrait
               },
               {
@@ -178,7 +178,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Young Moomin Learners",
                 desc: "Children enjoying Moomin-based English learning",
-                url: "/lovable-uploads/Moomin Language School/MoominLS Kids.png",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "wide", // Group of kids learning
               },
               {
@@ -186,7 +186,7 @@ const MoominLanguageSchool = () => {
                 type: "image",
                 title: "Creative Learning",
                 desc: "Fun and engaging Moomin language activities",
-                url: "/lovable-uploads/Moomin Language School/MoominLS kids 3.ong.png",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "standard", // Individual child
               },
             ]}

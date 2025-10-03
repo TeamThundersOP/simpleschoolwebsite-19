@@ -50,7 +50,7 @@ const CodeSchoolFinlandLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png"
+      src="/assets/partners/code-school-finland-logo.png"
       alt="Code School Finland Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -88,7 +88,7 @@ const CodeSchool = () => {
       <Seo
         title="Code School Finland × School Grads – Transforming How Indian Schools Teach Coding, AI & Future Skills"
         description="Designed for classrooms. Powered by Finnish pedagogy. Delivered in India by School Grads. Bring the best global teaching practices to Indian classrooms in a way that is easy, affordable, and scalable."
-        canonical="https://simpleschoolwebsite-19.onrender.com/code-school"
+        canonical="https://schoolgrads.ai/code-school"
       />
 
       <main id="main" className="w-full" role="main">
@@ -161,13 +161,13 @@ const CodeSchool = () => {
               <div className="relative w-full max-w-lg">
                 <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200 relative group">
                   <video
-                    src="/lovable-uploads/Code School Finland/csf_pedagogy_animated_explanation (1080p).mp4"
+                    src="/assets/videos/csf-pedagogy-explanation.mp4"
                     autoPlay
                     muted
                     loop
                     playsInline
                     className="w-full h-full object-cover"
-                    poster="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                    poster="/assets/gallery/team-meeting.jpg"
                   >
                     Your browser does not support the video tag.
                   </video>
@@ -313,7 +313,7 @@ const CodeSchool = () => {
             {/* Background Image */}
             <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
               <img
-                src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                src="/assets/gallery/team-meeting.jpg"
                 alt="Code School Finland Core Team"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
@@ -434,7 +434,7 @@ const CodeSchool = () => {
               <div className="flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-md">
                   <img
-                    src="/lovable-uploads/Code School Finland/Bobo AI.png"
+                    src="/assets/images/bobo-ai-character.svg"
                     alt="Bobo AI Learning Companion"
                     className="w-full h-auto rounded-2xl shadow-lg object-cover"
                   />
@@ -541,7 +541,7 @@ const CodeSchool = () => {
                 <CodeSchoolFinlandLogo className="" size="medium" />
                 <span className="text-2xl md:text-3xl font-bold text-gray-700">×</span>
                 <img
-                  src="/lovable-uploads/logo.svg"
+                  src="/assets/logos/school-grads-logo.svg"
                   alt="School Grads Logo"
                   className="h-8 w-auto md:h-12"
                 />
@@ -674,7 +674,7 @@ const CodeSchool = () => {
             <div className="box-border w-full lg:w-1/2 flex justify-center m-0 p-0">
               <div className="relative w-full max-w-lg">
                 <img
-                  src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+                  src="/assets/gallery/team-meeting.jpg"
                   alt="Code School Finland Core Team"
                   className="w-full h-auto rounded-2xl shadow-lg object-cover"
                 />
@@ -730,7 +730,7 @@ const CodeSchool = () => {
                 type: "video",
                 title: "Code School Finland Pedagogy",
                 desc: "Animated explanation of Finnish coding education methodology and classroom implementation",
-                url: "/lovable-uploads/Code School Finland/csf_pedagogy_animated_explanation (1080p).mp4",
+                url: "/assets/videos/csf-pedagogy-explanation.mp4",
                 span: "large",
               },
               {
@@ -738,7 +738,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "CSF Core Team",
                 desc: "Meet the dedicated educators and innovators behind Code School Finland's world-class curriculum",
-                url: "/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg",
+                url: "/assets/gallery/team-meeting.jpg",
                 span: "wide",
               },
               {
@@ -746,7 +746,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "Bobo AI Learning Companion",
                 desc: "Interactive AI character that guides students through coding concepts with engaging storytelling",
-                url: "/lovable-uploads/Code School Finland/Bobo AI.png",
+                url: "/assets/images/bobo-ai-character.svg",
                 span: "standard",
               },
               {
@@ -754,7 +754,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "Bobo Character Family",
                 desc: "Engaging character duo designed to make coding education fun and accessible for all ages",
-                url: "/lovable-uploads/Code School Finland/Bobo and small bobo.png",
+                url: "/assets/images/bobo-ai-character.svg",
                 span: "tall",
               },
               {
@@ -762,7 +762,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "Digital Literacy Focus",
                 desc: "Technology-focused learning character representing computational thinking and digital skills",
-                url: "/lovable-uploads/Code School Finland/Bobo computer head.png",
+                url: "/assets/images/bobo-ai-character.svg",
                 span: "standard",
               },
               {
@@ -770,7 +770,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "Problem-Solving Skills",
                 desc: "Teaching debugging concepts and critical thinking through relatable character expressions",
-                url: "/lovable-uploads/Code School Finland/Bobo confused.png",
+                url: "/assets/images/bobo-ai-character.svg",
                 span: "standard",
               },
               {
@@ -778,7 +778,7 @@ const CodeSchool = () => {
                 type: "image",
                 title: "Digital Citizenship",
                 desc: "Introducing students to software concepts, downloading, and responsible technology use",
-                url: "/lovable-uploads/Code School Finland/Bobo download.png",
+                url: "/assets/images/bobo-ai-character.svg",
                 span: "wide",
               },
             ]}

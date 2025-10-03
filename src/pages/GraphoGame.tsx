@@ -25,7 +25,7 @@ const GraphoGame = () => {
       <Seo
         title="GraphoGame – Revolutionary Reading Game for Children"
         description="Making learning to read fun and effective through scientifically-designed interactive games. Trusted by over 1 million children worldwide."
-        canonical="https://simpleschoolwebsite-19.onrender.com/grapho-game"
+        canonical="https://schoolgrads.ai/grapho-game"
       />
 
       <main id="main" className="w-full" role="main">
@@ -71,7 +71,7 @@ const GraphoGame = () => {
                 type: "image",
                 title: "GraphoGame Learning Session",
                 desc: "Children engaged in interactive literacy games",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "",
               },
               {
@@ -79,7 +79,7 @@ const GraphoGame = () => {
                 type: "image",
                 title: "Reading Development",
                 desc: "Research-backed reading development",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "",
               },
               {
@@ -87,7 +87,7 @@ const GraphoGame = () => {
                 type: "image",
                 title: "Global Classroom Success",
                 desc: "Proven literacy outcomes worldwide",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0007.jpg",
+                url: "/assets/gallery/classroom-3.jpg",
                 span: "",
               },
               {
@@ -95,7 +95,7 @@ const GraphoGame = () => {
                 type: "image",
                 title: "University Research Partners",
                 desc: "Academic collaboration and validation",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0009.jpg",
+                url: "/assets/gallery/classroom-2.jpg",
                 span: "",
               },
               {
@@ -103,7 +103,7 @@ const GraphoGame = () => {
                 type: "image",
                 title: "Digital Literacy Learning",
                 desc: "Personalized reading pathways",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0010.jpg",
+                url: "/assets/gallery/classroom-3.jpg",
                 span: "",
               },
             ]}

@@ -91,7 +91,7 @@ const Teachers = () => {
               >
                 <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden">
                   <img
-                    src="/lovable-uploads/School Grads/IMG-20250924-WA0013.jpg"
+                    src="/assets/gallery/classroom-3.jpg"
                     alt="Teacher Resources Platform"
                     className="w-full h-full object-cover"
                   />

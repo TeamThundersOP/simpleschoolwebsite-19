@@ -72,7 +72,7 @@ const AboutUs = () => {
             </div>
           </div>
           <img
-            src="/lovable-uploads/School Grads/IMG-20250924-WA0007.jpg"
+            src="/assets/gallery/classroom-3.jpg"
             alt="School Grads empowering educational excellence through global pedagogy and innovative learning solutions"
             className="box-border h-80 sm:h-96 lg:h-[640px] w-full lg:flex-1 aspect-[15/16] object-cover m-0 p-0 rounded-2xl"
           />

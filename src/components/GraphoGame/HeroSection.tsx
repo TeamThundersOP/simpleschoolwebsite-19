@@ -17,7 +17,7 @@ const GraphoGameLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/Group-215.svg"
+      src="/assets/partners/graphogame-logo.svg"
       alt="GraphoGame Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -61,7 +61,7 @@ const HeroSection = () => {
           <div className="relative w-full max-w-lg">
             <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
               <img
-                src="/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg"
+                src="/assets/gallery/students-learning.jpg"
                 alt="Children learning to read with GraphoGame"
                 className="w-full h-full object-cover"
               />

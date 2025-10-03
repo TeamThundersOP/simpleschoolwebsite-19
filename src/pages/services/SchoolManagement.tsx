@@ -25,28 +25,28 @@ const SchoolManagementService = () => {
       title: "Strategic Implementation Plan",
       description:
         "Customized roadmap for integrating future-skills education aligned with your school's vision, resources, and timeline. Includes stakeholder mapping and change management strategies.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 2,
       title: "Curriculum Alignment",
       description:
         "Seamless integration with existing curriculum and NEP 2020 requirements. Our team ensures coding and computational thinking enhance rather than compete with core subjects.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 3,
       title: "Leadership Development",
       description:
         "Training for principals and administrators on leading digital transformation, supporting teachers, and communicating value to parents and stakeholders.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 4,
       title: "Continuous Assessment",
       description:
         "Data-driven insights into program effectiveness, student engagement, and teacher development. Regular reports help optimize implementation and demonstrate ROI.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
   ];
 
@@ -147,7 +147,7 @@ const SchoolManagementService = () => {
       {/* Image-Content Section 1 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="School leadership team planning digital transformation"
           title="Strategic vision meets practical implementation"
           body={
@@ -235,7 +235,7 @@ const SchoolManagementService = () => {
       {/* Image-Content Section 2 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Complete implementation planning and support materials"
           title="End-to-end transformation support"
           body={
@@ -358,7 +358,7 @@ const SchoolManagementService = () => {
       {/* Image-Content Section 3 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="School celebrating successful digital transformation"
           title="Celebrating transformation success"
           body={

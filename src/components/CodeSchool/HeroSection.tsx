@@ -5,7 +5,7 @@ import { Code } from "lucide-react";
 // Code School Finland Logo Component
 const CodeSchoolFinlandLogo = ({ className = "" }: { className?: string }) => (
   <img
-    src="/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png"
+    src="/assets/partners/code-school-finland-logo.png"
     alt="Code School Finland Logo"
     className={`h-16 w-auto md:h-20 ${className}`}
   />

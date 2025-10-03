@@ -17,7 +17,7 @@ const FinnishExperienceLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/FEDS-LOGO-FE-3.png"
+      src="/assets/partners/finnish-experience-logo.png"
       alt="Finnish Education Solutions Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -79,7 +79,7 @@ const PartnershipModelsSection = () => {
             <FinnishExperienceLogo className="" size="medium" />
             <span className="text-2xl md:text-3xl font-bold text-gray-700">×</span>
             <img
-              src="/lovable-uploads/logo.svg"
+              src="/assets/logos/school-grads-logo.svg"
               alt="School Grads Logo"
               className="h-8 w-auto md:h-12"
             />

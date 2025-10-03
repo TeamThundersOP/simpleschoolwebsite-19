@@ -47,7 +47,7 @@ const ProductPage = () => {
       <Seo
         title="Code School Finland – Transform Coding Education"
         description="Bring Finnish pedagogy and innovative coding education to your classroom. Proven results, expert training, and comprehensive support."
-        canonical="https://simpleschoolwebsite-19.onrender.com/product"
+        canonical="https://schoolgrads.ai/product"
       />
 
       <main id="main" className="w-full" role="main">

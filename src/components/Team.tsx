@@ -8,15 +8,14 @@ const Team = () => {
       role: "Founder & CEO",
       description:
         "An education entrepreneur leading Fly Graduate, School Grads, and Grad Trips, dedicated to bridging global excellence with Indian schools through Finnish pedagogy, digital solutions, and international collaborations.",
-      image: "/lovable-uploads/Team/Nithin-reddy.jpg",
+      image: "/assets/team/nithin-reddy.jpg",
     },
     {
       name: "M. Sudhakara Reddy",
       role: "Mentor & Strategic Advisor",
       description:
         "With over three decades in education, he has been a pioneer in organizing concept-based study tours for educators, students, and professionals. His expertise brings valuable insights into school transformation, global exposure, and experiential learning for the Indian education community.",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/5bf9c02f399a547a7b52636f2d53e10fd2c7e5cd?width=592",
+      image: "/assets/team/nithin-reddy.jpg",
     },
   ];
 

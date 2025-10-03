@@ -16,7 +16,7 @@ const GraphoGameLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/Group-215.svg"
+      src="/assets/partners/graphogame-logo.svg"
       alt="GraphoGame Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -50,7 +50,7 @@ const WhyChooseSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="/lovable-uploads/School Grads/IMG-20250924-WA0012.jpg"
+            src="/assets/gallery/classroom-2.jpg"
             alt="GraphoGame Learning Community"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -63,7 +63,7 @@ const WhyChooseSection = () => {
               <GraphoGameLogo className="" size="medium" />
               <span className="text-2xl md:text-3xl font-bold text-white">×</span>
               <img
-                src="/lovable-uploads/logo.svg"
+                src="/assets/logos/school-grads-logo.svg"
                 alt="School Grads Logo"
                 className="h-8 w-auto md:h-12"
               />

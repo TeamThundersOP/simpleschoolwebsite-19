@@ -65,7 +65,7 @@ const KindieDays = () => {
       <Seo
         title="Kindiedays – Pedagogical Solutions for Early Education"
         description="Bringing the best of Finnish early childhood education to the world. Smart software, playful lesson plans, and interactive workshops for preschools and kindergartens."
-        canonical="https://simpleschoolwebsite-19.onrender.com/kindie-days"
+        canonical="https://schoolgrads.ai/kindie-days"
       />
 
       <main id="main" className="w-full" role="main">
@@ -139,7 +139,7 @@ const KindieDays = () => {
               <div className="relative w-full max-w-lg">
                 <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
                   <img
-                    src="/lovable-uploads/kdlogobroadjpgcopy.jpg"
+                    src="/assets/partners/kindiedays-logo.jpg"
                     alt="Kindie Days Early Education"
                     className="w-full h-full object-cover"
                   />

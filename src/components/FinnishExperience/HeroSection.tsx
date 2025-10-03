@@ -17,7 +17,7 @@ const FinnishExperienceLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/FEDS-LOGO-FE-3.png"
+      src="/assets/partners/finnish-experience-logo.png"
       alt="Finnish Education Solutions Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -61,7 +61,7 @@ const HeroSection = () => {
           <div className="relative w-full max-w-lg">
             <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
               <img
-                src="/lovable-uploads/School Grads/IMG-20250924-WA0014.jpg"
+                src="/assets/gallery/classroom-1.jpg"
                 alt="Finnish Experience® transforming education"
                 className="w-full h-full object-cover"
               />

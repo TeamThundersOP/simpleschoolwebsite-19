@@ -67,7 +67,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "15px",
       zIndex: 50,
       direction: "left" as Direction,
-      src: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
+      src: "/assets/images/education-excellence-1.jpg",
     },
     {
       id: 2,
@@ -76,7 +76,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
+      src: "/assets/gallery/classroom-1.jpg",
     },
     {
       id: 3,
@@ -85,7 +85,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
+      src: "/assets/gallery/classroom-2.jpg",
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
+      src: "/assets/gallery/educational-activities.jpg",
     },
     {
       id: 5,
@@ -103,7 +103,7 @@ export const PhotoGallery = ({ animationDelay = 0.5 }: { animationDelay?: number
       y: "44px",
       zIndex: 10,
       direction: "left" as Direction,
-      src: "/lovable-uploads/School Grads/IMG-20250924-WA0005.jpg",
+      src: "/assets/gallery/students-learning.jpg",
     },
   ];
 

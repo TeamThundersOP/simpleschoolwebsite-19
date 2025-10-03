@@ -21,35 +21,35 @@ const demoData = {
     {
       id: 1,
       title: "Global Pedagogy Integration",
-      image: "/lovable-uploads/School Grads/IMG-20250924-WA0017.jpg",
+      image: "/assets/gallery/classroom-3.jpg",
       description:
         "Bring world-class Finnish education methods directly to your classroom. Our proven pedagogy enhances student engagement and academic performance through research-backed teaching strategies that work across all subjects and grade levels.",
     },
     {
       id: 2,
       title: "Teacher Empowerment & Training",
-      image: "/lovable-uploads/School Grads/IMG-20250924-WA0010.jpg",
+      image: "/assets/gallery/classroom-3.jpg",
       description:
         "Comprehensive professional development programs that transform educators into confident innovators. Get practical training, certification, and continuous support to implement 21st-century teaching methods without overwhelming your schedule.",
     },
     {
       id: 3,
       title: "Future-Ready Digital Tools",
-      image: "/lovable-uploads/School Grads/IMG-20250924-WA0011.jpg",
+      image: "/assets/gallery/educational-activities.jpg",
       description:
         "Access award-winning educational technology from leading Finnish companies. From coding and AI to language learning and literacy apps, equip students with digital skills that prepare them for tomorrow's workforce.",
     },
     {
       id: 4,
       title: "School Transformation Support",
-      image: "/lovable-uploads/School Grads/IMG-20250924-WA0012.jpg",
+      image: "/assets/gallery/team-meeting.jpg",
       description:
         "Complete institutional transformation through our Finnish Experience® programs. Become a flagship school with global recognition, enhanced reputation, and proven results that attract families seeking excellence in education.",
     },
     {
       id: 5,
       title: "Measurable Learning Outcomes",
-      image: "/lovable-uploads/School Grads/IMG-20250924-WA0013.jpg",
+      image: "/assets/gallery/students-learning.jpg",
       description:
         "Track progress with data-driven insights and proven results. Our solutions are backed by research from leading universities and trusted by millions of students worldwide, ensuring your investment delivers real educational impact.",
     },
@@ -63,7 +63,7 @@ const Index = () => {
       <Seo
         title="Simple School – Modern Education Solutions"
         description="Discover innovative educational programs including CodeSchool and Moomin Language School. Quality education solutions for students and teachers."
-        canonical="https://simpleschoolwebsite-19.onrender.com/"
+        canonical="https://schoolgrads.ai/"
       />
       <main id="main" className="w-full" role="main">
         <Hero />

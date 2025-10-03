@@ -38,9 +38,9 @@ const stats = [
 const TrustedSolutions = () => {
   return (
     <section className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden bg-[rgb(2,18,35)]">
-      {/* Background pattern using EduPat.svg from public */}
+      {/* Background pattern using education pattern from assets */}
       <div
-        className="absolute inset-0 bg-[url('/EduPat.svg')] bg-repeat bg-center opacity-[0.70] pointer-events-none select-none"
+        className="absolute inset-0 bg-[url('/assets/images/education-pattern.svg')] bg-repeat bg-center opacity-[0.70] pointer-events-none select-none"
         aria-hidden="true"
       />
 

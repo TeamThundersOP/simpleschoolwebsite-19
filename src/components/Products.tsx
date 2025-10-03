@@ -8,7 +8,7 @@ const Products = () => {
       description:
         "Empowering Indian schools with world-class coding, AI, and future-skills education—rooted in Finnish pedagogy, tailored for NEP 2020, and made simple for teachers and students alike.",
       features: ["Coding & AI Education", "Finnish Pedagogy", "NEP 2020 Aligned"],
-      image: "/lovable-uploads/CSF-LOGO-simple+1580x1040++(1).png",
+      image: "/assets/partners/code-school-finland-logo.png",
       link: "/code-school",
       logoStyle: "contain",
     },
@@ -17,7 +17,7 @@ const Products = () => {
       description:
         "Bringing the world's most admired education methods to schools, leaders, and learners through Finnish pedagogy, EdTech, training, and immersive Finnish Experience® programs.",
       features: ["Finnish Pedagogy", "Leadership Training", "School Transformation"],
-      image: "/lovable-uploads/FEDS-LOGO-FE-3.png",
+      image: "/assets/partners/finnish-experience-logo.png",
       link: "/finnish-experience",
       logoStyle: "contain",
     },
@@ -34,7 +34,7 @@ const Products = () => {
       description:
         "A Finnish early education platform that empowers preschools with smart apps, playful lesson plans, and teacher training—making learning visible, consistent, and joyful for children and families.",
       features: ["Early Education", "Smart Apps", "Teacher Training"],
-      image: "/lovable-uploads/kdlogobroadjpgcopy.jpg",
+      image: "/assets/partners/kindiedays-logo.jpg",
       link: "/kindie-days",
       logoStyle: "contain",
     },
@@ -43,7 +43,7 @@ const Products = () => {
       description:
         "A playful, Finnish-designed program that helps children aged 3–8 learn English naturally through daily app practice and weekly group sessions—making language learning fun, stress-free, and effective.",
       features: ["Language Learning", "Moomin Characters", "Story-driven"],
-      image: "/lovable-uploads/MoominLS_logo_text3-1.png.webp",
+      image: "/assets/partners/moomin-language-school-logo.webp",
       link: "/moomin-language-school",
       logoStyle: "contain",
     },

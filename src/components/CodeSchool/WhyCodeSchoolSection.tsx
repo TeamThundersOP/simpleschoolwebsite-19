@@ -13,7 +13,7 @@ const WhyCodeSchoolSection = () => {
         <div className="mb-12">
           <div className="aspect-[16/9] bg-white rounded-2xl overflow-hidden shadow-lg border border-[rgba(0,0,0,0.12)] max-w-4xl mx-auto">
             <img
-              src="/lovable-uploads/Code School Finland/CSF Core Team  2651x1772.jpg"
+              src="/assets/gallery/team-meeting.jpg"
               alt="Code School Finland Core Team - The educators and innovators behind the world's most effective coding curriculum"
               className="w-full h-full object-cover"
             />

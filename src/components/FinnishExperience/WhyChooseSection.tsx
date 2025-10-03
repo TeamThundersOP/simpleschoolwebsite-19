@@ -28,7 +28,7 @@ const WhyChooseSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="/lovable-uploads/School Grads/IMG-20250924-WA0011.jpg"
+            src="/assets/gallery/educational-activities.jpg"
             alt="Finnish Education Experience"
             className="absolute inset-0 w-full h-full object-cover"
           />

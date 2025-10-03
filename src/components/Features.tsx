@@ -76,7 +76,7 @@ const Features = () => {
             </div>
           </motion.div>
           <motion.img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/43d51e42581e42c1cd3ce13625944e73c55a3263?width=1200"
+            src="/assets/images/education-excellence-1.jpg"
             alt="Educational excellence in action"
             className="box-border h-80 sm:h-96 lg:h-[640px] w-full lg:flex-1 aspect-[15/16] object-cover m-0 p-0 rounded-2xl"
             initial={{ opacity: 0, x: 50 }}

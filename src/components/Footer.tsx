@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <Link to="/">
               <img
-                src="/Logo-Inverted.svg"
+                src="/assets/logos/school-grads-inverted.svg"
                 alt="School Grads Logo"
                 className="h-16 w-auto"
                 loading="lazy"

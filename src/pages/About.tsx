@@ -26,7 +26,7 @@ const About = () => {
       <Seo
         title="About School Grads – Bringing Global Excellence to Indian Schools"
         description="At School Grads, we transform Indian classrooms with world-class pedagogy, digital innovations, and school transformation models inspired by Finland and other globally trusted education systems."
-        canonical="https://simpleschoolwebsite-19.onrender.com/about"
+        canonical="https://schoolgrads.ai/about"
       />
       <main id="main" className="w-full" role="main">
         {/* Hero Section */}
@@ -63,7 +63,7 @@ const About = () => {
             {/* Image Section */}
             <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/43d51e42581e42c1cd3ce13625944e73c55a3263?width=1200"
+                src="/assets/images/education-excellence-1.jpg"
                 alt="Educational excellence in action"
                 className="box-border h-80 sm:h-96 lg:h-[500px] w-full max-w-lg aspect-[15/16] object-cover m-0 p-0 rounded-2xl"
               />
@@ -192,6 +192,13 @@ const About = () => {
             <div className="box-border w-full overflow-x-visible m-0 p-0">
               <div className="box-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 m-0 p-0">
                 <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
+                  <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
+                    <img
+                      src="/assets/partners/code-school-finland-logo.png"
+                      alt="Code School Finland"
+                      className="h-8 w-auto"
+                    />
+                  </div>
                   <div className="box-border flex flex-col items-start gap-2 w-full m-0 p-0">
                     <h4 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-white">
                       Code School Finland
@@ -203,6 +210,13 @@ const About = () => {
                 </article>
 
                 <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
+                  <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
+                    <img
+                      src="/assets/partners/finnish-experience-logo.png"
+                      alt="Finnish Experience"
+                      className="h-8 w-auto"
+                    />
+                  </div>
                   <div className="box-border flex flex-col items-start gap-2 w-full m-0 p-0">
                     <h4 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-white">
                       Finnish Experience®️
@@ -214,6 +228,13 @@ const About = () => {
                 </article>
 
                 <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
+                  <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
+                    <img
+                      src="/assets/partners/kindiedays-logo.jpg"
+                      alt="Kindiedays"
+                      className="h-8 w-auto"
+                    />
+                  </div>
                   <div className="box-border flex flex-col items-start gap-2 w-full m-0 p-0">
                     <h4 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-white">
                       Kindiedays
@@ -225,6 +246,13 @@ const About = () => {
                 </article>
 
                 <article className="box-border flex flex-col justify-between items-start gap-4 lg:gap-6 w-full flex-shrink-0 m-0 p-6 bg-gray-50/90 rounded-2xl shadow-md backdrop-blur transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-2 cursor-pointer group h-full">
+                  <div className="box-border flex items-center justify-center w-16 h-16 bg-white/80 rounded-2xl m-0 p-0 shadow transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:bg-gray-800">
+                    <img
+                      src="/assets/partners/moomin-language-school-logo.webp"
+                      alt="Moomin Language School"
+                      className="h-8 w-auto"
+                    />
+                  </div>
                   <div className="box-border flex flex-col items-start gap-2 w-full m-0 p-0">
                     <h4 className="box-border w-full text-[#0C0504] text-lg lg:text-xl font-medium leading-tight tracking-tight m-0 p-0 break-words transition-colors duration-300 group-hover:text-white">
                       Moomin Language School
@@ -244,7 +272,7 @@ const About = () => {
           className="relative box-border flex w-full flex-col items-center gap-12 lg:gap-20 m-0 px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28 overflow-hidden"
           style={{
             backgroundColor: "#0b1b45",
-            backgroundImage: `url('/assets/pattern-schoolgrads.svg')`,
+            backgroundImage: `url('/assets/images/education-pattern.svg')`,
             backgroundRepeat: "repeat",
             backgroundSize: "160px 160px",
             backgroundPosition: "center",

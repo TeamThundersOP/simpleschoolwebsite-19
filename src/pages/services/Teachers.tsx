@@ -25,28 +25,28 @@ const TeachersService = () => {
       title: "Complete Lesson Plans",
       description:
         "Ready-to-use lesson plans with detailed instructions, learning objectives, and assessment rubrics. No preparation time needed – just open and teach.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 2,
       title: "Professional Development",
       description:
         "Comprehensive training program that builds your confidence and expertise. From basic concepts to advanced pedagogy, we support your growth every step.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 3,
       title: "Ongoing Support",
       description:
         "Access to our expert team through live sessions, forums, and direct support. Never feel alone in your teaching journey with our responsive help system.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 4,
       title: "Certification Program",
       description:
         "Earn recognized certification in computational thinking and coding education. Add valuable credentials to your professional profile.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
   ];
 
@@ -149,7 +149,7 @@ const TeachersService = () => {
       {/* Image-Content Section 1 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Teacher confidently leading a coding lesson"
           title="Built by educators, for educators"
           body={
@@ -237,7 +237,7 @@ const TeachersService = () => {
       {/* Image-Content Section 2 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Complete teacher training materials and resources"
           title="Everything you need to succeed"
           body={
@@ -364,7 +364,7 @@ const TeachersService = () => {
       {/* Image-Content Section 3 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Teachers collaborating and sharing best practices"
           title="Join a community of innovative educators"
           body={

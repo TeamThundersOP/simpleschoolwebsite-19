@@ -28,7 +28,7 @@ const WhyItWorksSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="/lovable-uploads/Moomin Language School/Playful-session_2.jpg"
+            src="/assets/gallery/educational-activities.jpg"
             alt="Moomin Language School Learning Session"
             className="absolute inset-0 w-full h-full object-cover"
           />

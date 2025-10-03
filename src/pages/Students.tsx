@@ -30,7 +30,7 @@ const Students = () => {
       <Seo
         title="Student Services – Simple School"
         description="Empowering students with innovative learning solutions, adaptive learning paths, and collaborative tools."
-        canonical="https://simpleschoolwebsite-19.onrender.com/students"
+        canonical="https://schoolgrads.ai/students"
       />
       <main id="main" className="flex-1" role="main">
         {/* Hero Section */}
@@ -88,7 +88,7 @@ const Students = () => {
               >
                 <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden">
                   <img
-                    src="/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg"
+                    src="/assets/gallery/students-learning.jpg"
                     alt="Student Services Platform"
                     className="w-full h-full object-cover"
                   />

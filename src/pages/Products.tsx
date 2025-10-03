@@ -47,31 +47,31 @@ const Products = () => {
       title: "Program Overview",
       duration: "2:45",
       videoUrl: "https://example.com/videos/overview.mp4",
-      posterUrl: "/api/placeholder/480/270",
+      posterUrl: "/placeholder.svg",
     },
     {
       title: "Teacher Training Walkthrough",
       duration: "3:10",
       videoUrl: "https://example.com/videos/training.mp4",
-      posterUrl: "/api/placeholder/480/270",
+      posterUrl: "/placeholder.svg",
     },
     {
       title: "Classroom Kit in Action",
       duration: "1:55",
       videoUrl: "https://example.com/videos/classroom-kit.mp4",
-      posterUrl: "/api/placeholder/480/270",
+      posterUrl: "/placeholder.svg",
     },
     {
       title: "NEP 2020 Alignment Explained",
       duration: "2:20",
       videoUrl: "https://example.com/videos/nep.mp4",
-      posterUrl: "/api/placeholder/480/270",
+      posterUrl: "/placeholder.svg",
     },
     {
       title: "Student Project Showcase",
       duration: "2:40",
       videoUrl: "https://example.com/videos/projects.mp4",
-      posterUrl: "/api/placeholder/480/270",
+      posterUrl: "/placeholder.svg",
     },
   ];
 
@@ -255,7 +255,7 @@ const Products = () => {
                 <VideoThumbnail
                   videoUrl="https://example.com/videos/hero.mp4"
                   title="Code School Finland Hero Video"
-                  posterUrl="/api/placeholder/640/360"
+                  posterUrl="/placeholder.svg"
                   onPlay={() =>
                     openVideoModal(
                       "https://example.com/videos/hero.mp4",
@@ -775,7 +775,7 @@ const Products = () => {
                 type: "image",
                 title: "Code School Finland Classroom",
                 desc: "Students engaged in coding activities",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0006.jpg",
+                url: "/assets/gallery/students-learning.jpg",
                 span: "md:col-span-1 md:row-span-3 sm:col-span-1 sm:row-span-2",
               },
               {
@@ -783,7 +783,7 @@ const Products = () => {
                 type: "image",
                 title: "Teacher Training Session",
                 desc: "Professional development in action",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0007.jpg",
+                url: "/assets/gallery/classroom-3.jpg",
                 span: "md:col-span-2 md:row-span-2 col-span-1 sm:col-span-2 sm:row-span-2",
               },
               {
@@ -791,7 +791,7 @@ const Products = () => {
                 type: "image",
                 title: "AI Learning Lab",
                 desc: "Future-ready technology education",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0008.jpg",
+                url: "/assets/gallery/classroom-1.jpg",
                 span: "md:col-span-1 md:row-span-3 sm:col-span-2 sm:row-span-2",
               },
               {
@@ -799,7 +799,7 @@ const Products = () => {
                 type: "image",
                 title: "Student Project Showcase",
                 desc: "Creative coding achievements",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0009.jpg",
+                url: "/assets/gallery/classroom-2.jpg",
                 span: "md:col-span-2 md:row-span-2 sm:col-span-1 sm:row-span-2",
               },
               {
@@ -807,7 +807,7 @@ const Products = () => {
                 type: "image",
                 title: "Curriculum Implementation",
                 desc: "Real classroom integration",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0010.jpg",
+                url: "/assets/gallery/classroom-3.jpg",
                 span: "md:col-span-1 md:row-span-3 sm:col-span-1 sm:row-span-2",
               },
             ]}

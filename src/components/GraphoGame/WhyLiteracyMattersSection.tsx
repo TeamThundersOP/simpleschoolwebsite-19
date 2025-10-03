@@ -24,7 +24,7 @@ const WhyLiteracyMattersSection = () => {
         {/* Background Image */}
         <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] w-full">
           <img
-            src="/lovable-uploads/School Grads/IMG-20250924-WA0013.jpg"
+            src="/assets/gallery/classroom-3.jpg"
             alt="Children Reading and Learning"
             className="absolute inset-0 w-full h-full object-cover"
           />

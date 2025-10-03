@@ -25,28 +25,28 @@ const StudentsService = () => {
       title: "Project-Based Learning",
       description:
         "Students work on real-world projects that combine coding, creativity, and problem-solving. From building games to creating digital stories, every project develops multiple skills simultaneously.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 2,
       title: "Computational Thinking",
       description:
         "Break down complex problems into manageable parts. Students learn to think logically, recognize patterns, and develop step-by-step solutions that apply far beyond coding.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 3,
       title: "Creative Expression",
       description:
         "Technology becomes a medium for artistic and creative expression. Students design, animate, and build their own digital creations while learning fundamental programming concepts.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
     {
       id: 4,
       title: "Collaborative Skills",
       description:
         "Work in teams, share ideas, and build together. Students develop communication and collaboration skills essential for the modern workplace through pair programming and group projects.",
-      image: "/lovable-uploads/Primary.svg",
+      image: "/assets/logos/school-grads-primary.svg",
     },
   ];
 
@@ -148,7 +148,7 @@ const StudentsService = () => {
       {/* Image-Content Section 1 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Students collaborating in a coding classroom"
           title="Built by educators, proven worldwide"
           body={
@@ -235,7 +235,7 @@ const StudentsService = () => {
       {/* Image-Content Section 2 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Complete classroom coding kit"
           title="Everything you need to start"
           body={
@@ -357,7 +357,7 @@ const StudentsService = () => {
       {/* Image-Content Section 3 */}
       <AltSection index={sectionIndex++}>
         <ImageContentSection
-          imageSrc="/lovable-uploads/Primary.svg"
+          imageSrc="/assets/logos/school-grads-primary.svg"
           imageAlt="Students presenting their coding projects"
           title="Celebrating student achievements"
           body={

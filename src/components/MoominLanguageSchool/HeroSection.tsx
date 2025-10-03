@@ -18,7 +18,7 @@ const MoominLanguageSchoolLogo = ({
 
   return (
     <img
-      src="/lovable-uploads/MoominLS_logo_text3-1.png.webp"
+      src="/assets/partners/moomin-language-school-logo.webp"
       alt="Moomin Language School Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
@@ -90,14 +90,17 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Images Section - Right */}
+        {/* Video Section - Right */}
         <div className="box-border w-full lg:w-1/2 flex justify-center lg:justify-end m-0 p-0">
           <div className="relative w-full max-w-lg">
             <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-200">
-              <img
-                src="/lovable-uploads/Moomin Language School/MoominLS Kids 2.webp"
-                alt="Children learning with Moomin Language School"
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.youtube.com/embed/RGSuHVeNmd0"
+                title="Moomin Language School - Early English in the Finnish Way"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
               />
             </div>
           </div>

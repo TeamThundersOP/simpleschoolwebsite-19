@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ["simpleschoolwebsite-19.onrender.com"],
+    allowedHosts: ["schoolgrads.ai"],
   },
   plugins: [react(), ...(mode === "development" ? [componentTagger()] : [])],
   resolve: {

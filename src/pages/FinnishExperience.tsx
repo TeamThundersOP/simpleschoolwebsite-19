@@ -21,7 +21,7 @@ const FinnishExperience = () => {
       <Seo
         title="Finnish Education Solutions – Bringing the Finnish Experience® to India"
         description="Transform your school with world-class Finnish pedagogy. Join 1,000 schools in the Finnish Experience® movement with proven education practices."
-        canonical="https://simpleschoolwebsite-19.onrender.com/finnish-experience"
+        canonical="https://schoolgrads.ai/finnish-experience"
       />
 
       <main id="main" className="w-full" role="main">
@@ -55,7 +55,7 @@ const FinnishExperience = () => {
                 type: "image",
                 title: "Finnish School Classroom",
                 desc: "Experience authentic Finnish pedagogy in action",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0001.jpg",
+                url: "/assets/images/education-excellence-1.jpg",
                 span: "",
               },
               {
@@ -63,7 +63,7 @@ const FinnishExperience = () => {
                 type: "image",
                 title: "Teacher Training Session",
                 desc: "Hands-on professional development",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0002.jpg",
+                url: "/assets/gallery/classroom-1.jpg",
                 span: "",
               },
               {
@@ -71,7 +71,7 @@ const FinnishExperience = () => {
                 type: "image",
                 title: "Education Experience",
                 desc: "Custom-made learning experiences",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0003.jpg",
+                url: "/assets/gallery/classroom-2.jpg",
                 span: "",
               },
               {
@@ -79,7 +79,7 @@ const FinnishExperience = () => {
                 type: "image",
                 title: "Finnish Experience School",
                 desc: "Partner schools implementing Finnish practices",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0004.jpg",
+                url: "/assets/gallery/educational-activities.jpg",
                 span: "",
               },
               {
@@ -87,7 +87,7 @@ const FinnishExperience = () => {
                 type: "image",
                 title: "Workshop & Events",
                 desc: "Expert-led conferences and training",
-                url: "/lovable-uploads/School Grads/IMG-20250924-WA0011.jpg",
+                url: "/assets/gallery/educational-activities.jpg",
                 span: "",
               },
             ]}
